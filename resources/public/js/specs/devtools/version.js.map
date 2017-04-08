@@ -1,0 +1,1 @@
+{"version":3,"file":"\/Users\/Nadiar\/Desktop\/Ebtanas\/resources\/public\/js\/specs\/devtools\/version.js","sources":["version.cljs?rel=1491640785949"],"lineCount":9,"mappings":";AAAA;;AAGA,AAAKA,mCAAgB;AAErB,uCAAA,vCAAMC;AAAN,AACED","names":["devtools.version\/current-version","devtools.version\/get-current-version"]}
