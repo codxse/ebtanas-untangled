@@ -15,19 +15,18 @@ goog.require('om.util');
 /**
  * Internal function to validate and process the parameters of `load` and `load-action`.
  */
-untangled.client.data_fetch.load_params_STAR_ = (function untangled$client$data_fetch$load_params_STAR_(server_property_or_ident,SubqueryClass,p__105324){
-var map__105329 = p__105324;
-var map__105329__$1 = ((((!((map__105329 == null)))?((((map__105329.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__105329.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__105329):map__105329);
-var target = cljs.core.get.call(null,map__105329__$1,new cljs.core.Keyword(null,"target","target",253001721));
-var remote = cljs.core.get.call(null,map__105329__$1,new cljs.core.Keyword(null,"remote","remote",-1593576576),new cljs.core.Keyword(null,"remote","remote",-1593576576));
-var refresh = cljs.core.get.call(null,map__105329__$1,new cljs.core.Keyword(null,"refresh","refresh",1947415525),cljs.core.PersistentVector.EMPTY);
-var parallel = cljs.core.get.call(null,map__105329__$1,new cljs.core.Keyword(null,"parallel","parallel",-1863607128),false);
-var fallback = cljs.core.get.call(null,map__105329__$1,new cljs.core.Keyword(null,"fallback","fallback",761637929));
-var marker = cljs.core.get.call(null,map__105329__$1,new cljs.core.Keyword(null,"marker","marker",865118313),true);
-var params = cljs.core.get.call(null,map__105329__$1,new cljs.core.Keyword(null,"params","params",710516235));
-var post_mutation = cljs.core.get.call(null,map__105329__$1,new cljs.core.Keyword(null,"post-mutation","post-mutation",-1076606705));
-var without = cljs.core.get.call(null,map__105329__$1,new cljs.core.Keyword(null,"without","without",1107036688),cljs.core.PersistentHashSet.EMPTY);
-var post_mutation_params = cljs.core.get.call(null,map__105329__$1,new cljs.core.Keyword(null,"post-mutation-params","post-mutation-params",-849425897));
+untangled.client.data_fetch.load_params_STAR_ = (function untangled$client$data_fetch$load_params_STAR_(server_property_or_ident,SubqueryClass,p__52191){
+var map__52196 = p__52191;
+var map__52196__$1 = ((((!((map__52196 == null)))?((((map__52196.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__52196.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__52196):map__52196);
+var target = cljs.core.get.call(null,map__52196__$1,new cljs.core.Keyword(null,"target","target",253001721));
+var params = cljs.core.get.call(null,map__52196__$1,new cljs.core.Keyword(null,"params","params",710516235));
+var marker = cljs.core.get.call(null,map__52196__$1,new cljs.core.Keyword(null,"marker","marker",865118313),true);
+var refresh = cljs.core.get.call(null,map__52196__$1,new cljs.core.Keyword(null,"refresh","refresh",1947415525),cljs.core.PersistentVector.EMPTY);
+var parallel = cljs.core.get.call(null,map__52196__$1,new cljs.core.Keyword(null,"parallel","parallel",-1863607128),false);
+var post_mutation = cljs.core.get.call(null,map__52196__$1,new cljs.core.Keyword(null,"post-mutation","post-mutation",-1076606705));
+var post_mutation_params = cljs.core.get.call(null,map__52196__$1,new cljs.core.Keyword(null,"post-mutation-params","post-mutation-params",-849425897));
+var fallback = cljs.core.get.call(null,map__52196__$1,new cljs.core.Keyword(null,"fallback","fallback",761637929));
+var without = cljs.core.get.call(null,map__52196__$1,new cljs.core.Keyword(null,"without","without",1107036688),cljs.core.PersistentHashSet.EMPTY);
 if(((target == null)) || (cljs.core.vector_QMARK_.call(null,target))){
 } else {
 throw (new Error("Assert failed: (or (nil? target) (vector? target))"));
@@ -68,9 +67,9 @@ if((om.util.ident_QMARK_.call(null,server_property_or_ident)) || ((server_proper
 throw (new Error("Assert failed: (or (util/ident? server-property-or-ident) (keyword? server-property-or-ident))"));
 }
 
-if((function (){var or__34555__auto__ = (SubqueryClass == null);
-if(or__34555__auto__){
-return or__34555__auto__;
+if((function (){var or__39222__auto__ = (SubqueryClass == null);
+if(or__39222__auto__){
+return or__39222__auto__;
 } else {
 if(!((SubqueryClass == null))){
 if((false) || ((cljs.core.PROTOCOL_SENTINEL === SubqueryClass.om$next$IQuery$))){
@@ -87,29 +86,29 @@ return false;
 throw (new Error("Assert failed: (or (nil? SubqueryClass) (implements? om/IQuery SubqueryClass))"));
 }
 
-var query = (cljs.core.truth_((function (){var and__34543__auto__ = SubqueryClass;
-if(cljs.core.truth_(and__34543__auto__)){
+var query = (cljs.core.truth_((function (){var and__39210__auto__ = SubqueryClass;
+if(cljs.core.truth_(and__39210__auto__)){
 return cljs.core.map_QMARK_.call(null,params);
 } else {
-return and__34543__auto__;
+return and__39210__auto__;
 }
-})())?cljs.core.vec.call(null,cljs.core.sequence.call(null,cljs.core.seq.call(null,cljs.core.concat.call(null,(function (){var x__35489__auto__ = cljs.core.sequence.call(null,cljs.core.seq.call(null,cljs.core.concat.call(null,(function (){var x__35489__auto__ = cljs.core.apply.call(null,cljs.core.array_map,cljs.core.sequence.call(null,cljs.core.seq.call(null,cljs.core.concat.call(null,(function (){var x__35489__auto__ = server_property_or_ident;
-return cljs.core._conj.call(null,cljs.core.List.EMPTY,x__35489__auto__);
-})(),(function (){var x__35489__auto__ = om.next.get_query.call(null,SubqueryClass);
-return cljs.core._conj.call(null,cljs.core.List.EMPTY,x__35489__auto__);
+})())?cljs.core.vec.call(null,cljs.core.sequence.call(null,cljs.core.seq.call(null,cljs.core.concat.call(null,(function (){var x__40156__auto__ = cljs.core.sequence.call(null,cljs.core.seq.call(null,cljs.core.concat.call(null,(function (){var x__40156__auto__ = cljs.core.apply.call(null,cljs.core.array_map,cljs.core.sequence.call(null,cljs.core.seq.call(null,cljs.core.concat.call(null,(function (){var x__40156__auto__ = server_property_or_ident;
+return cljs.core._conj.call(null,cljs.core.List.EMPTY,x__40156__auto__);
+})(),(function (){var x__40156__auto__ = om.next.get_query.call(null,SubqueryClass);
+return cljs.core._conj.call(null,cljs.core.List.EMPTY,x__40156__auto__);
 })()))));
-return cljs.core._conj.call(null,cljs.core.List.EMPTY,x__35489__auto__);
-})(),(function (){var x__35489__auto__ = params;
-return cljs.core._conj.call(null,cljs.core.List.EMPTY,x__35489__auto__);
+return cljs.core._conj.call(null,cljs.core.List.EMPTY,x__40156__auto__);
+})(),(function (){var x__40156__auto__ = params;
+return cljs.core._conj.call(null,cljs.core.List.EMPTY,x__40156__auto__);
 })())));
-return cljs.core._conj.call(null,cljs.core.List.EMPTY,x__35489__auto__);
-})())))):(cljs.core.truth_(SubqueryClass)?new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.PersistentArrayMap.createAsIfByAssoc([server_property_or_ident,om.next.get_query.call(null,SubqueryClass)])], null):((cljs.core.map_QMARK_.call(null,params))?new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(function (){var x__35489__auto__ = server_property_or_ident;
-return cljs.core._conj.call(null,(function (){var x__35489__auto____$1 = params;
-return cljs.core._conj.call(null,cljs.core.List.EMPTY,x__35489__auto____$1);
-})(),x__35489__auto__);
+return cljs.core._conj.call(null,cljs.core.List.EMPTY,x__40156__auto__);
+})())))):(cljs.core.truth_(SubqueryClass)?new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.PersistentArrayMap.createAsIfByAssoc([server_property_or_ident,om.next.get_query.call(null,SubqueryClass)])], null):((cljs.core.map_QMARK_.call(null,params))?new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(function (){var x__40156__auto__ = server_property_or_ident;
+return cljs.core._conj.call(null,(function (){var x__40156__auto____$1 = params;
+return cljs.core._conj.call(null,cljs.core.List.EMPTY,x__40156__auto____$1);
+})(),x__40156__auto__);
 })()], null):new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [server_property_or_ident], null)
 )));
-return cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"remote","remote",-1593576576),new cljs.core.Keyword(null,"refresh","refresh",1947415525),new cljs.core.Keyword(null,"parallel","parallel",-1863607128),new cljs.core.Keyword(null,"fallback","fallback",761637929),new cljs.core.Keyword(null,"marker","marker",865118313),new cljs.core.Keyword(null,"post-mutation","post-mutation",-1076606705),new cljs.core.Keyword(null,"without","without",1107036688),new cljs.core.Keyword(null,"post-mutation-params","post-mutation-params",-849425897),new cljs.core.Keyword(null,"target","target",253001721),new cljs.core.Keyword(null,"query","query",-1288509510)],[remote,refresh,parallel,fallback,marker,post_mutation,without,post_mutation_params,target,query]);
+return cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"refresh","refresh",1947415525),new cljs.core.Keyword(null,"parallel","parallel",-1863607128),new cljs.core.Keyword(null,"fallback","fallback",761637929),new cljs.core.Keyword(null,"marker","marker",865118313),new cljs.core.Keyword(null,"post-mutation","post-mutation",-1076606705),new cljs.core.Keyword(null,"without","without",1107036688),new cljs.core.Keyword(null,"post-mutation-params","post-mutation-params",-849425897),new cljs.core.Keyword(null,"target","target",253001721),new cljs.core.Keyword(null,"query","query",-1288509510)],[refresh,parallel,fallback,marker,post_mutation,without,post_mutation_params,target,query]);
 });
 /**
  * Generates an Om transaction expression for a load mutation. It includes a follow-on read for :ui/loading-data. The args
@@ -122,15 +121,15 @@ if(((new cljs.core.Keyword(null,"refresh","refresh",1947415525).cljs$core$IFn$_i
 throw (new Error("Assert failed: (or (nil? (:refresh load-args)) (vector? (:refresh load-args)))"));
 }
 
-var refresh = (function (){var or__34555__auto__ = new cljs.core.Keyword(null,"refresh","refresh",1947415525).cljs$core$IFn$_invoke$arity$1(load_args);
-if(cljs.core.truth_(or__34555__auto__)){
-return or__34555__auto__;
+var refresh = (function (){var or__39222__auto__ = new cljs.core.Keyword(null,"refresh","refresh",1947415525).cljs$core$IFn$_invoke$arity$1(load_args);
+if(cljs.core.truth_(or__39222__auto__)){
+return or__39222__auto__;
 } else {
 return cljs.core.PersistentVector.EMPTY;
 }
 })();
-return cljs.core.into.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core._conj.call(null,(function (){var x__35489__auto__ = load_args;
-return cljs.core._conj.call(null,cljs.core.List.EMPTY,x__35489__auto__);
+return cljs.core.into.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core._conj.call(null,(function (){var x__40156__auto__ = load_args;
+return cljs.core._conj.call(null,cljs.core.List.EMPTY,x__40156__auto__);
 })(),new cljs.core.Symbol("untangled","load","untangled/load",89075339,null)),new cljs.core.Keyword("ui","loading-data","ui/loading-data",-1566515143)], null),refresh);
 });
 /**
@@ -157,7 +156,6 @@ return cljs.core._conj.call(null,cljs.core.List.EMPTY,x__35489__auto__);
  *   - `target` - An assoc-in path at which to put the result of the Subquery. If supplied, the data AND load marker will appear
  *  at this path. If not supplied the data and marker will appear at `server-property` in the top-level of the client app state
  *  database. Ignored if you're loading via ident (the ident is your target).
- *   - `remote` - Optional. Keyword name of the remote that this load should come from.
  *   - `params` - Optional parameters to add to the generated query
  *   - `marker` - Boolean to determine if you want a fetch-state marker in your app state. Defaults to true. Add `:ui/fetch-state` to the
  *   target component in order to see this data in your component.
@@ -172,23 +170,23 @@ return cljs.core._conj.call(null,cljs.core.List.EMPTY,x__35489__auto__);
  *   
  */
 untangled.client.data_fetch.load = (function untangled$client$data_fetch$load(var_args){
-var args105333 = [];
-var len__35776__auto___105340 = arguments.length;
-var i__35777__auto___105341 = (0);
+var args52200 = [];
+var len__40443__auto___52207 = arguments.length;
+var i__40444__auto___52208 = (0);
 while(true){
-if((i__35777__auto___105341 < len__35776__auto___105340)){
-args105333.push((arguments[i__35777__auto___105341]));
+if((i__40444__auto___52208 < len__40443__auto___52207)){
+args52200.push((arguments[i__40444__auto___52208]));
 
-var G__105342 = (i__35777__auto___105341 + (1));
-i__35777__auto___105341 = G__105342;
+var G__52209 = (i__40444__auto___52208 + (1));
+i__40444__auto___52208 = G__52209;
 continue;
 } else {
 }
 break;
 }
 
-var G__105335 = args105333.length;
-switch (G__105335) {
+var G__52202 = args52200.length;
+switch (G__52202) {
 case 3:
 return untangled.client.data_fetch.load.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -198,7 +196,7 @@ return untangled.client.data_fetch.load.cljs$core$IFn$_invoke$arity$4((arguments
 
 break;
 default:
-throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Invalid arity: "),cljs.core.str.cljs$core$IFn$_invoke$arity$1(args105333.length)].join('')));
+throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Invalid arity: "),cljs.core.str.cljs$core$IFn$_invoke$arity$1(args52200.length)].join('')));
 
 }
 });
@@ -208,13 +206,13 @@ return untangled.client.data_fetch.load.call(null,app_or_comp_or_reconciler,serv
 });
 
 untangled.client.data_fetch.load.cljs$core$IFn$_invoke$arity$4 = (function (app_or_comp_or_reconciler,server_property_or_ident,SubqueryClass,config){
-if((function (){var or__34555__auto__ = om.next.component_QMARK_.call(null,app_or_comp_or_reconciler);
-if(or__34555__auto__){
-return or__34555__auto__;
+if((function (){var or__39222__auto__ = om.next.component_QMARK_.call(null,app_or_comp_or_reconciler);
+if(or__39222__auto__){
+return or__39222__auto__;
 } else {
-var or__34555__auto____$1 = om.next.reconciler_QMARK_.call(null,app_or_comp_or_reconciler);
-if(or__34555__auto____$1){
-return or__34555__auto____$1;
+var or__39222__auto____$1 = om.next.reconciler_QMARK_.call(null,app_or_comp_or_reconciler);
+if(or__39222__auto____$1){
+return or__39222__auto____$1;
 } else {
 if(!((app_or_comp_or_reconciler == null))){
 if((false) || ((cljs.core.PROTOCOL_SENTINEL === app_or_comp_or_reconciler.untangled$client$core$UntangledApplication$))){
@@ -245,8 +243,7 @@ untangled.client.data_fetch.load.cljs$lang$maxFixedArity = 4;
  *   See `load` for descriptions of parameters and config.
  * 
  *   Queue up a remote load from within an already-running mutation. Similar to `load`, but usable from
- *   within a mutation. IMPORTANT: Make sure you specify the `:remote` parameter to this function, as
- *   well as including a `remote-load` for that remote.
+ *   within a mutation.
  * 
  *   Note the `:refresh` parameter is supported, and defaults to empty. If you want anything to refresh other than
  *   the targeted component you will want to include the :refresh parameter.
@@ -255,30 +252,28 @@ untangled.client.data_fetch.load.cljs$lang$maxFixedArity = 4;
  *   should use the helper function `remote-load` as it's value:
  * 
  *   { :remote (df/remote-load env)
- *     ; NOTE: :remote must be the keyword name of a legal remote in your system; however,
- *     ; You must still name the remote in the `load-action` if it is something other than default.
  *     :action (fn []
  *        (load-action ...)
  *        ; other optimistic updates/state changes)}
  */
 untangled.client.data_fetch.load_action = (function untangled$client$data_fetch$load_action(var_args){
-var args105344 = [];
-var len__35776__auto___105347 = arguments.length;
-var i__35777__auto___105348 = (0);
+var args52211 = [];
+var len__40443__auto___52214 = arguments.length;
+var i__40444__auto___52215 = (0);
 while(true){
-if((i__35777__auto___105348 < len__35776__auto___105347)){
-args105344.push((arguments[i__35777__auto___105348]));
+if((i__40444__auto___52215 < len__40443__auto___52214)){
+args52211.push((arguments[i__40444__auto___52215]));
 
-var G__105349 = (i__35777__auto___105348 + (1));
-i__35777__auto___105348 = G__105349;
+var G__52216 = (i__40444__auto___52215 + (1));
+i__40444__auto___52215 = G__52216;
 continue;
 } else {
 }
 break;
 }
 
-var G__105346 = args105344.length;
-switch (G__105346) {
+var G__52213 = args52211.length;
+switch (G__52213) {
 case 3:
 return untangled.client.data_fetch.load_action.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -288,7 +283,7 @@ return untangled.client.data_fetch.load_action.cljs$core$IFn$_invoke$arity$4((ar
 
 break;
 default:
-throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Invalid arity: "),cljs.core.str.cljs$core$IFn$_invoke$arity$1(args105344.length)].join('')));
+throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Invalid arity: "),cljs.core.str.cljs$core$IFn$_invoke$arity$1(args52211.length)].join('')));
 
 }
 });
@@ -318,7 +313,6 @@ untangled.client.data_fetch.load_action.cljs$lang$maxFixedArity = 4;
  *   - `parallel`: See `load-data`
  *   - `fallback`: See `load-data`
  *   - `marker`: See `load-data`
- *   - `remote`: See `load-data`
  *   - `refresh`: See `load-data`
  * 
  *   NOTE: The :ui/loading-data attribute is always included in refresh. This means you probably don't want to
@@ -328,36 +322,35 @@ untangled.client.data_fetch.load_action.cljs$lang$maxFixedArity = 4;
  *   
  */
 untangled.client.data_fetch.load_field = (function untangled$client$data_fetch$load_field(var_args){
-var args__35783__auto__ = [];
-var len__35776__auto___105357 = arguments.length;
-var i__35777__auto___105358 = (0);
+var args__40450__auto__ = [];
+var len__40443__auto___52224 = arguments.length;
+var i__40444__auto___52225 = (0);
 while(true){
-if((i__35777__auto___105358 < len__35776__auto___105357)){
-args__35783__auto__.push((arguments[i__35777__auto___105358]));
+if((i__40444__auto___52225 < len__40443__auto___52224)){
+args__40450__auto__.push((arguments[i__40444__auto___52225]));
 
-var G__105359 = (i__35777__auto___105358 + (1));
-i__35777__auto___105358 = G__105359;
+var G__52226 = (i__40444__auto___52225 + (1));
+i__40444__auto___52225 = G__52226;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__35784__auto__ = ((((2) < args__35783__auto__.length))?(new cljs.core.IndexedSeq(args__35783__auto__.slice((2)),(0),null)):null);
-return untangled.client.data_fetch.load_field.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__35784__auto__);
+var argseq__40451__auto__ = ((((2) < args__40450__auto__.length))?(new cljs.core.IndexedSeq(args__40450__auto__.slice((2)),(0),null)):null);
+return untangled.client.data_fetch.load_field.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__40451__auto__);
 });
 
-untangled.client.data_fetch.load_field.cljs$core$IFn$_invoke$arity$variadic = (function (component,field,p__105354){
-var map__105355 = p__105354;
-var map__105355__$1 = ((((!((map__105355 == null)))?((((map__105355.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__105355.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__105355):map__105355);
-var without = cljs.core.get.call(null,map__105355__$1,new cljs.core.Keyword(null,"without","without",1107036688));
-var params = cljs.core.get.call(null,map__105355__$1,new cljs.core.Keyword(null,"params","params",710516235));
-var remote = cljs.core.get.call(null,map__105355__$1,new cljs.core.Keyword(null,"remote","remote",-1593576576),new cljs.core.Keyword(null,"remote","remote",-1593576576));
-var post_mutation = cljs.core.get.call(null,map__105355__$1,new cljs.core.Keyword(null,"post-mutation","post-mutation",-1076606705));
-var fallback = cljs.core.get.call(null,map__105355__$1,new cljs.core.Keyword(null,"fallback","fallback",761637929));
-var parallel = cljs.core.get.call(null,map__105355__$1,new cljs.core.Keyword(null,"parallel","parallel",-1863607128));
-var refresh = cljs.core.get.call(null,map__105355__$1,new cljs.core.Keyword(null,"refresh","refresh",1947415525),cljs.core.PersistentVector.EMPTY);
-var marker = cljs.core.get.call(null,map__105355__$1,new cljs.core.Keyword(null,"marker","marker",865118313),true);
+untangled.client.data_fetch.load_field.cljs$core$IFn$_invoke$arity$variadic = (function (component,field,p__52221){
+var map__52222 = p__52221;
+var map__52222__$1 = ((((!((map__52222 == null)))?((((map__52222.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__52222.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__52222):map__52222);
+var without = cljs.core.get.call(null,map__52222__$1,new cljs.core.Keyword(null,"without","without",1107036688));
+var params = cljs.core.get.call(null,map__52222__$1,new cljs.core.Keyword(null,"params","params",710516235));
+var post_mutation = cljs.core.get.call(null,map__52222__$1,new cljs.core.Keyword(null,"post-mutation","post-mutation",-1076606705));
+var fallback = cljs.core.get.call(null,map__52222__$1,new cljs.core.Keyword(null,"fallback","fallback",761637929));
+var parallel = cljs.core.get.call(null,map__52222__$1,new cljs.core.Keyword(null,"parallel","parallel",-1863607128));
+var refresh = cljs.core.get.call(null,map__52222__$1,new cljs.core.Keyword(null,"refresh","refresh",1947415525),cljs.core.PersistentVector.EMPTY);
+var marker = cljs.core.get.call(null,map__52222__$1,new cljs.core.Keyword(null,"marker","marker",865118313),true);
 if(cljs.core.truth_(fallback)){
 if((fallback instanceof cljs.core.Symbol)){
 } else {
@@ -366,19 +359,19 @@ throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Assert failed: ")
 } else {
 }
 
-return om.next.transact_BANG_.call(null,component,cljs.core.into.call(null,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core._conj.call(null,(function (){var x__35489__auto__ = cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"remote","remote",-1593576576),new cljs.core.Keyword(null,"refresh","refresh",1947415525),new cljs.core.Keyword(null,"parallel","parallel",-1863607128),new cljs.core.Keyword(null,"fallback","fallback",761637929),new cljs.core.Keyword(null,"marker","marker",865118313),new cljs.core.Keyword(null,"params","params",710516235),new cljs.core.Keyword(null,"field","field",-1302436500),new cljs.core.Keyword(null,"post-mutation","post-mutation",-1076606705),new cljs.core.Keyword(null,"without","without",1107036688),new cljs.core.Keyword(null,"ident","ident",-742346),new cljs.core.Keyword(null,"query","query",-1288509510)],[remote,refresh,parallel,fallback,marker,params,field,post_mutation,without,om.next.get_ident.call(null,component),om.next.focus_query.call(null,om.next.get_query.call(null,component),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [field], null))]);
-return cljs.core._conj.call(null,cljs.core.List.EMPTY,x__35489__auto__);
+return om.next.transact_BANG_.call(null,component,cljs.core.into.call(null,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core._conj.call(null,(function (){var x__40156__auto__ = cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"refresh","refresh",1947415525),new cljs.core.Keyword(null,"parallel","parallel",-1863607128),new cljs.core.Keyword(null,"fallback","fallback",761637929),new cljs.core.Keyword(null,"marker","marker",865118313),new cljs.core.Keyword(null,"params","params",710516235),new cljs.core.Keyword(null,"field","field",-1302436500),new cljs.core.Keyword(null,"post-mutation","post-mutation",-1076606705),new cljs.core.Keyword(null,"without","without",1107036688),new cljs.core.Keyword(null,"ident","ident",-742346),new cljs.core.Keyword(null,"query","query",-1288509510)],[refresh,parallel,fallback,marker,params,field,post_mutation,without,om.next.get_ident.call(null,component),om.next.focus_query.call(null,om.next.get_query.call(null,component),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [field], null))]);
+return cljs.core._conj.call(null,cljs.core.List.EMPTY,x__40156__auto__);
 })(),new cljs.core.Symbol("untangled","load","untangled/load",89075339,null)),new cljs.core.Keyword("ui","loading-data","ui/loading-data",-1566515143),om.next.get_ident.call(null,component)], null),refresh));
 });
 
 untangled.client.data_fetch.load_field.cljs$lang$maxFixedArity = (2);
 
-untangled.client.data_fetch.load_field.cljs$lang$applyTo = (function (seq105351){
-var G__105352 = cljs.core.first.call(null,seq105351);
-var seq105351__$1 = cljs.core.next.call(null,seq105351);
-var G__105353 = cljs.core.first.call(null,seq105351__$1);
-var seq105351__$2 = cljs.core.next.call(null,seq105351__$1);
-return untangled.client.data_fetch.load_field.cljs$core$IFn$_invoke$arity$variadic(G__105352,G__105353,seq105351__$2);
+untangled.client.data_fetch.load_field.cljs$lang$applyTo = (function (seq52218){
+var G__52219 = cljs.core.first.call(null,seq52218);
+var seq52218__$1 = cljs.core.next.call(null,seq52218);
+var G__52220 = cljs.core.first.call(null,seq52218__$1);
+var seq52218__$2 = cljs.core.next.call(null,seq52218__$1);
+return untangled.client.data_fetch.load_field.cljs$core$IFn$_invoke$arity$variadic(G__52219,G__52220,seq52218__$2);
 });
 
 /**
@@ -398,41 +391,40 @@ return untangled.client.data_fetch.load_field.cljs$core$IFn$_invoke$arity$variad
  *  components, then those components will be re-rendered after the load has finished and post mutations have run.
  *   - `without`: A set of keywords. Any keyword appearing in this set will be recursively removed from the query (in a proper AST-preserving fashion).
  *   - `params`: A parameter map to augment onto the first element of the query
- *   - `remote`: A keyword naming which remote to query.
+ * 
  *   
  */
 untangled.client.data_fetch.load_data = (function untangled$client$data_fetch$load_data(var_args){
-var args__35783__auto__ = [];
-var len__35776__auto___105366 = arguments.length;
-var i__35777__auto___105367 = (0);
+var args__40450__auto__ = [];
+var len__40443__auto___52233 = arguments.length;
+var i__40444__auto___52234 = (0);
 while(true){
-if((i__35777__auto___105367 < len__35776__auto___105366)){
-args__35783__auto__.push((arguments[i__35777__auto___105367]));
+if((i__40444__auto___52234 < len__40443__auto___52233)){
+args__40450__auto__.push((arguments[i__40444__auto___52234]));
 
-var G__105368 = (i__35777__auto___105367 + (1));
-i__35777__auto___105367 = G__105368;
+var G__52235 = (i__40444__auto___52234 + (1));
+i__40444__auto___52234 = G__52235;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__35784__auto__ = ((((2) < args__35783__auto__.length))?(new cljs.core.IndexedSeq(args__35783__auto__.slice((2)),(0),null)):null);
-return untangled.client.data_fetch.load_data.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__35784__auto__);
+var argseq__40451__auto__ = ((((2) < args__40450__auto__.length))?(new cljs.core.IndexedSeq(args__40450__auto__.slice((2)),(0),null)):null);
+return untangled.client.data_fetch.load_data.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__40451__auto__);
 });
 
-untangled.client.data_fetch.load_data.cljs$core$IFn$_invoke$arity$variadic = (function (comp_or_reconciler,query,p__105363){
-var map__105364 = p__105363;
-var map__105364__$1 = ((((!((map__105364 == null)))?((((map__105364.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__105364.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__105364):map__105364);
-var ident = cljs.core.get.call(null,map__105364__$1,new cljs.core.Keyword(null,"ident","ident",-742346));
-var without = cljs.core.get.call(null,map__105364__$1,new cljs.core.Keyword(null,"without","without",1107036688));
-var remote = cljs.core.get.call(null,map__105364__$1,new cljs.core.Keyword(null,"remote","remote",-1593576576),new cljs.core.Keyword(null,"remote","remote",-1593576576));
-var params = cljs.core.get.call(null,map__105364__$1,new cljs.core.Keyword(null,"params","params",710516235));
-var post_mutation = cljs.core.get.call(null,map__105364__$1,new cljs.core.Keyword(null,"post-mutation","post-mutation",-1076606705));
-var fallback = cljs.core.get.call(null,map__105364__$1,new cljs.core.Keyword(null,"fallback","fallback",761637929));
-var parallel = cljs.core.get.call(null,map__105364__$1,new cljs.core.Keyword(null,"parallel","parallel",-1863607128));
-var refresh = cljs.core.get.call(null,map__105364__$1,new cljs.core.Keyword(null,"refresh","refresh",1947415525),cljs.core.PersistentVector.EMPTY);
-var marker = cljs.core.get.call(null,map__105364__$1,new cljs.core.Keyword(null,"marker","marker",865118313),true);
+untangled.client.data_fetch.load_data.cljs$core$IFn$_invoke$arity$variadic = (function (comp_or_reconciler,query,p__52230){
+var map__52231 = p__52230;
+var map__52231__$1 = ((((!((map__52231 == null)))?((((map__52231.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__52231.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__52231):map__52231);
+var ident = cljs.core.get.call(null,map__52231__$1,new cljs.core.Keyword(null,"ident","ident",-742346));
+var without = cljs.core.get.call(null,map__52231__$1,new cljs.core.Keyword(null,"without","without",1107036688));
+var params = cljs.core.get.call(null,map__52231__$1,new cljs.core.Keyword(null,"params","params",710516235));
+var post_mutation = cljs.core.get.call(null,map__52231__$1,new cljs.core.Keyword(null,"post-mutation","post-mutation",-1076606705));
+var fallback = cljs.core.get.call(null,map__52231__$1,new cljs.core.Keyword(null,"fallback","fallback",761637929));
+var parallel = cljs.core.get.call(null,map__52231__$1,new cljs.core.Keyword(null,"parallel","parallel",-1863607128));
+var refresh = cljs.core.get.call(null,map__52231__$1,new cljs.core.Keyword(null,"refresh","refresh",1947415525),cljs.core.PersistentVector.EMPTY);
+var marker = cljs.core.get.call(null,map__52231__$1,new cljs.core.Keyword(null,"marker","marker",865118313),true);
 if(cljs.core.truth_(fallback)){
 if((fallback instanceof cljs.core.Symbol)){
 } else {
@@ -441,19 +433,19 @@ throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Assert failed: ")
 } else {
 }
 
-return om.next.transact_BANG_.call(null,comp_or_reconciler,cljs.core.into.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core._conj.call(null,(function (){var x__35489__auto__ = cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"remote","remote",-1593576576),new cljs.core.Keyword(null,"refresh","refresh",1947415525),new cljs.core.Keyword(null,"parallel","parallel",-1863607128),new cljs.core.Keyword(null,"fallback","fallback",761637929),new cljs.core.Keyword(null,"marker","marker",865118313),new cljs.core.Keyword(null,"params","params",710516235),new cljs.core.Keyword(null,"post-mutation","post-mutation",-1076606705),new cljs.core.Keyword(null,"without","without",1107036688),new cljs.core.Keyword(null,"ident","ident",-742346),new cljs.core.Keyword(null,"query","query",-1288509510)],[remote,refresh,parallel,fallback,marker,params,post_mutation,without,ident,query]);
-return cljs.core._conj.call(null,cljs.core.List.EMPTY,x__35489__auto__);
+return om.next.transact_BANG_.call(null,comp_or_reconciler,cljs.core.into.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core._conj.call(null,(function (){var x__40156__auto__ = cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"refresh","refresh",1947415525),new cljs.core.Keyword(null,"parallel","parallel",-1863607128),new cljs.core.Keyword(null,"fallback","fallback",761637929),new cljs.core.Keyword(null,"marker","marker",865118313),new cljs.core.Keyword(null,"params","params",710516235),new cljs.core.Keyword(null,"post-mutation","post-mutation",-1076606705),new cljs.core.Keyword(null,"without","without",1107036688),new cljs.core.Keyword(null,"ident","ident",-742346),new cljs.core.Keyword(null,"query","query",-1288509510)],[refresh,parallel,fallback,marker,params,post_mutation,without,ident,query]);
+return cljs.core._conj.call(null,cljs.core.List.EMPTY,x__40156__auto__);
 })(),new cljs.core.Symbol("untangled","load","untangled/load",89075339,null)),new cljs.core.Keyword("ui","loading-data","ui/loading-data",-1566515143)], null),refresh));
 });
 
 untangled.client.data_fetch.load_data.cljs$lang$maxFixedArity = (2);
 
-untangled.client.data_fetch.load_data.cljs$lang$applyTo = (function (seq105360){
-var G__105361 = cljs.core.first.call(null,seq105360);
-var seq105360__$1 = cljs.core.next.call(null,seq105360);
-var G__105362 = cljs.core.first.call(null,seq105360__$1);
-var seq105360__$2 = cljs.core.next.call(null,seq105360__$1);
-return untangled.client.data_fetch.load_data.cljs$core$IFn$_invoke$arity$variadic(G__105361,G__105362,seq105360__$2);
+untangled.client.data_fetch.load_data.cljs$lang$applyTo = (function (seq52227){
+var G__52228 = cljs.core.first.call(null,seq52227);
+var seq52227__$1 = cljs.core.next.call(null,seq52227);
+var G__52229 = cljs.core.first.call(null,seq52227__$1);
+var seq52227__$2 = cljs.core.next.call(null,seq52227__$1);
+return untangled.client.data_fetch.load_data.cljs$core$IFn$_invoke$arity$variadic(G__52228,G__52229,seq52227__$2);
 });
 
 /**
@@ -466,58 +458,55 @@ return untangled.client.data_fetch.load_data.cljs$core$IFn$_invoke$arity$variadi
  *   should use the helper function `remote-load` as it's value:
  * 
  *   { :remote (df/remote-load env)
- *  ; NOTE: :remote must be the keyword name of a legal remote in your system; however,
- *  ; You must still name the remote in the `load-action` if it is something other than default.
  *  :action (fn []
  *     (load-field-action ...)
  *     ; other optimistic updates/state changes)}
  */
 untangled.client.data_fetch.load_field_action = (function untangled$client$data_fetch$load_field_action(var_args){
-var args__35783__auto__ = [];
-var len__35776__auto___105377 = arguments.length;
-var i__35777__auto___105378 = (0);
+var args__40450__auto__ = [];
+var len__40443__auto___52244 = arguments.length;
+var i__40444__auto___52245 = (0);
 while(true){
-if((i__35777__auto___105378 < len__35776__auto___105377)){
-args__35783__auto__.push((arguments[i__35777__auto___105378]));
+if((i__40444__auto___52245 < len__40443__auto___52244)){
+args__40450__auto__.push((arguments[i__40444__auto___52245]));
 
-var G__105379 = (i__35777__auto___105378 + (1));
-i__35777__auto___105378 = G__105379;
+var G__52246 = (i__40444__auto___52245 + (1));
+i__40444__auto___52245 = G__52246;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__35784__auto__ = ((((4) < args__35783__auto__.length))?(new cljs.core.IndexedSeq(args__35783__auto__.slice((4)),(0),null)):null);
-return untangled.client.data_fetch.load_field_action.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),(arguments[(3)]),argseq__35784__auto__);
+var argseq__40451__auto__ = ((((4) < args__40450__auto__.length))?(new cljs.core.IndexedSeq(args__40450__auto__.slice((4)),(0),null)):null);
+return untangled.client.data_fetch.load_field_action.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),(arguments[(3)]),argseq__40451__auto__);
 });
 
-untangled.client.data_fetch.load_field_action.cljs$core$IFn$_invoke$arity$variadic = (function (app_state,component_class,ident,field,p__105374){
-var map__105375 = p__105374;
-var map__105375__$1 = ((((!((map__105375 == null)))?((((map__105375.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__105375.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__105375):map__105375);
-var without = cljs.core.get.call(null,map__105375__$1,new cljs.core.Keyword(null,"without","without",1107036688));
-var remote = cljs.core.get.call(null,map__105375__$1,new cljs.core.Keyword(null,"remote","remote",-1593576576),new cljs.core.Keyword(null,"remote","remote",-1593576576));
-var params = cljs.core.get.call(null,map__105375__$1,new cljs.core.Keyword(null,"params","params",710516235));
-var post_mutation = cljs.core.get.call(null,map__105375__$1,new cljs.core.Keyword(null,"post-mutation","post-mutation",-1076606705));
-var fallback = cljs.core.get.call(null,map__105375__$1,new cljs.core.Keyword(null,"fallback","fallback",761637929));
-var parallel = cljs.core.get.call(null,map__105375__$1,new cljs.core.Keyword(null,"parallel","parallel",-1863607128));
-var refresh = cljs.core.get.call(null,map__105375__$1,new cljs.core.Keyword(null,"refresh","refresh",1947415525),cljs.core.PersistentVector.EMPTY);
-var marker = cljs.core.get.call(null,map__105375__$1,new cljs.core.Keyword(null,"marker","marker",865118313),true);
-return untangled.client.impl.data_fetch.mark_ready.call(null,cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"remote","remote",-1593576576),new cljs.core.Keyword(null,"refresh","refresh",1947415525),new cljs.core.Keyword(null,"parallel","parallel",-1863607128),new cljs.core.Keyword(null,"fallback","fallback",761637929),new cljs.core.Keyword(null,"marker","marker",865118313),new cljs.core.Keyword(null,"params","params",710516235),new cljs.core.Keyword(null,"field","field",-1302436500),new cljs.core.Keyword(null,"state","state",-1988618099),new cljs.core.Keyword(null,"post-mutation","post-mutation",-1076606705),new cljs.core.Keyword(null,"without","without",1107036688),new cljs.core.Keyword(null,"ident","ident",-742346),new cljs.core.Keyword(null,"query","query",-1288509510)],[remote,refresh,parallel,fallback,marker,params,field,app_state,post_mutation,without,ident,om.next.focus_query.call(null,om.next.get_query.call(null,component_class),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [field], null))]));
+untangled.client.data_fetch.load_field_action.cljs$core$IFn$_invoke$arity$variadic = (function (app_state,component_class,ident,field,p__52241){
+var map__52242 = p__52241;
+var map__52242__$1 = ((((!((map__52242 == null)))?((((map__52242.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__52242.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__52242):map__52242);
+var without = cljs.core.get.call(null,map__52242__$1,new cljs.core.Keyword(null,"without","without",1107036688));
+var params = cljs.core.get.call(null,map__52242__$1,new cljs.core.Keyword(null,"params","params",710516235));
+var post_mutation = cljs.core.get.call(null,map__52242__$1,new cljs.core.Keyword(null,"post-mutation","post-mutation",-1076606705));
+var fallback = cljs.core.get.call(null,map__52242__$1,new cljs.core.Keyword(null,"fallback","fallback",761637929));
+var parallel = cljs.core.get.call(null,map__52242__$1,new cljs.core.Keyword(null,"parallel","parallel",-1863607128));
+var refresh = cljs.core.get.call(null,map__52242__$1,new cljs.core.Keyword(null,"refresh","refresh",1947415525),cljs.core.PersistentVector.EMPTY);
+var marker = cljs.core.get.call(null,map__52242__$1,new cljs.core.Keyword(null,"marker","marker",865118313),true);
+return untangled.client.impl.data_fetch.mark_ready.call(null,cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"refresh","refresh",1947415525),new cljs.core.Keyword(null,"parallel","parallel",-1863607128),new cljs.core.Keyword(null,"fallback","fallback",761637929),new cljs.core.Keyword(null,"marker","marker",865118313),new cljs.core.Keyword(null,"params","params",710516235),new cljs.core.Keyword(null,"field","field",-1302436500),new cljs.core.Keyword(null,"state","state",-1988618099),new cljs.core.Keyword(null,"post-mutation","post-mutation",-1076606705),new cljs.core.Keyword(null,"without","without",1107036688),new cljs.core.Keyword(null,"ident","ident",-742346),new cljs.core.Keyword(null,"query","query",-1288509510)],[refresh,parallel,fallback,marker,params,field,app_state,post_mutation,without,ident,om.next.focus_query.call(null,om.next.get_query.call(null,component_class),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [field], null))]));
 });
 
 untangled.client.data_fetch.load_field_action.cljs$lang$maxFixedArity = (4);
 
-untangled.client.data_fetch.load_field_action.cljs$lang$applyTo = (function (seq105369){
-var G__105370 = cljs.core.first.call(null,seq105369);
-var seq105369__$1 = cljs.core.next.call(null,seq105369);
-var G__105371 = cljs.core.first.call(null,seq105369__$1);
-var seq105369__$2 = cljs.core.next.call(null,seq105369__$1);
-var G__105372 = cljs.core.first.call(null,seq105369__$2);
-var seq105369__$3 = cljs.core.next.call(null,seq105369__$2);
-var G__105373 = cljs.core.first.call(null,seq105369__$3);
-var seq105369__$4 = cljs.core.next.call(null,seq105369__$3);
-return untangled.client.data_fetch.load_field_action.cljs$core$IFn$_invoke$arity$variadic(G__105370,G__105371,G__105372,G__105373,seq105369__$4);
+untangled.client.data_fetch.load_field_action.cljs$lang$applyTo = (function (seq52236){
+var G__52237 = cljs.core.first.call(null,seq52236);
+var seq52236__$1 = cljs.core.next.call(null,seq52236);
+var G__52238 = cljs.core.first.call(null,seq52236__$1);
+var seq52236__$2 = cljs.core.next.call(null,seq52236__$1);
+var G__52239 = cljs.core.first.call(null,seq52236__$2);
+var seq52236__$3 = cljs.core.next.call(null,seq52236__$2);
+var G__52240 = cljs.core.first.call(null,seq52236__$3);
+var seq52236__$4 = cljs.core.next.call(null,seq52236__$3);
+return untangled.client.data_fetch.load_field_action.cljs$core$IFn$_invoke$arity$variadic(G__52237,G__52238,G__52239,G__52240,seq52236__$4);
 });
 
 /**
@@ -537,48 +526,47 @@ return untangled.client.data_fetch.load_field_action.cljs$core$IFn$_invoke$arity
  *     ; other optimistic updates/state changes)}
  */
 untangled.client.data_fetch.load_data_action = (function untangled$client$data_fetch$load_data_action(var_args){
-var args__35783__auto__ = [];
-var len__35776__auto___105386 = arguments.length;
-var i__35777__auto___105387 = (0);
+var args__40450__auto__ = [];
+var len__40443__auto___52253 = arguments.length;
+var i__40444__auto___52254 = (0);
 while(true){
-if((i__35777__auto___105387 < len__35776__auto___105386)){
-args__35783__auto__.push((arguments[i__35777__auto___105387]));
+if((i__40444__auto___52254 < len__40443__auto___52253)){
+args__40450__auto__.push((arguments[i__40444__auto___52254]));
 
-var G__105388 = (i__35777__auto___105387 + (1));
-i__35777__auto___105387 = G__105388;
+var G__52255 = (i__40444__auto___52254 + (1));
+i__40444__auto___52254 = G__52255;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__35784__auto__ = ((((2) < args__35783__auto__.length))?(new cljs.core.IndexedSeq(args__35783__auto__.slice((2)),(0),null)):null);
-return untangled.client.data_fetch.load_data_action.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__35784__auto__);
+var argseq__40451__auto__ = ((((2) < args__40450__auto__.length))?(new cljs.core.IndexedSeq(args__40450__auto__.slice((2)),(0),null)):null);
+return untangled.client.data_fetch.load_data_action.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__40451__auto__);
 });
 
-untangled.client.data_fetch.load_data_action.cljs$core$IFn$_invoke$arity$variadic = (function (app_state,query,p__105383){
-var map__105384 = p__105383;
-var map__105384__$1 = ((((!((map__105384 == null)))?((((map__105384.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__105384.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__105384):map__105384);
-var ident = cljs.core.get.call(null,map__105384__$1,new cljs.core.Keyword(null,"ident","ident",-742346));
-var without = cljs.core.get.call(null,map__105384__$1,new cljs.core.Keyword(null,"without","without",1107036688));
-var params = cljs.core.get.call(null,map__105384__$1,new cljs.core.Keyword(null,"params","params",710516235));
-var remote = cljs.core.get.call(null,map__105384__$1,new cljs.core.Keyword(null,"remote","remote",-1593576576),new cljs.core.Keyword(null,"remote","remote",-1593576576));
-var post_mutation = cljs.core.get.call(null,map__105384__$1,new cljs.core.Keyword(null,"post-mutation","post-mutation",-1076606705));
-var fallback = cljs.core.get.call(null,map__105384__$1,new cljs.core.Keyword(null,"fallback","fallback",761637929));
-var parallel = cljs.core.get.call(null,map__105384__$1,new cljs.core.Keyword(null,"parallel","parallel",-1863607128));
-var refresh = cljs.core.get.call(null,map__105384__$1,new cljs.core.Keyword(null,"refresh","refresh",1947415525),cljs.core.PersistentVector.EMPTY);
-var marker = cljs.core.get.call(null,map__105384__$1,new cljs.core.Keyword(null,"marker","marker",865118313),true);
-return untangled.client.impl.data_fetch.mark_ready.call(null,cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"remote","remote",-1593576576),new cljs.core.Keyword(null,"refresh","refresh",1947415525),new cljs.core.Keyword(null,"parallel","parallel",-1863607128),new cljs.core.Keyword(null,"fallback","fallback",761637929),new cljs.core.Keyword(null,"marker","marker",865118313),new cljs.core.Keyword(null,"params","params",710516235),new cljs.core.Keyword(null,"state","state",-1988618099),new cljs.core.Keyword(null,"post-mutation","post-mutation",-1076606705),new cljs.core.Keyword(null,"without","without",1107036688),new cljs.core.Keyword(null,"ident","ident",-742346),new cljs.core.Keyword(null,"query","query",-1288509510)],[remote,refresh,parallel,fallback,marker,params,app_state,post_mutation,without,ident,query]));
+untangled.client.data_fetch.load_data_action.cljs$core$IFn$_invoke$arity$variadic = (function (app_state,query,p__52250){
+var map__52251 = p__52250;
+var map__52251__$1 = ((((!((map__52251 == null)))?((((map__52251.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__52251.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__52251):map__52251);
+var ident = cljs.core.get.call(null,map__52251__$1,new cljs.core.Keyword(null,"ident","ident",-742346));
+var without = cljs.core.get.call(null,map__52251__$1,new cljs.core.Keyword(null,"without","without",1107036688));
+var params = cljs.core.get.call(null,map__52251__$1,new cljs.core.Keyword(null,"params","params",710516235));
+var post_mutation = cljs.core.get.call(null,map__52251__$1,new cljs.core.Keyword(null,"post-mutation","post-mutation",-1076606705));
+var fallback = cljs.core.get.call(null,map__52251__$1,new cljs.core.Keyword(null,"fallback","fallback",761637929));
+var parallel = cljs.core.get.call(null,map__52251__$1,new cljs.core.Keyword(null,"parallel","parallel",-1863607128));
+var refresh = cljs.core.get.call(null,map__52251__$1,new cljs.core.Keyword(null,"refresh","refresh",1947415525),cljs.core.PersistentVector.EMPTY);
+var marker = cljs.core.get.call(null,map__52251__$1,new cljs.core.Keyword(null,"marker","marker",865118313),true);
+return untangled.client.impl.data_fetch.mark_ready.call(null,cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"refresh","refresh",1947415525),new cljs.core.Keyword(null,"parallel","parallel",-1863607128),new cljs.core.Keyword(null,"fallback","fallback",761637929),new cljs.core.Keyword(null,"marker","marker",865118313),new cljs.core.Keyword(null,"params","params",710516235),new cljs.core.Keyword(null,"state","state",-1988618099),new cljs.core.Keyword(null,"post-mutation","post-mutation",-1076606705),new cljs.core.Keyword(null,"without","without",1107036688),new cljs.core.Keyword(null,"ident","ident",-742346),new cljs.core.Keyword(null,"query","query",-1288509510)],[refresh,parallel,fallback,marker,params,app_state,post_mutation,without,ident,query]));
 });
 
 untangled.client.data_fetch.load_data_action.cljs$lang$maxFixedArity = (2);
 
-untangled.client.data_fetch.load_data_action.cljs$lang$applyTo = (function (seq105380){
-var G__105381 = cljs.core.first.call(null,seq105380);
-var seq105380__$1 = cljs.core.next.call(null,seq105380);
-var G__105382 = cljs.core.first.call(null,seq105380__$1);
-var seq105380__$2 = cljs.core.next.call(null,seq105380__$1);
-return untangled.client.data_fetch.load_data_action.cljs$core$IFn$_invoke$arity$variadic(G__105381,G__105382,seq105380__$2);
+untangled.client.data_fetch.load_data_action.cljs$lang$applyTo = (function (seq52247){
+var G__52248 = cljs.core.first.call(null,seq52247);
+var seq52247__$1 = cljs.core.next.call(null,seq52247);
+var G__52249 = cljs.core.first.call(null,seq52247__$1);
+var seq52247__$2 = cljs.core.next.call(null,seq52247__$1);
+return untangled.client.data_fetch.load_data_action.cljs$core$IFn$_invoke$arity$variadic(G__52248,G__52249,seq52247__$2);
 });
 
 /**
@@ -650,44 +638,44 @@ return untangled.client.impl.data_fetch.failed_QMARK_.call(null,state);
  *   ```
  */
 untangled.client.data_fetch.lazily_loaded = (function untangled$client$data_fetch$lazily_loaded(var_args){
-var args__35783__auto__ = [];
-var len__35776__auto___105395 = arguments.length;
-var i__35777__auto___105396 = (0);
+var args__40450__auto__ = [];
+var len__40443__auto___52262 = arguments.length;
+var i__40444__auto___52263 = (0);
 while(true){
-if((i__35777__auto___105396 < len__35776__auto___105395)){
-args__35783__auto__.push((arguments[i__35777__auto___105396]));
+if((i__40444__auto___52263 < len__40443__auto___52262)){
+args__40450__auto__.push((arguments[i__40444__auto___52263]));
 
-var G__105397 = (i__35777__auto___105396 + (1));
-i__35777__auto___105396 = G__105397;
+var G__52264 = (i__40444__auto___52263 + (1));
+i__40444__auto___52263 = G__52264;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__35784__auto__ = ((((2) < args__35783__auto__.length))?(new cljs.core.IndexedSeq(args__35783__auto__.slice((2)),(0),null)):null);
-return untangled.client.data_fetch.lazily_loaded.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__35784__auto__);
+var argseq__40451__auto__ = ((((2) < args__40450__auto__.length))?(new cljs.core.IndexedSeq(args__40450__auto__.slice((2)),(0),null)):null);
+return untangled.client.data_fetch.lazily_loaded.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__40451__auto__);
 });
 
-untangled.client.data_fetch.lazily_loaded.cljs$core$IFn$_invoke$arity$variadic = (function (data_render,props,p__105392){
-var map__105393 = p__105392;
-var map__105393__$1 = ((((!((map__105393 == null)))?((((map__105393.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__105393.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__105393):map__105393);
-var ready_render = cljs.core.get.call(null,map__105393__$1,new cljs.core.Keyword(null,"ready-render","ready-render",-1421004936),((function (map__105393,map__105393__$1){
+untangled.client.data_fetch.lazily_loaded.cljs$core$IFn$_invoke$arity$variadic = (function (data_render,props,p__52259){
+var map__52260 = p__52259;
+var map__52260__$1 = ((((!((map__52260 == null)))?((((map__52260.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__52260.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__52260):map__52260);
+var ready_render = cljs.core.get.call(null,map__52260__$1,new cljs.core.Keyword(null,"ready-render","ready-render",-1421004936),((function (map__52260,map__52260__$1){
 return (function (_){
 return om.dom.div.call(null,cljs.core.clj__GT_js.call(null,new cljs.core.PersistentArrayMap(null, 1, ["className","lazy-loading-ready"], null)),"Queued");
-});})(map__105393,map__105393__$1))
+});})(map__52260,map__52260__$1))
 );
-var loading_render = cljs.core.get.call(null,map__105393__$1,new cljs.core.Keyword(null,"loading-render","loading-render",-1821208169),((function (map__105393,map__105393__$1,ready_render){
+var loading_render = cljs.core.get.call(null,map__52260__$1,new cljs.core.Keyword(null,"loading-render","loading-render",-1821208169),((function (map__52260,map__52260__$1,ready_render){
 return (function (_){
 return om.dom.div.call(null,cljs.core.clj__GT_js.call(null,new cljs.core.PersistentArrayMap(null, 1, ["className","lazy-loading-load"], null)),"Loading...");
-});})(map__105393,map__105393__$1,ready_render))
+});})(map__52260,map__52260__$1,ready_render))
 );
-var failed_render = cljs.core.get.call(null,map__105393__$1,new cljs.core.Keyword(null,"failed-render","failed-render",-433071277),((function (map__105393,map__105393__$1,ready_render,loading_render){
+var failed_render = cljs.core.get.call(null,map__52260__$1,new cljs.core.Keyword(null,"failed-render","failed-render",-433071277),((function (map__52260,map__52260__$1,ready_render,loading_render){
 return (function (_){
 return om.dom.div.call(null,cljs.core.clj__GT_js.call(null,new cljs.core.PersistentArrayMap(null, 1, ["className","lazy-loading-failed"], null)),"Loading error!");
-});})(map__105393,map__105393__$1,ready_render,loading_render))
+});})(map__52260,map__52260__$1,ready_render,loading_render))
 );
-var not_present_render = cljs.core.get.call(null,map__105393__$1,new cljs.core.Keyword(null,"not-present-render","not-present-render",-946766938));
+var not_present_render = cljs.core.get.call(null,map__52260__$1,new cljs.core.Keyword(null,"not-present-render","not-present-render",-946766938));
 var state = new cljs.core.Keyword("ui","fetch-state","ui/fetch-state",1030289927).cljs$core$IFn$_invoke$arity$1(props);
 if(cljs.core.truth_(untangled.client.data_fetch.ready_QMARK_.call(null,state))){
 return ready_render.call(null,props);
@@ -698,11 +686,11 @@ return loading_render.call(null,props);
 if(cljs.core.truth_(untangled.client.data_fetch.failed_QMARK_.call(null,state))){
 return failed_render.call(null,props);
 } else {
-if(cljs.core.truth_((function (){var and__34543__auto__ = not_present_render;
-if(cljs.core.truth_(and__34543__auto__)){
+if(cljs.core.truth_((function (){var and__39210__auto__ = not_present_render;
+if(cljs.core.truth_(and__39210__auto__)){
 return (props == null);
 } else {
-return and__34543__auto__;
+return and__39210__auto__;
 }
 })())){
 return not_present_render.call(null,props);
@@ -717,13 +705,13 @@ return data_render.call(null,props);
 
 untangled.client.data_fetch.lazily_loaded.cljs$lang$maxFixedArity = (2);
 
-untangled.client.data_fetch.lazily_loaded.cljs$lang$applyTo = (function (seq105389){
-var G__105390 = cljs.core.first.call(null,seq105389);
-var seq105389__$1 = cljs.core.next.call(null,seq105389);
-var G__105391 = cljs.core.first.call(null,seq105389__$1);
-var seq105389__$2 = cljs.core.next.call(null,seq105389__$1);
-return untangled.client.data_fetch.lazily_loaded.cljs$core$IFn$_invoke$arity$variadic(G__105390,G__105391,seq105389__$2);
+untangled.client.data_fetch.lazily_loaded.cljs$lang$applyTo = (function (seq52256){
+var G__52257 = cljs.core.first.call(null,seq52256);
+var seq52256__$1 = cljs.core.next.call(null,seq52256);
+var G__52258 = cljs.core.first.call(null,seq52256__$1);
+var seq52256__$2 = cljs.core.next.call(null,seq52256__$1);
+return untangled.client.data_fetch.lazily_loaded.cljs$core$IFn$_invoke$arity$variadic(G__52257,G__52258,seq52256__$2);
 });
 
 
-//# sourceMappingURL=data_fetch.js.map?rel=1491640859113
+//# sourceMappingURL=data_fetch.js.map?rel=1491695672254

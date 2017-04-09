@@ -9,7 +9,7 @@
     [untangled.server.impl.components.handler :as h]
 
     [taoensso.timbre :as timbre]
-    [ring.middleware.cookies :as cookies]
+    [ring.middleware.cookies :refer [wrap-cookies]]
     [ring.util.response :as response]))
 
 (defn logging-mutate [env k params]
@@ -24,7 +24,7 @@
     ; If you're sure this is the only component hooking in, you could simply set it instead.
     (let [vanilla-pipeline (h/get-pre-hook handler)]
       (h/set-pre-hook! handler (comp vanilla-pipeline
-                                     (partial cookies/wrap-cookies))))
+                                     (partial wrap-cookies))))
     this)
   (stop [this] this))
 
@@ -35,14 +35,14 @@
     :parser-injections #{:config}
     ; TEMPLATE: :examples
     ; An example for providing extra route handlers (e.g. REST-based endpoints for non-Om clients)
-    :extra-routes {:routes   [["/hello/" [#"\d+" :id]] :sample1] ; See docs in Bidi for making route defs
+    :extra-routes {:routes   ["/" {["hello/" [#"\d+" :id]] :sampel1}]
                    ; Use the route target keyword to define the function that handles that route
-                   :handlers {:sample1 (fn [env {:keys [route-params]}]
+                   :handlers {:sampel1 (fn [env {:keys [route-params] :as params}]
                                          (timbre/info "Got a request on sample1 route with " :ENV env :ROUTE-PARAMS route-params)
-                                         (-> (str "Hello: " (:id route-params))
+                                         (-> (str "Hello: " (:id route-params)
+                                                  "PARAMS: " params)
                                              response/response
                                              (response/content-type "text/plain")))}}
-    ; TEMPLATE: :examples
-    :components {:pipeline (component/using                 ; add some additional wrappers to the pipeline
+    :components {:pipeline (component/using
                              (map->AdditionalPipeline {})
                              [:handler])}))

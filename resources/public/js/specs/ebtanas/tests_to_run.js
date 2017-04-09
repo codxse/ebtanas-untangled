@@ -4,4 +4,4 @@ goog.require('cljs.core');
 goog.require('ebtanas.ui.root_spec');
 goog.require('ebtanas.sample_spec');
 
-//# sourceMappingURL=tests_to_run.js.map?rel=1491640781104
+//# sourceMappingURL=tests_to_run.js.map?rel=1491641832114

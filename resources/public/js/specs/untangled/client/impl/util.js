@@ -8,23 +8,23 @@ untangled.client.impl.util.atom_QMARK_ = (function untangled$client$impl$util$at
 return (a instanceof cljs.core.Atom);
 });
 untangled.client.impl.util.deep_merge = (function untangled$client$impl$util$deep_merge(var_args){
-var args__35783__auto__ = [];
-var len__35776__auto___46803 = arguments.length;
-var i__35777__auto___46804 = (0);
+var args__40450__auto__ = [];
+var len__40443__auto___42677 = arguments.length;
+var i__40444__auto___42678 = (0);
 while(true){
-if((i__35777__auto___46804 < len__35776__auto___46803)){
-args__35783__auto__.push((arguments[i__35777__auto___46804]));
+if((i__40444__auto___42678 < len__40443__auto___42677)){
+args__40450__auto__.push((arguments[i__40444__auto___42678]));
 
-var G__46805 = (i__35777__auto___46804 + (1));
-i__35777__auto___46804 = G__46805;
+var G__42679 = (i__40444__auto___42678 + (1));
+i__40444__auto___42678 = G__42679;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__35784__auto__ = ((((0) < args__35783__auto__.length))?(new cljs.core.IndexedSeq(args__35783__auto__.slice((0)),(0),null)):null);
-return untangled.client.impl.util.deep_merge.cljs$core$IFn$_invoke$arity$variadic(argseq__35784__auto__);
+var argseq__40451__auto__ = ((((0) < args__40450__auto__.length))?(new cljs.core.IndexedSeq(args__40450__auto__.slice((0)),(0),null)):null);
+return untangled.client.impl.util.deep_merge.cljs$core$IFn$_invoke$arity$variadic(argseq__40451__auto__);
 });
 
 untangled.client.impl.util.deep_merge.cljs$core$IFn$_invoke$arity$variadic = (function (xs){
@@ -38,8 +38,8 @@ return cljs.core.last.call(null,xs);
 
 untangled.client.impl.util.deep_merge.cljs$lang$maxFixedArity = (0);
 
-untangled.client.impl.util.deep_merge.cljs$lang$applyTo = (function (seq46802){
-return untangled.client.impl.util.deep_merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq46802));
+untangled.client.impl.util.deep_merge.cljs$lang$applyTo = (function (seq42676){
+return untangled.client.impl.util.deep_merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq42676));
 });
 
 /**
@@ -47,23 +47,23 @@ return untangled.client.impl.util.deep_merge.cljs$core$IFn$_invoke$arity$variadi
  * (like get-in), or both.
  */
 untangled.client.impl.util.log_app_state = (function untangled$client$impl$util$log_app_state(var_args){
-var args__35783__auto__ = [];
-var len__35776__auto___46812 = arguments.length;
-var i__35777__auto___46813 = (0);
+var args__40450__auto__ = [];
+var len__40443__auto___42686 = arguments.length;
+var i__40444__auto___42687 = (0);
 while(true){
-if((i__35777__auto___46813 < len__35776__auto___46812)){
-args__35783__auto__.push((arguments[i__35777__auto___46813]));
+if((i__40444__auto___42687 < len__40443__auto___42686)){
+args__40450__auto__.push((arguments[i__40444__auto___42687]));
 
-var G__46814 = (i__35777__auto___46813 + (1));
-i__35777__auto___46813 = G__46814;
+var G__42688 = (i__40444__auto___42687 + (1));
+i__40444__auto___42687 = G__42688;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__35784__auto__ = ((((1) < args__35783__auto__.length))?(new cljs.core.IndexedSeq(args__35783__auto__.slice((1)),(0),null)):null);
-return untangled.client.impl.util.log_app_state.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__35784__auto__);
+var argseq__40451__auto__ = ((((1) < args__40450__auto__.length))?(new cljs.core.IndexedSeq(args__40450__auto__.slice((1)),(0),null)):null);
+return untangled.client.impl.util.log_app_state.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__40451__auto__);
 });
 
 untangled.client.impl.util.log_app_state.cljs$core$IFn$_invoke$arity$variadic = (function (app_atom,keys_and_paths){
@@ -83,34 +83,34 @@ var path = make_path.call(null,location);
 return cljs.core.assoc_in.call(null,acc,path,cljs.core.get_in.call(null,cljs.core.deref.call(null,app_state),path));
 });})(app_state))
 ;
-var pred__46809 = cljs.core._EQ_;
-var expr__46810 = cljs.core.count.call(null,keys_and_paths);
-if(cljs.core.truth_(pred__46809.call(null,(0),expr__46810))){
+var pred__42683 = cljs.core._EQ_;
+var expr__42684 = cljs.core.count.call(null,keys_and_paths);
+if(cljs.core.truth_(pred__42683.call(null,(0),expr__42684))){
 return cljs.core.deref.call(null,app_state);
 } else {
-if(cljs.core.truth_(pred__46809.call(null,(1),expr__46810))){
+if(cljs.core.truth_(pred__42683.call(null,(1),expr__42684))){
 return cljs.core.get_in.call(null,cljs.core.deref.call(null,app_state),make_path.call(null,cljs.core.first.call(null,keys_and_paths)));
 } else {
 return cljs.core.reduce.call(null,process_location,cljs.core.PersistentArrayMap.EMPTY,keys_and_paths);
 }
 }
 })());
-}catch (e46808){if((e46808 instanceof Error)){
-var e = e46808;
+}catch (e42682){if((e42682 instanceof Error)){
+var e = e42682;
 throw cljs.core.ex_info.call(null,"untangled.client.impl.util/log-app-state expects an atom with an untangled client",cljs.core.PersistentArrayMap.EMPTY);
 } else {
-throw e46808;
+throw e42682;
 
 }
 }});
 
 untangled.client.impl.util.log_app_state.cljs$lang$maxFixedArity = (1);
 
-untangled.client.impl.util.log_app_state.cljs$lang$applyTo = (function (seq46806){
-var G__46807 = cljs.core.first.call(null,seq46806);
-var seq46806__$1 = cljs.core.next.call(null,seq46806);
-return untangled.client.impl.util.log_app_state.cljs$core$IFn$_invoke$arity$variadic(G__46807,seq46806__$1);
+untangled.client.impl.util.log_app_state.cljs$lang$applyTo = (function (seq42680){
+var G__42681 = cljs.core.first.call(null,seq42680);
+var seq42680__$1 = cljs.core.next.call(null,seq42680);
+return untangled.client.impl.util.log_app_state.cljs$core$IFn$_invoke$arity$variadic(G__42681,seq42680__$1);
 });
 
 
-//# sourceMappingURL=util.js.map?rel=1491640761472
+//# sourceMappingURL=util.js.map?rel=1491695652016

@@ -21,23 +21,23 @@ return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(s)].join('');
  *   those things in their queries.
  */
 untangled.dom.force_render = (function untangled$dom$force_render(var_args){
-var args51250 = [];
-var len__35776__auto___51253 = arguments.length;
-var i__35777__auto___51254 = (0);
+var args44127 = [];
+var len__40443__auto___44130 = arguments.length;
+var i__40444__auto___44131 = (0);
 while(true){
-if((i__35777__auto___51254 < len__35776__auto___51253)){
-args51250.push((arguments[i__35777__auto___51254]));
+if((i__40444__auto___44131 < len__40443__auto___44130)){
+args44127.push((arguments[i__40444__auto___44131]));
 
-var G__51255 = (i__35777__auto___51254 + (1));
-i__35777__auto___51254 = G__51255;
+var G__44132 = (i__40444__auto___44131 + (1));
+i__40444__auto___44131 = G__44132;
 continue;
 } else {
 }
 break;
 }
 
-var G__51252 = args51250.length;
-switch (G__51252) {
+var G__44129 = args44127.length;
+switch (G__44129) {
 case 2:
 return untangled.dom.force_render.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -47,7 +47,7 @@ return untangled.dom.force_render.cljs$core$IFn$_invoke$arity$1((arguments[(0)])
 
 break;
 default:
-throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Invalid arity: "),cljs.core.str.cljs$core$IFn$_invoke$arity$1(args51250.length)].join('')));
+throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Invalid arity: "),cljs.core.str.cljs$core$IFn$_invoke$arity$1(args44127.length)].join('')));
 
 }
 });
@@ -79,32 +79,32 @@ untangled.dom.force_render.cljs$lang$maxFixedArity = 2;
  */
 untangled.dom.append_class = (function untangled$dom$append_class(component,local_state_key){
 return (function() { 
-var G__51263__delegate = function (state_key,default_class_string,p__51260){
-var map__51261 = p__51260;
-var map__51261__$1 = ((((!((map__51261 == null)))?((((map__51261.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__51261.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__51261):map__51261);
-var when_true = cljs.core.get.call(null,map__51261__$1,new cljs.core.Keyword(null,"when-true","when-true",-657079170),"active");
-var when_false = cljs.core.get.call(null,map__51261__$1,new cljs.core.Keyword(null,"when-false","when-false",815014297),"");
+var G__44140__delegate = function (state_key,default_class_string,p__44137){
+var map__44138 = p__44137;
+var map__44138__$1 = ((((!((map__44138 == null)))?((((map__44138.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__44138.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__44138):map__44138);
+var when_true = cljs.core.get.call(null,map__44138__$1,new cljs.core.Keyword(null,"when-true","when-true",-657079170),"active");
+var when_false = cljs.core.get.call(null,map__44138__$1,new cljs.core.Keyword(null,"when-false","when-false",815014297),"");
 var append_string = ((cljs.core._EQ_.call(null,state_key,om.next.get_state.call(null,component,local_state_key)))?when_true:when_false);
 return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(default_class_string),cljs.core.str.cljs$core$IFn$_invoke$arity$1(" "),cljs.core.str.cljs$core$IFn$_invoke$arity$1(append_string)].join('');
 };
-var G__51263 = function (state_key,default_class_string,var_args){
-var p__51260 = null;
+var G__44140 = function (state_key,default_class_string,var_args){
+var p__44137 = null;
 if (arguments.length > 2) {
-var G__51264__i = 0, G__51264__a = new Array(arguments.length -  2);
-while (G__51264__i < G__51264__a.length) {G__51264__a[G__51264__i] = arguments[G__51264__i + 2]; ++G__51264__i;}
-  p__51260 = new cljs.core.IndexedSeq(G__51264__a,0);
+var G__44141__i = 0, G__44141__a = new Array(arguments.length -  2);
+while (G__44141__i < G__44141__a.length) {G__44141__a[G__44141__i] = arguments[G__44141__i + 2]; ++G__44141__i;}
+  p__44137 = new cljs.core.IndexedSeq(G__44141__a,0);
 } 
-return G__51263__delegate.call(this,state_key,default_class_string,p__51260);};
-G__51263.cljs$lang$maxFixedArity = 2;
-G__51263.cljs$lang$applyTo = (function (arglist__51265){
-var state_key = cljs.core.first(arglist__51265);
-arglist__51265 = cljs.core.next(arglist__51265);
-var default_class_string = cljs.core.first(arglist__51265);
-var p__51260 = cljs.core.rest(arglist__51265);
-return G__51263__delegate(state_key,default_class_string,p__51260);
+return G__44140__delegate.call(this,state_key,default_class_string,p__44137);};
+G__44140.cljs$lang$maxFixedArity = 2;
+G__44140.cljs$lang$applyTo = (function (arglist__44142){
+var state_key = cljs.core.first(arglist__44142);
+arglist__44142 = cljs.core.next(arglist__44142);
+var default_class_string = cljs.core.first(arglist__44142);
+var p__44137 = cljs.core.rest(arglist__44142);
+return G__44140__delegate(state_key,default_class_string,p__44137);
 });
-G__51263.cljs$core$IFn$_invoke$arity$variadic = G__51263__delegate;
-return G__51263;
+G__44140.cljs$core$IFn$_invoke$arity$variadic = G__44140__delegate;
+return G__44140;
 })()
 ;
 });
@@ -124,30 +124,30 @@ return G__51263;
  *   
  */
 untangled.dom.toggle_class = (function untangled$dom$toggle_class(var_args){
-var args__35783__auto__ = [];
-var len__35776__auto___51273 = arguments.length;
-var i__35777__auto___51274 = (0);
+var args__40450__auto__ = [];
+var len__40443__auto___44150 = arguments.length;
+var i__40444__auto___44151 = (0);
 while(true){
-if((i__35777__auto___51274 < len__35776__auto___51273)){
-args__35783__auto__.push((arguments[i__35777__auto___51274]));
+if((i__40444__auto___44151 < len__40443__auto___44150)){
+args__40450__auto__.push((arguments[i__40444__auto___44151]));
 
-var G__51275 = (i__35777__auto___51274 + (1));
-i__35777__auto___51274 = G__51275;
+var G__44152 = (i__40444__auto___44151 + (1));
+i__40444__auto___44151 = G__44152;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__35784__auto__ = ((((3) < args__35783__auto__.length))?(new cljs.core.IndexedSeq(args__35783__auto__.slice((3)),(0),null)):null);
-return untangled.dom.toggle_class.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),argseq__35784__auto__);
+var argseq__40451__auto__ = ((((3) < args__40450__auto__.length))?(new cljs.core.IndexedSeq(args__40450__auto__.slice((3)),(0),null)):null);
+return untangled.dom.toggle_class.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),argseq__40451__auto__);
 });
 
-untangled.dom.toggle_class.cljs$core$IFn$_invoke$arity$variadic = (function (data,key,always_classes,p__51270){
-var map__51271 = p__51270;
-var map__51271__$1 = ((((!((map__51271 == null)))?((((map__51271.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__51271.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__51271):map__51271);
-var when_true = cljs.core.get.call(null,map__51271__$1,new cljs.core.Keyword(null,"when-true","when-true",-657079170),"active");
-var when_false = cljs.core.get.call(null,map__51271__$1,new cljs.core.Keyword(null,"when-false","when-false",815014297),"");
+untangled.dom.toggle_class.cljs$core$IFn$_invoke$arity$variadic = (function (data,key,always_classes,p__44147){
+var map__44148 = p__44147;
+var map__44148__$1 = ((((!((map__44148 == null)))?((((map__44148.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__44148.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__44148):map__44148);
+var when_true = cljs.core.get.call(null,map__44148__$1,new cljs.core.Keyword(null,"when-true","when-true",-657079170),"active");
+var when_false = cljs.core.get.call(null,map__44148__$1,new cljs.core.Keyword(null,"when-false","when-false",815014297),"");
 if(cljs.core.truth_(cljs.core.get.call(null,data,key))){
 return clojure.string.join.call(null," ",new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [always_classes,when_true], null));
 } else {
@@ -157,14 +157,14 @@ return clojure.string.join.call(null," ",new cljs.core.PersistentVector(null, 2,
 
 untangled.dom.toggle_class.cljs$lang$maxFixedArity = (3);
 
-untangled.dom.toggle_class.cljs$lang$applyTo = (function (seq51266){
-var G__51267 = cljs.core.first.call(null,seq51266);
-var seq51266__$1 = cljs.core.next.call(null,seq51266);
-var G__51268 = cljs.core.first.call(null,seq51266__$1);
-var seq51266__$2 = cljs.core.next.call(null,seq51266__$1);
-var G__51269 = cljs.core.first.call(null,seq51266__$2);
-var seq51266__$3 = cljs.core.next.call(null,seq51266__$2);
-return untangled.dom.toggle_class.cljs$core$IFn$_invoke$arity$variadic(G__51267,G__51268,G__51269,seq51266__$3);
+untangled.dom.toggle_class.cljs$lang$applyTo = (function (seq44143){
+var G__44144 = cljs.core.first.call(null,seq44143);
+var seq44143__$1 = cljs.core.next.call(null,seq44143);
+var G__44145 = cljs.core.first.call(null,seq44143__$1);
+var seq44143__$2 = cljs.core.next.call(null,seq44143__$1);
+var G__44146 = cljs.core.first.call(null,seq44143__$2);
+var seq44143__$3 = cljs.core.next.call(null,seq44143__$2);
+return untangled.dom.toggle_class.cljs$core$IFn$_invoke$arity$variadic(G__44144,G__44145,G__44146,seq44143__$3);
 });
 
 /**
@@ -172,13 +172,13 @@ return untangled.dom.toggle_class.cljs$core$IFn$_invoke$arity$variadic(G__51267,
  */
 untangled.dom.text_value = (function untangled$dom$text_value(evt){
 try{return evt.target.value;
-}catch (e51277){if((e51277 instanceof Object)){
-var e = e51277;
+}catch (e44154){if((e44154 instanceof Object)){
+var e = e44154;
 return untangled.client.logging.warn.call(null,"Event had no target when trying to pull text");
 } else {
-throw e51277;
+throw e44154;
 
 }
 }});
 
-//# sourceMappingURL=dom.js.map?rel=1491640764682
+//# sourceMappingURL=dom.js.map?rel=1491695654688

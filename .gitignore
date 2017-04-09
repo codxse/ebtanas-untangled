@@ -13,3 +13,6 @@ pom.xml.asc
 *.iml
 *.idea
 *.log
+yarn.lock
+package.json
+node_modules
