@@ -11,6 +11,87 @@
     [untangled.client.core :as uc]
     [goog.string :as gstring]))
 
+(defui ^:once NavigationItem
+  static uc/InitialAppState
+  (initial-state [this {:keys [name icon url active]}]
+    {:name name :icon icon :url url :active active})
+  static om/Ident
+  (ident [this {:keys [name]}]
+    [:navItem/by-name name])
+  static om/IQuery
+  (query [this]
+    [:name :icon :url :active])
+  Object
+  (render [this]
+    (let [{:keys [name icon url active]} (om/props this)]
+      (dom/li #js {:className (str "tab-item " (when active "active"))}
+              (dom/a #js {:href (str url)}
+                (when icon (dom/span #js {:className (str "icon " icon)}))
+                (str " " name))))))
+
+(def navigation-item (om/factory NavigationItem {:keyfn :name}))
+
+(defui ^:once Navigation
+  static uc/InitialAppState
+  (initial-state [this params]
+    {:title "Navigation Header"
+     :menus [(uc/initial-state NavigationItem {:name "Home"
+                                               :icon "icon-home"
+                                               :url "/"
+                                               :active true})
+             (uc/initial-state NavigationItem {:name "Bank Soal"
+                                               :icon "icon-library_books"
+                                               :url "#" :active false})
+             (uc/initial-state NavigationItem {:name "Daftar"
+                                               :icon "icon-people"
+                                               :url "#"
+                                               :active false})
+             (uc/initial-state NavigationItem {:name "Masuk"
+                                               :icon "icon-exit_to_app"
+                                               :url "/login"
+                                               :active false})]})
+  static om/Ident
+  (ident [this {:keys [title]}]
+    [:nav/by-title title])
+  static om/IQuery
+  (query [this]
+    [:title
+     {:menus (om/get-query NavigationItem)}])
+  Object
+  (render [this]
+    (let [{:keys [menus]} (om/props this)]
+      (dom/ul #js {:className "tab inline-flex"}
+        (map navigation-item menus)))))
+
+(def navigation-header-ui (om/factory Navigation))
+
+(defui ^:once Header
+  static uc/InitialAppState
+  (initial-state [this params]
+    {:title "Ebtanas"
+     :navigation (uc/initial-state Navigation {})})
+  static om/Ident
+  (ident [this {:keys [title]}]
+    [:header/by-title title])
+  static om/IQuery
+  (query [this]
+    [:title
+     {:navigation (om/get-query Navigation)}])
+  Object
+  (render [this]
+    (let [{:keys [title navigation]} (om/props this)]
+      (dom/header #js {:className "navbar"}
+        (dom/section #js {:className "navbar-section"}
+          (dom/a #js {:className "navbar-brand"
+                      :href "#"}
+            (dom/i #js {:className "icon icon-pages"})
+            (str " " title)))
+        (dom/section #js {:className "navbar-section"}
+            (dom/ul #js {:className "tab inline-flex"}
+              (navigation-header-ui navigation)))))))
+
+(def header-ui (om/factory Header))
+
 (defui ^:once LoginForm
   static uc/InitialAppState
   (initial-state [this params]
@@ -80,13 +161,12 @@
             (dom/button #js {:className "btn btn-primary btn-action btn-lg"}
               (dom/span #js {:className "icon icon-search"}))))))))
 
-(def search-form (om/factory SearchForm))
+(def search-ui (om/factory SearchForm))
 
 (defui ^:once BodySwitcher
   static uc/InitialAppState
   (initial-state [this params]
     (uc/initial-state SearchForm {}))
-    ;(uc/initial-state LoginForm {}))
   static om/Ident
   (ident [this {:keys [component id]}]
     [component id])
@@ -100,24 +180,27 @@
       (dom/section #js {:className "body section columns"}
         (dom/div #js {:className "container"}
           (case component
-            :main (search-form props)
+            :main (search-ui props)
             :login (login-ui props)
             (dom/h1 nil "YOU ARE LOST!")))))))
 
-(def body (om/factory BodySwitcher))
+(def body-ui (om/factory BodySwitcher))
 
 (defui ^:once Root
   static uc/InitialAppState
   (initial-state [this params]
     {:ui/react-key "start"
+     :header (uc/initial-state Header {})
      :active-body (uc/initial-state BodySwitcher {})})
   static om/IQuery
   (query [this]
     [:ui/react-key
-     {:active-body (om/get-query BodySwitcher)}])
+     {:active-body (om/get-query BodySwitcher)}
+     {:header (om/get-query Header)}])
   Object
   (render [this]
-    (let [{:keys [ui/react-key active-body]} (om/props this)]
+    (let [{:keys [ui/react-key active-body header]} (om/props this)]
       (dom/div #js {:id "reactive" :key react-key}
         (js/console.log "Props:" (om/props this))
-        (body active-body)))))
+        (header-ui header)
+        (body-ui active-body)))))

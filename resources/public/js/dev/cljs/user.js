@@ -13,14 +13,14 @@ return cljs.core.deref.call(null,new cljs.core.Keyword(null,"reconciler","reconc
 });
 cljs.user.log_app_state = (function cljs$user$log_app_state(var_args){
 var args__40434__auto__ = [];
-var len__40427__auto___239184 = arguments.length;
-var i__40428__auto___239185 = (0);
+var len__40427__auto___248197 = arguments.length;
+var i__40428__auto___248198 = (0);
 while(true){
-if((i__40428__auto___239185 < len__40427__auto___239184)){
-args__40434__auto__.push((arguments[i__40428__auto___239185]));
+if((i__40428__auto___248198 < len__40427__auto___248197)){
+args__40434__auto__.push((arguments[i__40428__auto___248198]));
 
-var G__239186 = (i__40428__auto___239185 + (1));
-i__40428__auto___239185 = G__239186;
+var G__248199 = (i__40428__auto___248198 + (1));
+i__40428__auto___248198 = G__248199;
 continue;
 } else {
 }
@@ -43,8 +43,8 @@ return cljs.core.select_keys.call(null,app_state,keywords);
 
 cljs.user.log_app_state.cljs$lang$maxFixedArity = (0);
 
-cljs.user.log_app_state.cljs$lang$applyTo = (function (seq239183){
-return cljs.user.log_app_state.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq239183));
+cljs.user.log_app_state.cljs$lang$applyTo = (function (seq248196){
+return cljs.user.log_app_state.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq248196));
 });
 
 cljs.user.dump_query = (function cljs$user$dump_query(comp){
@@ -76,4 +76,4 @@ var state = cljs.user.app_state.call(null);
 return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"QUERY","QUERY",-480154195),query,new cljs.core.Keyword(null,"RESULT","RESULT",1760898052),om.next.db__GT_tree.call(null,query,state,state)], null);
 });
 
-//# sourceMappingURL=user.js.map?rel=1491717844257
+//# sourceMappingURL=user.js.map?rel=1491724578300
