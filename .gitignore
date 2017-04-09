@@ -16,3 +16,4 @@ pom.xml.asc
 yarn.lock
 package.json
 node_modules
+out
