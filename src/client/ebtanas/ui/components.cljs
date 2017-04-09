@@ -3,7 +3,8 @@
     [om.next :as om :refer-macros [defui]]
     [om.dom :as dom]
     [untangled.client.core :as uc]
-    [goog.string :as gstring]))
+    [goog.string :as gstring]
+    [ebtanas.ui.root :as root]))
 
 (defui ^:once NavigationItem
   static uc/InitialAppState
@@ -17,9 +18,11 @@
     [:name :icon :url :active])
   Object
   (render [this]
-    (let [{:keys [name icon url active]} (om/props this)]
+    (let [{:keys [name icon url active] :as params} (om/props this)
+          {:keys [set-active-body!]} (om/get-computed this)]
       (dom/li #js {:className (str "tab-item " (when active "active"))}
-        (dom/a #js {:href (str url)}
+        (dom/a #js {:href "#";(str url)
+                    :onClick #(set-active-body! params)}
           (when icon (dom/span #js {:className (str "icon " icon)}))
           (str " " name))))))
 
@@ -39,9 +42,13 @@
      {:menus (om/get-query NavigationItem)}])
   Object
   (render [this]
-    (let [{:keys [menus]} (om/props this)]
+    (let [{:keys [menus]} (om/props this)
+          set-active-body! (fn [{:keys [name active]}]
+                             (om/transact! this `[(app/set-active-page! ~{:name name :active active}) :active-body]))]
       (dom/ul #js {:className "tab inline-flex"}
-        (map navigation-item menus)))))
+        (map (fn [menu]
+               (navigation-item (om/computed menu {:set-active-body! set-active-body!})))
+             menus)))))
 
 (def navigation-ui (om/factory Navigation))
 
@@ -73,11 +80,11 @@
         (dom/section #js {:className "navbar-section"}
           (dom/a #js {:className "navbar-brand"
                       :href "#"}
-                 (dom/i #js {:className "icon icon-pages"})
-                 (str " " title)))
+            (dom/i #js {:className "icon icon-pages"})
+            (str " " title)))
         (dom/section #js {:className "navbar-section"}
           (dom/ul #js {:className "tab inline-flex"}
-                  (navigation-ui header-nav)))))))
+            (navigation-ui header-nav)))))))
 
 (def header-ui (om/factory Header))
 
@@ -110,7 +117,7 @@
         (dom/hr #js {:className "style14"})
         (dom/section #js {:className "navbar"}
           (dom/section #js {:className "navbar-section"}
-            (dom/span #js {:className "btn btn-link"}
+            (dom/span nil
               (str (gstring/unescapeEntities "&copy; ")
                    (str "Hak Cipta " year " - " copyright))))
           (dom/section #js {:className "navbar-center"}
