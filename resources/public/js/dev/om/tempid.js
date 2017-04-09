@@ -55,8 +55,8 @@ om.tempid.TempId.cljs$lang$type = true;
 
 om.tempid.TempId.cljs$lang$ctorStr = "om.tempid/TempId";
 
-om.tempid.TempId.cljs$lang$ctorPrWriter = (function (this__35212__auto__,writer__35213__auto__,opt__35214__auto__){
-return cljs.core._write.call(null,writer__35213__auto__,"om.tempid/TempId");
+om.tempid.TempId.cljs$lang$ctorPrWriter = (function (this__39863__auto__,writer__39864__auto__,opt__39865__auto__){
+return cljs.core._write.call(null,writer__39864__auto__,"om.tempid/TempId");
 });
 
 om.tempid.__GT_TempId = (function om$tempid$__GT_TempId(id,__hash){
@@ -64,23 +64,23 @@ return (new om.tempid.TempId(id,__hash));
 });
 
 om.tempid.tempid = (function om$tempid$tempid(var_args){
-var args98032 = [];
-var len__35776__auto___98035 = arguments.length;
-var i__35777__auto___98036 = (0);
+var args219106 = [];
+var len__40427__auto___219109 = arguments.length;
+var i__40428__auto___219110 = (0);
 while(true){
-if((i__35777__auto___98036 < len__35776__auto___98035)){
-args98032.push((arguments[i__35777__auto___98036]));
+if((i__40428__auto___219110 < len__40427__auto___219109)){
+args219106.push((arguments[i__40428__auto___219110]));
 
-var G__98037 = (i__35777__auto___98036 + (1));
-i__35777__auto___98036 = G__98037;
+var G__219111 = (i__40428__auto___219110 + (1));
+i__40428__auto___219110 = G__219111;
 continue;
 } else {
 }
 break;
 }
 
-var G__98034 = args98032.length;
-switch (G__98034) {
+var G__219108 = args219106.length;
+switch (G__219108) {
 case 0:
 return om.tempid.tempid.cljs$core$IFn$_invoke$arity$0();
 
@@ -90,7 +90,7 @@ return om.tempid.tempid.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
 break;
 default:
-throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Invalid arity: "),cljs.core.str.cljs$core$IFn$_invoke$arity$1(args98032.length)].join('')));
+throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Invalid arity: "),cljs.core.str.cljs$core$IFn$_invoke$arity$1(args219106.length)].join('')));
 
 }
 });
@@ -109,4 +109,4 @@ om.tempid.tempid_QMARK_ = (function om$tempid$tempid_QMARK_(x){
 return (x instanceof om.tempid.TempId);
 });
 
-//# sourceMappingURL=tempid.js.map?rel=1491640837796
+//# sourceMappingURL=tempid.js.map?rel=1491715127957

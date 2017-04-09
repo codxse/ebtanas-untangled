@@ -16,14 +16,14 @@ om_css.core.css = (function om_css$core$css(this$){
 if((!((this$ == null))) && (!((this$.om_css$core$CSS$css$arity$1 == null)))){
 return this$.om_css$core$CSS$css$arity$1(this$);
 } else {
-var x__35273__auto__ = (((this$ == null))?null:this$);
-var m__35274__auto__ = (om_css.core.css[goog.typeOf(x__35273__auto__)]);
-if(!((m__35274__auto__ == null))){
-return m__35274__auto__.call(null,this$);
+var x__39924__auto__ = (((this$ == null))?null:this$);
+var m__39925__auto__ = (om_css.core.css[goog.typeOf(x__39924__auto__)]);
+if(!((m__39925__auto__ == null))){
+return m__39925__auto__.call(null,this$);
 } else {
-var m__35274__auto____$1 = (om_css.core.css["_"]);
-if(!((m__35274__auto____$1 == null))){
-return m__35274__auto____$1.call(null,this$);
+var m__39925__auto____$1 = (om_css.core.css["_"]);
+if(!((m__39925__auto____$1 == null))){
+return m__39925__auto____$1.call(null,this$);
 } else {
 throw cljs.core.missing_protocol.call(null,"CSS.css",this$);
 }
@@ -41,23 +41,23 @@ return clojure.string.replace.call(null,str,/[.\/]/,"_");
  * Generate a keyword for a localized CSS class for use in Garden CSS syntax as a localized component classname keyword.
  */
 om_css.core.local_kw = (function om_css$core$local_kw(var_args){
-var args55569 = [];
-var len__35776__auto___55572 = arguments.length;
-var i__35777__auto___55573 = (0);
+var args187472 = [];
+var len__40427__auto___187475 = arguments.length;
+var i__40428__auto___187476 = (0);
 while(true){
-if((i__35777__auto___55573 < len__35776__auto___55572)){
-args55569.push((arguments[i__35777__auto___55573]));
+if((i__40428__auto___187476 < len__40427__auto___187475)){
+args187472.push((arguments[i__40428__auto___187476]));
 
-var G__55574 = (i__35777__auto___55573 + (1));
-i__35777__auto___55573 = G__55574;
+var G__187477 = (i__40428__auto___187476 + (1));
+i__40428__auto___187476 = G__187477;
 continue;
 } else {
 }
 break;
 }
 
-var G__55571 = args55569.length;
-switch (G__55571) {
+var G__187474 = args187472.length;
+switch (G__187474) {
 case 1:
 return om_css.core.local_kw.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -67,7 +67,7 @@ return om_css.core.local_kw.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(argu
 
 break;
 default:
-throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Invalid arity: "),cljs.core.str.cljs$core$IFn$_invoke$arity$1(args55569.length)].join('')));
+throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Invalid arity: "),cljs.core.str.cljs$core$IFn$_invoke$arity$1(args187472.length)].join('')));
 
 }
 });
@@ -87,23 +87,23 @@ om_css.core.local_kw.cljs$lang$maxFixedArity = 2;
  *   with the (optional) specified name.
  */
 om_css.core.local_class = (function om_css$core$local_class(var_args){
-var args55576 = [];
-var len__35776__auto___55579 = arguments.length;
-var i__35777__auto___55580 = (0);
+var args187479 = [];
+var len__40427__auto___187482 = arguments.length;
+var i__40428__auto___187483 = (0);
 while(true){
-if((i__35777__auto___55580 < len__35776__auto___55579)){
-args55576.push((arguments[i__35777__auto___55580]));
+if((i__40428__auto___187483 < len__40427__auto___187482)){
+args187479.push((arguments[i__40428__auto___187483]));
 
-var G__55581 = (i__35777__auto___55580 + (1));
-i__35777__auto___55580 = G__55581;
+var G__187484 = (i__40428__auto___187483 + (1));
+i__40428__auto___187483 = G__187484;
 continue;
 } else {
 }
 break;
 }
 
-var G__55578 = args55576.length;
-switch (G__55578) {
+var G__187481 = args187479.length;
+switch (G__187481) {
 case 1:
 return om_css.core.local_class.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -113,7 +113,7 @@ return om_css.core.local_class.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(a
 
 break;
 default:
-throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Invalid arity: "),cljs.core.str.cljs$core$IFn$_invoke$arity$1(args55576.length)].join('')));
+throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Invalid arity: "),cljs.core.str.cljs$core$IFn$_invoke$arity$1(args187479.length)].join('')));
 
 }
 });
@@ -155,23 +155,23 @@ om_css.core.local_class.cljs$lang$maxFixedArity = 2;
  *   
  */
 om_css.core.css_merge = (function om_css$core$css_merge(var_args){
-var args__35783__auto__ = [];
-var len__35776__auto___55585 = arguments.length;
-var i__35777__auto___55586 = (0);
+var args__40434__auto__ = [];
+var len__40427__auto___187488 = arguments.length;
+var i__40428__auto___187489 = (0);
 while(true){
-if((i__35777__auto___55586 < len__35776__auto___55585)){
-args__35783__auto__.push((arguments[i__35777__auto___55586]));
+if((i__40428__auto___187489 < len__40427__auto___187488)){
+args__40434__auto__.push((arguments[i__40428__auto___187489]));
 
-var G__55587 = (i__35777__auto___55586 + (1));
-i__35777__auto___55586 = G__55587;
+var G__187490 = (i__40428__auto___187489 + (1));
+i__40428__auto___187489 = G__187490;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__35784__auto__ = ((((0) < args__35783__auto__.length))?(new cljs.core.IndexedSeq(args__35783__auto__.slice((0)),(0),null)):null);
-return om_css.core.css_merge.cljs$core$IFn$_invoke$arity$variadic(argseq__35784__auto__);
+var argseq__40435__auto__ = ((((0) < args__40434__auto__.length))?(new cljs.core.IndexedSeq(args__40434__auto__.slice((0)),(0),null)):null);
+return om_css.core.css_merge.cljs$core$IFn$_invoke$arity$variadic(argseq__40435__auto__);
 });
 
 om_css.core.css_merge.cljs$core$IFn$_invoke$arity$variadic = (function (items){
@@ -196,8 +196,8 @@ return acc;
 
 om_css.core.css_merge.cljs$lang$maxFixedArity = (0);
 
-om_css.core.css_merge.cljs$lang$applyTo = (function (seq55583){
-return om_css.core.css_merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq55583));
+om_css.core.css_merge.cljs$lang$applyTo = (function (seq187486){
+return om_css.core.css_merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq187486));
 });
 
 /**
@@ -227,4 +227,4 @@ style_ele.setAttribute("id",id);
 return document.body.appendChild(style_ele);
 });
 
-//# sourceMappingURL=core.js.map?rel=1491640771842
+//# sourceMappingURL=core.js.map?rel=1491715070749

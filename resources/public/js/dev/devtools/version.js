@@ -6,4 +6,4 @@ devtools.version.get_current_version = (function devtools$version$get_current_ve
 return devtools.version.current_version;
 });
 
-//# sourceMappingURL=version.js.map?rel=1491640861641
+//# sourceMappingURL=version.js.map?rel=1491715149441

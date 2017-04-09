@@ -16,14 +16,14 @@ om_css.core.css = (function om_css$core$css(this$){
 if((!((this$ == null))) && (!((this$.om_css$core$CSS$css$arity$1 == null)))){
 return this$.om_css$core$CSS$css$arity$1(this$);
 } else {
-var x__35273__auto__ = (((this$ == null))?null:this$);
-var m__35274__auto__ = (om_css.core.css[goog.typeOf(x__35273__auto__)]);
-if(!((m__35274__auto__ == null))){
-return m__35274__auto__.call(null,this$);
+var x__39924__auto__ = (((this$ == null))?null:this$);
+var m__39925__auto__ = (om_css.core.css[goog.typeOf(x__39924__auto__)]);
+if(!((m__39925__auto__ == null))){
+return m__39925__auto__.call(null,this$);
 } else {
-var m__35274__auto____$1 = (om_css.core.css["_"]);
-if(!((m__35274__auto____$1 == null))){
-return m__35274__auto____$1.call(null,this$);
+var m__39925__auto____$1 = (om_css.core.css["_"]);
+if(!((m__39925__auto____$1 == null))){
+return m__39925__auto____$1.call(null,this$);
 } else {
 throw cljs.core.missing_protocol.call(null,"CSS.css",this$);
 }
@@ -41,23 +41,23 @@ return clojure.string.replace.call(null,str,/[.\/]/,"_");
  * Generate a keyword for a localized CSS class for use in Garden CSS syntax as a localized component classname keyword.
  */
 om_css.core.local_kw = (function om_css$core$local_kw(var_args){
-var args105303 = [];
-var len__35776__auto___105306 = arguments.length;
-var i__35777__auto___105307 = (0);
+var args226224 = [];
+var len__40427__auto___226227 = arguments.length;
+var i__40428__auto___226228 = (0);
 while(true){
-if((i__35777__auto___105307 < len__35776__auto___105306)){
-args105303.push((arguments[i__35777__auto___105307]));
+if((i__40428__auto___226228 < len__40427__auto___226227)){
+args226224.push((arguments[i__40428__auto___226228]));
 
-var G__105308 = (i__35777__auto___105307 + (1));
-i__35777__auto___105307 = G__105308;
+var G__226229 = (i__40428__auto___226228 + (1));
+i__40428__auto___226228 = G__226229;
 continue;
 } else {
 }
 break;
 }
 
-var G__105305 = args105303.length;
-switch (G__105305) {
+var G__226226 = args226224.length;
+switch (G__226226) {
 case 1:
 return om_css.core.local_kw.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -67,7 +67,7 @@ return om_css.core.local_kw.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(argu
 
 break;
 default:
-throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Invalid arity: "),cljs.core.str.cljs$core$IFn$_invoke$arity$1(args105303.length)].join('')));
+throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Invalid arity: "),cljs.core.str.cljs$core$IFn$_invoke$arity$1(args226224.length)].join('')));
 
 }
 });
@@ -87,23 +87,23 @@ om_css.core.local_kw.cljs$lang$maxFixedArity = 2;
  *   with the (optional) specified name.
  */
 om_css.core.local_class = (function om_css$core$local_class(var_args){
-var args105310 = [];
-var len__35776__auto___105313 = arguments.length;
-var i__35777__auto___105314 = (0);
+var args226231 = [];
+var len__40427__auto___226234 = arguments.length;
+var i__40428__auto___226235 = (0);
 while(true){
-if((i__35777__auto___105314 < len__35776__auto___105313)){
-args105310.push((arguments[i__35777__auto___105314]));
+if((i__40428__auto___226235 < len__40427__auto___226234)){
+args226231.push((arguments[i__40428__auto___226235]));
 
-var G__105315 = (i__35777__auto___105314 + (1));
-i__35777__auto___105314 = G__105315;
+var G__226236 = (i__40428__auto___226235 + (1));
+i__40428__auto___226235 = G__226236;
 continue;
 } else {
 }
 break;
 }
 
-var G__105312 = args105310.length;
-switch (G__105312) {
+var G__226233 = args226231.length;
+switch (G__226233) {
 case 1:
 return om_css.core.local_class.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -113,7 +113,7 @@ return om_css.core.local_class.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(a
 
 break;
 default:
-throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Invalid arity: "),cljs.core.str.cljs$core$IFn$_invoke$arity$1(args105310.length)].join('')));
+throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Invalid arity: "),cljs.core.str.cljs$core$IFn$_invoke$arity$1(args226231.length)].join('')));
 
 }
 });
@@ -155,23 +155,23 @@ om_css.core.local_class.cljs$lang$maxFixedArity = 2;
  *   
  */
 om_css.core.css_merge = (function om_css$core$css_merge(var_args){
-var args__35783__auto__ = [];
-var len__35776__auto___105319 = arguments.length;
-var i__35777__auto___105320 = (0);
+var args__40434__auto__ = [];
+var len__40427__auto___226240 = arguments.length;
+var i__40428__auto___226241 = (0);
 while(true){
-if((i__35777__auto___105320 < len__35776__auto___105319)){
-args__35783__auto__.push((arguments[i__35777__auto___105320]));
+if((i__40428__auto___226241 < len__40427__auto___226240)){
+args__40434__auto__.push((arguments[i__40428__auto___226241]));
 
-var G__105321 = (i__35777__auto___105320 + (1));
-i__35777__auto___105320 = G__105321;
+var G__226242 = (i__40428__auto___226241 + (1));
+i__40428__auto___226241 = G__226242;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__35784__auto__ = ((((0) < args__35783__auto__.length))?(new cljs.core.IndexedSeq(args__35783__auto__.slice((0)),(0),null)):null);
-return om_css.core.css_merge.cljs$core$IFn$_invoke$arity$variadic(argseq__35784__auto__);
+var argseq__40435__auto__ = ((((0) < args__40434__auto__.length))?(new cljs.core.IndexedSeq(args__40434__auto__.slice((0)),(0),null)):null);
+return om_css.core.css_merge.cljs$core$IFn$_invoke$arity$variadic(argseq__40435__auto__);
 });
 
 om_css.core.css_merge.cljs$core$IFn$_invoke$arity$variadic = (function (items){
@@ -196,8 +196,8 @@ return acc;
 
 om_css.core.css_merge.cljs$lang$maxFixedArity = (0);
 
-om_css.core.css_merge.cljs$lang$applyTo = (function (seq105317){
-return om_css.core.css_merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq105317));
+om_css.core.css_merge.cljs$lang$applyTo = (function (seq226238){
+return om_css.core.css_merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq226238));
 });
 
 /**
@@ -227,4 +227,4 @@ style_ele.setAttribute("id",id);
 return document.body.appendChild(style_ele);
 });
 
-//# sourceMappingURL=core.js.map?rel=1491640857406
+//# sourceMappingURL=core.js.map?rel=1491715146204

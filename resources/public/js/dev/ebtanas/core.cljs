@@ -10,10 +10,9 @@
   state)
 
 (defonce app
-         (atom (uc/new-untangled-client
-                 :mutation-merge merge-mutations
-                 :started-callback (fn [{:keys [reconciler]}]
-                                     (f/load-data reconciler [:logged-in? :current-user]
-                                                  :post-mutation 'login/login-complete)
-                                     ;;TODO: initial load of data
-                                     ))))
+         (atom (uc/new-untangled-client)))
+                 ;:mutation-merge merge-mutations
+                 ;:started-callback (fn [{:keys [reconciler]}]
+                 ;                    (f/load-data reconciler [:logged-in? :current-user]
+                 ;                                 :post-mutation 'login/login-complete)))))
+

@@ -9,4 +9,4 @@ devcards.core.register_card.call(null,new cljs.core.PersistentArrayMap(null, 2, 
 return devcards.core.card_base.call(null,new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),"SVGPlaceholder",new cljs.core.Keyword(null,"documentation","documentation",1889593999),"# SVG Placeholder",new cljs.core.Keyword(null,"main-obj","main-obj",-1544409742),ebtanas.ui.components.ui_placeholder.call(null,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"w","w",354169001),(200),new cljs.core.Keyword(null,"h","h",1109658740),(200)], null)),new cljs.core.Keyword(null,"initial-data","initial-data",-1315709804),cljs.core.PersistentArrayMap.EMPTY,new cljs.core.Keyword(null,"options","options",99638489),cljs.core.PersistentArrayMap.EMPTY], null));
 })], null));
 
-//# sourceMappingURL=intro.js.map?rel=1491640822778
+//# sourceMappingURL=intro.js.map?rel=1491715108770

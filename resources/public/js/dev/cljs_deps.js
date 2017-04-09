@@ -97,7 +97,7 @@ goog.addDependency("../figwheel/client/socket.js", ['figwheel.client.socket'], [
 goog.addDependency("../figwheel/client/file_reloading.js", ['figwheel.client.file_reloading'], ['goog.string', 'goog.net.jsloader', 'goog.Uri', 'cljs.core', 'goog.object', 'cljs.core.async', 'clojure.set', 'figwheel.client.utils', 'goog.async.Deferred', 'clojure.string']);
 goog.addDependency("../ebtanas/ui/login.js", ['ebtanas.ui.login'], ['cljs.core', 'om.dom', 'untangled.client.core', 'untangled.client.mutations', 'om_css.core', 'om.next', 'untangled.client.data_fetch']);
 goog.addDependency("../ebtanas/ui/main.js", ['ebtanas.ui.main'], ['cljs.core', 'om.dom', 'untangled.client.core', 'untangled.client.mutations', 'om_css.core', 'om.next']);
-goog.addDependency("../ebtanas/ui/root.js", ['ebtanas.ui.root'], ['ebtanas.ui.new_user', 'cljs.core', 'om.dom', 'untangled.client.core', 'untangled.client.mutations', 'ebtanas.ui.login', 'ebtanas.ui.main', 'om.next']);
+goog.addDependency("../ebtanas/ui/root.js", ['ebtanas.ui.root'], ['goog.string', 'ebtanas.ui.new_user', 'cljs.core', 'om.dom', 'untangled.client.core', 'untangled.client.mutations', 'ebtanas.ui.login', 'ebtanas.ui.main', 'om.next']);
 goog.addDependency("../ebtanas/state/mutations.js", ['ebtanas.state.mutations'], ['cljs.core', 'untangled.client.impl.data_fetch', 'untangled.client.mutations', 'om.next']);
 goog.addDependency("../ebtanas/core.js", ['ebtanas.core'], ['cljs.core', 'untangled.client.core', 'ebtanas.state.mutations', 'untangled.client.logging', 'om.next', 'untangled.client.data_fetch']);
 goog.addDependency("../cljs/user.js", ['cljs.user'], ['ebtanas.ui.root', 'ebtanas.core', 'cljs.core', 'untangled.client.core', 'cljs.pprint', 'om.next']);

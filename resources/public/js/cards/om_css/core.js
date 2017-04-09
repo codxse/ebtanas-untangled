@@ -16,14 +16,14 @@ om_css.core.css = (function om_css$core$css(this$){
 if((!((this$ == null))) && (!((this$.om_css$core$CSS$css$arity$1 == null)))){
 return this$.om_css$core$CSS$css$arity$1(this$);
 } else {
-var x__35273__auto__ = (((this$ == null))?null:this$);
-var m__35274__auto__ = (om_css.core.css[goog.typeOf(x__35273__auto__)]);
-if(!((m__35274__auto__ == null))){
-return m__35274__auto__.call(null,this$);
+var x__39924__auto__ = (((this$ == null))?null:this$);
+var m__39925__auto__ = (om_css.core.css[goog.typeOf(x__39924__auto__)]);
+if(!((m__39925__auto__ == null))){
+return m__39925__auto__.call(null,this$);
 } else {
-var m__35274__auto____$1 = (om_css.core.css["_"]);
-if(!((m__35274__auto____$1 == null))){
-return m__35274__auto____$1.call(null,this$);
+var m__39925__auto____$1 = (om_css.core.css["_"]);
+if(!((m__39925__auto____$1 == null))){
+return m__39925__auto____$1.call(null,this$);
 } else {
 throw cljs.core.missing_protocol.call(null,"CSS.css",this$);
 }
@@ -41,23 +41,23 @@ return clojure.string.replace.call(null,str,/[.\/]/,"_");
  * Generate a keyword for a localized CSS class for use in Garden CSS syntax as a localized component classname keyword.
  */
 om_css.core.local_kw = (function om_css$core$local_kw(var_args){
-var args84274 = [];
-var len__35776__auto___84277 = arguments.length;
-var i__35777__auto___84278 = (0);
+var args206058 = [];
+var len__40427__auto___206061 = arguments.length;
+var i__40428__auto___206062 = (0);
 while(true){
-if((i__35777__auto___84278 < len__35776__auto___84277)){
-args84274.push((arguments[i__35777__auto___84278]));
+if((i__40428__auto___206062 < len__40427__auto___206061)){
+args206058.push((arguments[i__40428__auto___206062]));
 
-var G__84279 = (i__35777__auto___84278 + (1));
-i__35777__auto___84278 = G__84279;
+var G__206063 = (i__40428__auto___206062 + (1));
+i__40428__auto___206062 = G__206063;
 continue;
 } else {
 }
 break;
 }
 
-var G__84276 = args84274.length;
-switch (G__84276) {
+var G__206060 = args206058.length;
+switch (G__206060) {
 case 1:
 return om_css.core.local_kw.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -67,7 +67,7 @@ return om_css.core.local_kw.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(argu
 
 break;
 default:
-throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Invalid arity: "),cljs.core.str.cljs$core$IFn$_invoke$arity$1(args84274.length)].join('')));
+throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Invalid arity: "),cljs.core.str.cljs$core$IFn$_invoke$arity$1(args206058.length)].join('')));
 
 }
 });
@@ -87,23 +87,23 @@ om_css.core.local_kw.cljs$lang$maxFixedArity = 2;
  *   with the (optional) specified name.
  */
 om_css.core.local_class = (function om_css$core$local_class(var_args){
-var args84281 = [];
-var len__35776__auto___84284 = arguments.length;
-var i__35777__auto___84285 = (0);
+var args206065 = [];
+var len__40427__auto___206068 = arguments.length;
+var i__40428__auto___206069 = (0);
 while(true){
-if((i__35777__auto___84285 < len__35776__auto___84284)){
-args84281.push((arguments[i__35777__auto___84285]));
+if((i__40428__auto___206069 < len__40427__auto___206068)){
+args206065.push((arguments[i__40428__auto___206069]));
 
-var G__84286 = (i__35777__auto___84285 + (1));
-i__35777__auto___84285 = G__84286;
+var G__206070 = (i__40428__auto___206069 + (1));
+i__40428__auto___206069 = G__206070;
 continue;
 } else {
 }
 break;
 }
 
-var G__84283 = args84281.length;
-switch (G__84283) {
+var G__206067 = args206065.length;
+switch (G__206067) {
 case 1:
 return om_css.core.local_class.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -113,7 +113,7 @@ return om_css.core.local_class.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(a
 
 break;
 default:
-throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Invalid arity: "),cljs.core.str.cljs$core$IFn$_invoke$arity$1(args84281.length)].join('')));
+throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Invalid arity: "),cljs.core.str.cljs$core$IFn$_invoke$arity$1(args206065.length)].join('')));
 
 }
 });
@@ -155,23 +155,23 @@ om_css.core.local_class.cljs$lang$maxFixedArity = 2;
  *   
  */
 om_css.core.css_merge = (function om_css$core$css_merge(var_args){
-var args__35783__auto__ = [];
-var len__35776__auto___84290 = arguments.length;
-var i__35777__auto___84291 = (0);
+var args__40434__auto__ = [];
+var len__40427__auto___206074 = arguments.length;
+var i__40428__auto___206075 = (0);
 while(true){
-if((i__35777__auto___84291 < len__35776__auto___84290)){
-args__35783__auto__.push((arguments[i__35777__auto___84291]));
+if((i__40428__auto___206075 < len__40427__auto___206074)){
+args__40434__auto__.push((arguments[i__40428__auto___206075]));
 
-var G__84292 = (i__35777__auto___84291 + (1));
-i__35777__auto___84291 = G__84292;
+var G__206076 = (i__40428__auto___206075 + (1));
+i__40428__auto___206075 = G__206076;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__35784__auto__ = ((((0) < args__35783__auto__.length))?(new cljs.core.IndexedSeq(args__35783__auto__.slice((0)),(0),null)):null);
-return om_css.core.css_merge.cljs$core$IFn$_invoke$arity$variadic(argseq__35784__auto__);
+var argseq__40435__auto__ = ((((0) < args__40434__auto__.length))?(new cljs.core.IndexedSeq(args__40434__auto__.slice((0)),(0),null)):null);
+return om_css.core.css_merge.cljs$core$IFn$_invoke$arity$variadic(argseq__40435__auto__);
 });
 
 om_css.core.css_merge.cljs$core$IFn$_invoke$arity$variadic = (function (items){
@@ -196,8 +196,8 @@ return acc;
 
 om_css.core.css_merge.cljs$lang$maxFixedArity = (0);
 
-om_css.core.css_merge.cljs$lang$applyTo = (function (seq84288){
-return om_css.core.css_merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq84288));
+om_css.core.css_merge.cljs$lang$applyTo = (function (seq206072){
+return om_css.core.css_merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq206072));
 });
 
 /**
@@ -227,4 +227,4 @@ style_ele.setAttribute("id",id);
 return document.body.appendChild(style_ele);
 });
 
-//# sourceMappingURL=core.js.map?rel=1491640819840
+//# sourceMappingURL=core.js.map?rel=1491715106056

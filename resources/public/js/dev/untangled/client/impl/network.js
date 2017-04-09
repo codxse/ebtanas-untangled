@@ -29,14 +29,14 @@ untangled.client.impl.network.send = (function untangled$client$impl$network$sen
 if((!((this$ == null))) && (!((this$.untangled$client$impl$network$UntangledNetwork$send$arity$4 == null)))){
 return this$.untangled$client$impl$network$UntangledNetwork$send$arity$4(this$,edn,ok_callback,error_callback);
 } else {
-var x__39940__auto__ = (((this$ == null))?null:this$);
-var m__39941__auto__ = (untangled.client.impl.network.send[goog.typeOf(x__39940__auto__)]);
-if(!((m__39941__auto__ == null))){
-return m__39941__auto__.call(null,this$,edn,ok_callback,error_callback);
+var x__39924__auto__ = (((this$ == null))?null:this$);
+var m__39925__auto__ = (untangled.client.impl.network.send[goog.typeOf(x__39924__auto__)]);
+if(!((m__39925__auto__ == null))){
+return m__39925__auto__.call(null,this$,edn,ok_callback,error_callback);
 } else {
-var m__39941__auto____$1 = (untangled.client.impl.network.send["_"]);
-if(!((m__39941__auto____$1 == null))){
-return m__39941__auto____$1.call(null,this$,edn,ok_callback,error_callback);
+var m__39925__auto____$1 = (untangled.client.impl.network.send["_"]);
+if(!((m__39925__auto____$1 == null))){
+return m__39925__auto____$1.call(null,this$,edn,ok_callback,error_callback);
 } else {
 throw cljs.core.missing_protocol.call(null,"UntangledNetwork.send",this$);
 }
@@ -51,14 +51,14 @@ untangled.client.impl.network.start = (function untangled$client$impl$network$st
 if((!((this$ == null))) && (!((this$.untangled$client$impl$network$UntangledNetwork$start$arity$2 == null)))){
 return this$.untangled$client$impl$network$UntangledNetwork$start$arity$2(this$,complete_app);
 } else {
-var x__39940__auto__ = (((this$ == null))?null:this$);
-var m__39941__auto__ = (untangled.client.impl.network.start[goog.typeOf(x__39940__auto__)]);
-if(!((m__39941__auto__ == null))){
-return m__39941__auto__.call(null,this$,complete_app);
+var x__39924__auto__ = (((this$ == null))?null:this$);
+var m__39925__auto__ = (untangled.client.impl.network.start[goog.typeOf(x__39924__auto__)]);
+if(!((m__39925__auto__ == null))){
+return m__39925__auto__.call(null,this$,complete_app);
 } else {
-var m__39941__auto____$1 = (untangled.client.impl.network.start["_"]);
-if(!((m__39941__auto____$1 == null))){
-return m__39941__auto____$1.call(null,this$,complete_app);
+var m__39925__auto____$1 = (untangled.client.impl.network.start["_"]);
+if(!((m__39925__auto____$1 == null))){
+return m__39925__auto____$1.call(null,this$,complete_app);
 } else {
 throw cljs.core.missing_protocol.call(null,"UntangledNetwork.start",this$);
 }
@@ -79,14 +79,14 @@ untangled.client.impl.network.response_ok = (function untangled$client$impl$netw
 if((!((this$ == null))) && (!((this$.untangled$client$impl$network$IXhrIOCallbacks$response_ok$arity$3 == null)))){
 return this$.untangled$client$impl$network$IXhrIOCallbacks$response_ok$arity$3(this$,xhrio,ok_cb);
 } else {
-var x__39940__auto__ = (((this$ == null))?null:this$);
-var m__39941__auto__ = (untangled.client.impl.network.response_ok[goog.typeOf(x__39940__auto__)]);
-if(!((m__39941__auto__ == null))){
-return m__39941__auto__.call(null,this$,xhrio,ok_cb);
+var x__39924__auto__ = (((this$ == null))?null:this$);
+var m__39925__auto__ = (untangled.client.impl.network.response_ok[goog.typeOf(x__39924__auto__)]);
+if(!((m__39925__auto__ == null))){
+return m__39925__auto__.call(null,this$,xhrio,ok_cb);
 } else {
-var m__39941__auto____$1 = (untangled.client.impl.network.response_ok["_"]);
-if(!((m__39941__auto____$1 == null))){
-return m__39941__auto____$1.call(null,this$,xhrio,ok_cb);
+var m__39925__auto____$1 = (untangled.client.impl.network.response_ok["_"]);
+if(!((m__39925__auto____$1 == null))){
+return m__39925__auto____$1.call(null,this$,xhrio,ok_cb);
 } else {
 throw cljs.core.missing_protocol.call(null,"IXhrIOCallbacks.response-ok",this$);
 }
@@ -101,14 +101,14 @@ untangled.client.impl.network.response_error = (function untangled$client$impl$n
 if((!((this$ == null))) && (!((this$.untangled$client$impl$network$IXhrIOCallbacks$response_error$arity$3 == null)))){
 return this$.untangled$client$impl$network$IXhrIOCallbacks$response_error$arity$3(this$,xhrio,err_cb);
 } else {
-var x__39940__auto__ = (((this$ == null))?null:this$);
-var m__39941__auto__ = (untangled.client.impl.network.response_error[goog.typeOf(x__39940__auto__)]);
-if(!((m__39941__auto__ == null))){
-return m__39941__auto__.call(null,this$,xhrio,err_cb);
+var x__39924__auto__ = (((this$ == null))?null:this$);
+var m__39925__auto__ = (untangled.client.impl.network.response_error[goog.typeOf(x__39924__auto__)]);
+if(!((m__39925__auto__ == null))){
+return m__39925__auto__.call(null,this$,xhrio,err_cb);
 } else {
-var m__39941__auto____$1 = (untangled.client.impl.network.response_error["_"]);
-if(!((m__39941__auto____$1 == null))){
-return m__39941__auto____$1.call(null,this$,xhrio,err_cb);
+var m__39925__auto____$1 = (untangled.client.impl.network.response_error["_"]);
+if(!((m__39925__auto____$1 == null))){
+return m__39925__auto____$1.call(null,this$,xhrio,err_cb);
 } else {
 throw cljs.core.missing_protocol.call(null,"IXhrIOCallbacks.response-error",this$);
 }
@@ -120,23 +120,23 @@ throw cljs.core.missing_protocol.call(null,"IXhrIOCallbacks.response-error",this
  * An XhrIo-specific implementation method for interpreting the server response.
  */
 untangled.client.impl.network.parse_response = (function untangled$client$impl$network$parse_response(var_args){
-var args51095 = [];
-var len__40443__auto___51099 = arguments.length;
-var i__40444__auto___51100 = (0);
+var args220503 = [];
+var len__40427__auto___220507 = arguments.length;
+var i__40428__auto___220508 = (0);
 while(true){
-if((i__40444__auto___51100 < len__40443__auto___51099)){
-args51095.push((arguments[i__40444__auto___51100]));
+if((i__40428__auto___220508 < len__40427__auto___220507)){
+args220503.push((arguments[i__40428__auto___220508]));
 
-var G__51101 = (i__40444__auto___51100 + (1));
-i__40444__auto___51100 = G__51101;
+var G__220509 = (i__40428__auto___220508 + (1));
+i__40428__auto___220508 = G__220509;
 continue;
 } else {
 }
 break;
 }
 
-var G__51097 = args51095.length;
-switch (G__51097) {
+var G__220505 = args220503.length;
+switch (G__220505) {
 case 1:
 return untangled.client.impl.network.parse_response.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -146,7 +146,7 @@ return untangled.client.impl.network.parse_response.cljs$core$IFn$_invoke$arity$
 
 break;
 default:
-throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Invalid arity: "),cljs.core.str.cljs$core$IFn$_invoke$arity$1(args51095.length)].join('')));
+throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Invalid arity: "),cljs.core.str.cljs$core$IFn$_invoke$arity$1(args220503.length)].join('')));
 
 }
 });
@@ -168,11 +168,11 @@ return xhr_io.getStatus();
 } else {
 return cognitect.transit.read.call(null,om.transit.reader.call(null,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"handlers","handlers",79528781),handlers], null)),xhr_io.getResponseText());
 }
-}catch (e51098){if((e51098 instanceof Object)){
-var e = e51098;
+}catch (e220506){if((e220506 instanceof Object)){
+var e = e220506;
 return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"error","error",-978969032),(404),new cljs.core.Keyword(null,"message","message",-406056002),"Server down"], null);
 } else {
-throw e51098;
+throw e220506;
 
 }
 }});
@@ -212,18 +212,18 @@ this.cljs$lang$protocol_mask$partition0$ = 2229667594;
 this.cljs$lang$protocol_mask$partition1$ = 8192;
 })
 
-untangled.client.impl.network.Network.prototype.cljs$core$ILookup$_lookup$arity$2 = (function (this__39897__auto__,k__39898__auto__){
+untangled.client.impl.network.Network.prototype.cljs$core$ILookup$_lookup$arity$2 = (function (this__39881__auto__,k__39882__auto__){
 var self__ = this;
-var this__39897__auto____$1 = this;
-return this__39897__auto____$1.cljs$core$ILookup$_lookup$arity$3(null,k__39898__auto__,null);
+var this__39881__auto____$1 = this;
+return this__39881__auto____$1.cljs$core$ILookup$_lookup$arity$3(null,k__39882__auto__,null);
 });
 
 
-untangled.client.impl.network.Network.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__39899__auto__,k51104,else__39900__auto__){
+untangled.client.impl.network.Network.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__39883__auto__,k220512,else__39884__auto__){
 var self__ = this;
-var this__39899__auto____$1 = this;
-var G__51106 = (((k51104 instanceof cljs.core.Keyword))?k51104.fqn:null);
-switch (G__51106) {
+var this__39883__auto____$1 = this;
+var G__220514 = (((k220512 instanceof cljs.core.Keyword))?k220512.fqn:null);
+switch (G__220514) {
 case "url":
 return self__.url;
 
@@ -245,44 +245,44 @@ return self__.transit_handlers;
 
 break;
 default:
-return cljs.core.get.call(null,self__.__extmap,k51104,else__39900__auto__);
+return cljs.core.get.call(null,self__.__extmap,k220512,else__39884__auto__);
 
 }
 });
 
 
-untangled.client.impl.network.Network.prototype.cljs$core$IPrintWithWriter$_pr_writer$arity$3 = (function (this__39911__auto__,writer__39912__auto__,opts__39913__auto__){
+untangled.client.impl.network.Network.prototype.cljs$core$IPrintWithWriter$_pr_writer$arity$3 = (function (this__39895__auto__,writer__39896__auto__,opts__39897__auto__){
 var self__ = this;
-var this__39911__auto____$1 = this;
-var pr_pair__39914__auto__ = ((function (this__39911__auto____$1){
-return (function (keyval__39915__auto__){
-return cljs.core.pr_sequential_writer.call(null,writer__39912__auto__,cljs.core.pr_writer,""," ","",opts__39913__auto__,keyval__39915__auto__);
-});})(this__39911__auto____$1))
+var this__39895__auto____$1 = this;
+var pr_pair__39898__auto__ = ((function (this__39895__auto____$1){
+return (function (keyval__39899__auto__){
+return cljs.core.pr_sequential_writer.call(null,writer__39896__auto__,cljs.core.pr_writer,""," ","",opts__39897__auto__,keyval__39899__auto__);
+});})(this__39895__auto____$1))
 ;
-return cljs.core.pr_sequential_writer.call(null,writer__39912__auto__,pr_pair__39914__auto__,"#untangled.client.impl.network.Network{",", ","}",opts__39913__auto__,cljs.core.concat.call(null,new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"url","url",276297046),self__.url],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"request-transform","request-transform",170337297),self__.request_transform],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"global-error-callback","global-error-callback",901427631),self__.global_error_callback],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"complete-app","complete-app",1317441339),self__.complete_app],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"transit-handlers","transit-handlers",-1206080791),self__.transit_handlers],null))], null),self__.__extmap));
+return cljs.core.pr_sequential_writer.call(null,writer__39896__auto__,pr_pair__39898__auto__,"#untangled.client.impl.network.Network{",", ","}",opts__39897__auto__,cljs.core.concat.call(null,new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"url","url",276297046),self__.url],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"request-transform","request-transform",170337297),self__.request_transform],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"global-error-callback","global-error-callback",901427631),self__.global_error_callback],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"complete-app","complete-app",1317441339),self__.complete_app],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"transit-handlers","transit-handlers",-1206080791),self__.transit_handlers],null))], null),self__.__extmap));
 });
 
 
 untangled.client.impl.network.Network.prototype.cljs$core$IIterable$ = cljs.core.PROTOCOL_SENTINEL;
 
 
-untangled.client.impl.network.Network.prototype.cljs$core$IIterable$_iterator$arity$1 = (function (G__51103){
+untangled.client.impl.network.Network.prototype.cljs$core$IIterable$_iterator$arity$1 = (function (G__220511){
 var self__ = this;
-var G__51103__$1 = this;
-return (new cljs.core.RecordIter((0),G__51103__$1,5,new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"url","url",276297046),new cljs.core.Keyword(null,"request-transform","request-transform",170337297),new cljs.core.Keyword(null,"global-error-callback","global-error-callback",901427631),new cljs.core.Keyword(null,"complete-app","complete-app",1317441339),new cljs.core.Keyword(null,"transit-handlers","transit-handlers",-1206080791)], null),(cljs.core.truth_(self__.__extmap)?cljs.core._iterator.call(null,self__.__extmap):cljs.core.nil_iter.call(null))));
+var G__220511__$1 = this;
+return (new cljs.core.RecordIter((0),G__220511__$1,5,new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"url","url",276297046),new cljs.core.Keyword(null,"request-transform","request-transform",170337297),new cljs.core.Keyword(null,"global-error-callback","global-error-callback",901427631),new cljs.core.Keyword(null,"complete-app","complete-app",1317441339),new cljs.core.Keyword(null,"transit-handlers","transit-handlers",-1206080791)], null),(cljs.core.truth_(self__.__extmap)?cljs.core._iterator.call(null,self__.__extmap):cljs.core.nil_iter.call(null))));
 });
 
 
-untangled.client.impl.network.Network.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__39895__auto__){
+untangled.client.impl.network.Network.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__39879__auto__){
 var self__ = this;
-var this__39895__auto____$1 = this;
+var this__39879__auto____$1 = this;
 return self__.__meta;
 });
 
 
-untangled.client.impl.network.Network.prototype.cljs$core$ICloneable$_clone$arity$1 = (function (this__39891__auto__){
+untangled.client.impl.network.Network.prototype.cljs$core$ICloneable$_clone$arity$1 = (function (this__39875__auto__){
 var self__ = this;
-var this__39891__auto____$1 = this;
+var this__39875__auto____$1 = this;
 return (new untangled.client.impl.network.Network(self__.url,self__.request_transform,self__.global_error_callback,self__.complete_app,self__.transit_handlers,self__.__meta,self__.__extmap,self__.__hash));
 });
 
@@ -295,11 +295,11 @@ var self__ = this;
 var this$__$1 = this;
 try{var read_handlers = new cljs.core.Keyword(null,"read","read",1140058661).cljs$core$IFn$_invoke$arity$1(self__.transit_handlers);
 var query_response = untangled.client.impl.network.parse_response.call(null,xhr_io,read_handlers);
-if(cljs.core.truth_((function (){var and__39210__auto__ = query_response;
-if(cljs.core.truth_(and__39210__auto__)){
+if(cljs.core.truth_((function (){var and__39194__auto__ = query_response;
+if(cljs.core.truth_(and__39194__auto__)){
 return valid_data_callback;
 } else {
-return and__39210__auto__;
+return and__39194__auto__;
 }
 })())){
 return valid_data_callback.call(null,query_response);
@@ -335,36 +335,36 @@ return log_and_dispatch_error.call(null,[cljs.core.str.cljs$core$IFn$_invoke$ari
 }});
 
 
-untangled.client.impl.network.Network.prototype.cljs$core$ICounted$_count$arity$1 = (function (this__39901__auto__){
+untangled.client.impl.network.Network.prototype.cljs$core$ICounted$_count$arity$1 = (function (this__39885__auto__){
 var self__ = this;
-var this__39901__auto____$1 = this;
+var this__39885__auto____$1 = this;
 return (5 + cljs.core.count.call(null,self__.__extmap));
 });
 
 
-untangled.client.impl.network.Network.prototype.cljs$core$IHash$_hash$arity$1 = (function (this__39892__auto__){
+untangled.client.impl.network.Network.prototype.cljs$core$IHash$_hash$arity$1 = (function (this__39876__auto__){
 var self__ = this;
-var this__39892__auto____$1 = this;
-var h__39664__auto__ = self__.__hash;
-if(!((h__39664__auto__ == null))){
-return h__39664__auto__;
+var this__39876__auto____$1 = this;
+var h__39648__auto__ = self__.__hash;
+if(!((h__39648__auto__ == null))){
+return h__39648__auto__;
 } else {
-var h__39664__auto____$1 = cljs.core.hash_imap.call(null,this__39892__auto____$1);
-self__.__hash = h__39664__auto____$1;
+var h__39648__auto____$1 = cljs.core.hash_imap.call(null,this__39876__auto____$1);
+self__.__hash = h__39648__auto____$1;
 
-return h__39664__auto____$1;
+return h__39648__auto____$1;
 }
 });
 
 
-untangled.client.impl.network.Network.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this__39893__auto__,other__39894__auto__){
+untangled.client.impl.network.Network.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this__39877__auto__,other__39878__auto__){
 var self__ = this;
-var this__39893__auto____$1 = this;
-if(cljs.core.truth_((function (){var and__39210__auto__ = other__39894__auto__;
-if(cljs.core.truth_(and__39210__auto__)){
-return ((this__39893__auto____$1.constructor === other__39894__auto__.constructor)) && (cljs.core.equiv_map.call(null,this__39893__auto____$1,other__39894__auto__));
+var this__39877__auto____$1 = this;
+if(cljs.core.truth_((function (){var and__39194__auto__ = other__39878__auto__;
+if(cljs.core.truth_(and__39194__auto__)){
+return ((this__39877__auto____$1.constructor === other__39878__auto__.constructor)) && (cljs.core.equiv_map.call(null,this__39877__auto____$1,other__39878__auto__));
 } else {
-return and__39210__auto__;
+return and__39194__auto__;
 }
 })())){
 return true;
@@ -381,38 +381,38 @@ untangled.client.impl.network.Network.prototype.untangled$client$impl$network$Un
 var self__ = this;
 var this$__$1 = this;
 var xhrio = untangled.client.impl.network.make_xhrio.call(null);
-var handlers = (function (){var or__39222__auto__ = new cljs.core.Keyword(null,"write","write",-1857649168).cljs$core$IFn$_invoke$arity$1(self__.transit_handlers);
-if(cljs.core.truth_(or__39222__auto__)){
-return or__39222__auto__;
+var handlers = (function (){var or__39206__auto__ = new cljs.core.Keyword(null,"write","write",-1857649168).cljs$core$IFn$_invoke$arity$1(self__.transit_handlers);
+if(cljs.core.truth_(or__39206__auto__)){
+return or__39206__auto__;
 } else {
 return cljs.core.PersistentArrayMap.EMPTY;
 }
 })();
 var headers = new cljs.core.PersistentArrayMap(null, 1, ["Content-Type","application/transit+json"], null);
-var map__51107 = (function (){var G__51108 = new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"body","body",-2049205669),edn,new cljs.core.Keyword(null,"headers","headers",-835030129),headers], null);
+var map__220515 = (function (){var G__220516 = new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"body","body",-2049205669),edn,new cljs.core.Keyword(null,"headers","headers",-835030129),headers], null);
 if(cljs.core.truth_(self__.request_transform)){
-return self__.request_transform.call(null,G__51108);
+return self__.request_transform.call(null,G__220516);
 } else {
-return G__51108;
+return G__220516;
 }
 })();
-var map__51107__$1 = ((((!((map__51107 == null)))?((((map__51107.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__51107.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__51107):map__51107);
-var body = cljs.core.get.call(null,map__51107__$1,new cljs.core.Keyword(null,"body","body",-2049205669));
-var headers__$1 = cljs.core.get.call(null,map__51107__$1,new cljs.core.Keyword(null,"headers","headers",-835030129));
+var map__220515__$1 = ((((!((map__220515 == null)))?((((map__220515.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__220515.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__220515):map__220515);
+var body = cljs.core.get.call(null,map__220515__$1,new cljs.core.Keyword(null,"body","body",-2049205669));
+var headers__$1 = cljs.core.get.call(null,map__220515__$1,new cljs.core.Keyword(null,"headers","headers",-835030129));
 var post_data = cognitect.transit.write.call(null,om.transit.writer.call(null,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"handlers","handlers",79528781),handlers], null)),body);
 var headers__$2 = cljs.core.clj__GT_js.call(null,headers__$1);
 xhrio.send(self__.url,"POST",post_data,headers__$2);
 
-goog.events.listen(xhrio,goog.net.EventType.SUCCESS,((function (xhrio,handlers,headers,map__51107,map__51107__$1,body,headers__$1,post_data,headers__$2,this$__$1){
+goog.events.listen(xhrio,goog.net.EventType.SUCCESS,((function (xhrio,handlers,headers,map__220515,map__220515__$1,body,headers__$1,post_data,headers__$2,this$__$1){
 return (function (){
 return untangled.client.impl.network.response_ok.call(null,this$__$1,xhrio,ok);
-});})(xhrio,handlers,headers,map__51107,map__51107__$1,body,headers__$1,post_data,headers__$2,this$__$1))
+});})(xhrio,handlers,headers,map__220515,map__220515__$1,body,headers__$1,post_data,headers__$2,this$__$1))
 );
 
-return goog.events.listen(xhrio,goog.net.EventType.ERROR,((function (xhrio,handlers,headers,map__51107,map__51107__$1,body,headers__$1,post_data,headers__$2,this$__$1){
+return goog.events.listen(xhrio,goog.net.EventType.ERROR,((function (xhrio,handlers,headers,map__220515,map__220515__$1,body,headers__$1,post_data,headers__$2,this$__$1){
 return (function (){
 return untangled.client.impl.network.response_error.call(null,this$__$1,xhrio,err);
-});})(xhrio,handlers,headers,map__51107,map__51107__$1,body,headers__$1,post_data,headers__$2,this$__$1))
+});})(xhrio,handlers,headers,map__220515,map__220515__$1,body,headers__$1,post_data,headers__$2,this$__$1))
 );
 });
 
@@ -424,38 +424,38 @@ return cljs.core.assoc.call(null,this$__$1,new cljs.core.Keyword(null,"complete-
 });
 
 
-untangled.client.impl.network.Network.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__39906__auto__,k__39907__auto__){
+untangled.client.impl.network.Network.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__39890__auto__,k__39891__auto__){
 var self__ = this;
-var this__39906__auto____$1 = this;
-if(cljs.core.contains_QMARK_.call(null,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"transit-handlers","transit-handlers",-1206080791),null,new cljs.core.Keyword(null,"global-error-callback","global-error-callback",901427631),null,new cljs.core.Keyword(null,"request-transform","request-transform",170337297),null,new cljs.core.Keyword(null,"url","url",276297046),null,new cljs.core.Keyword(null,"complete-app","complete-app",1317441339),null], null), null),k__39907__auto__)){
-return cljs.core.dissoc.call(null,cljs.core.with_meta.call(null,cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,this__39906__auto____$1),self__.__meta),k__39907__auto__);
+var this__39890__auto____$1 = this;
+if(cljs.core.contains_QMARK_.call(null,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"transit-handlers","transit-handlers",-1206080791),null,new cljs.core.Keyword(null,"global-error-callback","global-error-callback",901427631),null,new cljs.core.Keyword(null,"request-transform","request-transform",170337297),null,new cljs.core.Keyword(null,"url","url",276297046),null,new cljs.core.Keyword(null,"complete-app","complete-app",1317441339),null], null), null),k__39891__auto__)){
+return cljs.core.dissoc.call(null,cljs.core.with_meta.call(null,cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,this__39890__auto____$1),self__.__meta),k__39891__auto__);
 } else {
-return (new untangled.client.impl.network.Network(self__.url,self__.request_transform,self__.global_error_callback,self__.complete_app,self__.transit_handlers,self__.__meta,cljs.core.not_empty.call(null,cljs.core.dissoc.call(null,self__.__extmap,k__39907__auto__)),null));
+return (new untangled.client.impl.network.Network(self__.url,self__.request_transform,self__.global_error_callback,self__.complete_app,self__.transit_handlers,self__.__meta,cljs.core.not_empty.call(null,cljs.core.dissoc.call(null,self__.__extmap,k__39891__auto__)),null));
 }
 });
 
 
-untangled.client.impl.network.Network.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__39904__auto__,k__39905__auto__,G__51103){
+untangled.client.impl.network.Network.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__39888__auto__,k__39889__auto__,G__220511){
 var self__ = this;
-var this__39904__auto____$1 = this;
-var pred__51110 = cljs.core.keyword_identical_QMARK_;
-var expr__51111 = k__39905__auto__;
-if(cljs.core.truth_(pred__51110.call(null,new cljs.core.Keyword(null,"url","url",276297046),expr__51111))){
-return (new untangled.client.impl.network.Network(G__51103,self__.request_transform,self__.global_error_callback,self__.complete_app,self__.transit_handlers,self__.__meta,self__.__extmap,null));
+var this__39888__auto____$1 = this;
+var pred__220518 = cljs.core.keyword_identical_QMARK_;
+var expr__220519 = k__39889__auto__;
+if(cljs.core.truth_(pred__220518.call(null,new cljs.core.Keyword(null,"url","url",276297046),expr__220519))){
+return (new untangled.client.impl.network.Network(G__220511,self__.request_transform,self__.global_error_callback,self__.complete_app,self__.transit_handlers,self__.__meta,self__.__extmap,null));
 } else {
-if(cljs.core.truth_(pred__51110.call(null,new cljs.core.Keyword(null,"request-transform","request-transform",170337297),expr__51111))){
-return (new untangled.client.impl.network.Network(self__.url,G__51103,self__.global_error_callback,self__.complete_app,self__.transit_handlers,self__.__meta,self__.__extmap,null));
+if(cljs.core.truth_(pred__220518.call(null,new cljs.core.Keyword(null,"request-transform","request-transform",170337297),expr__220519))){
+return (new untangled.client.impl.network.Network(self__.url,G__220511,self__.global_error_callback,self__.complete_app,self__.transit_handlers,self__.__meta,self__.__extmap,null));
 } else {
-if(cljs.core.truth_(pred__51110.call(null,new cljs.core.Keyword(null,"global-error-callback","global-error-callback",901427631),expr__51111))){
-return (new untangled.client.impl.network.Network(self__.url,self__.request_transform,G__51103,self__.complete_app,self__.transit_handlers,self__.__meta,self__.__extmap,null));
+if(cljs.core.truth_(pred__220518.call(null,new cljs.core.Keyword(null,"global-error-callback","global-error-callback",901427631),expr__220519))){
+return (new untangled.client.impl.network.Network(self__.url,self__.request_transform,G__220511,self__.complete_app,self__.transit_handlers,self__.__meta,self__.__extmap,null));
 } else {
-if(cljs.core.truth_(pred__51110.call(null,new cljs.core.Keyword(null,"complete-app","complete-app",1317441339),expr__51111))){
-return (new untangled.client.impl.network.Network(self__.url,self__.request_transform,self__.global_error_callback,G__51103,self__.transit_handlers,self__.__meta,self__.__extmap,null));
+if(cljs.core.truth_(pred__220518.call(null,new cljs.core.Keyword(null,"complete-app","complete-app",1317441339),expr__220519))){
+return (new untangled.client.impl.network.Network(self__.url,self__.request_transform,self__.global_error_callback,G__220511,self__.transit_handlers,self__.__meta,self__.__extmap,null));
 } else {
-if(cljs.core.truth_(pred__51110.call(null,new cljs.core.Keyword(null,"transit-handlers","transit-handlers",-1206080791),expr__51111))){
-return (new untangled.client.impl.network.Network(self__.url,self__.request_transform,self__.global_error_callback,self__.complete_app,G__51103,self__.__meta,self__.__extmap,null));
+if(cljs.core.truth_(pred__220518.call(null,new cljs.core.Keyword(null,"transit-handlers","transit-handlers",-1206080791),expr__220519))){
+return (new untangled.client.impl.network.Network(self__.url,self__.request_transform,self__.global_error_callback,self__.complete_app,G__220511,self__.__meta,self__.__extmap,null));
 } else {
-return (new untangled.client.impl.network.Network(self__.url,self__.request_transform,self__.global_error_callback,self__.complete_app,self__.transit_handlers,self__.__meta,cljs.core.assoc.call(null,self__.__extmap,k__39905__auto__,G__51103),null));
+return (new untangled.client.impl.network.Network(self__.url,self__.request_transform,self__.global_error_callback,self__.complete_app,self__.transit_handlers,self__.__meta,cljs.core.assoc.call(null,self__.__extmap,k__39889__auto__,G__220511),null));
 }
 }
 }
@@ -464,27 +464,27 @@ return (new untangled.client.impl.network.Network(self__.url,self__.request_tran
 });
 
 
-untangled.client.impl.network.Network.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__39909__auto__){
+untangled.client.impl.network.Network.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__39893__auto__){
 var self__ = this;
-var this__39909__auto____$1 = this;
+var this__39893__auto____$1 = this;
 return cljs.core.seq.call(null,cljs.core.concat.call(null,new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"url","url",276297046),self__.url],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"request-transform","request-transform",170337297),self__.request_transform],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"global-error-callback","global-error-callback",901427631),self__.global_error_callback],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"complete-app","complete-app",1317441339),self__.complete_app],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"transit-handlers","transit-handlers",-1206080791),self__.transit_handlers],null))], null),self__.__extmap));
 });
 
 
-untangled.client.impl.network.Network.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__39896__auto__,G__51103){
+untangled.client.impl.network.Network.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__39880__auto__,G__220511){
 var self__ = this;
-var this__39896__auto____$1 = this;
-return (new untangled.client.impl.network.Network(self__.url,self__.request_transform,self__.global_error_callback,self__.complete_app,self__.transit_handlers,G__51103,self__.__extmap,self__.__hash));
+var this__39880__auto____$1 = this;
+return (new untangled.client.impl.network.Network(self__.url,self__.request_transform,self__.global_error_callback,self__.complete_app,self__.transit_handlers,G__220511,self__.__extmap,self__.__hash));
 });
 
 
-untangled.client.impl.network.Network.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__39902__auto__,entry__39903__auto__){
+untangled.client.impl.network.Network.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__39886__auto__,entry__39887__auto__){
 var self__ = this;
-var this__39902__auto____$1 = this;
-if(cljs.core.vector_QMARK_.call(null,entry__39903__auto__)){
-return this__39902__auto____$1.cljs$core$IAssociative$_assoc$arity$3(null,cljs.core._nth.call(null,entry__39903__auto__,(0)),cljs.core._nth.call(null,entry__39903__auto__,(1)));
+var this__39886__auto____$1 = this;
+if(cljs.core.vector_QMARK_.call(null,entry__39887__auto__)){
+return this__39886__auto____$1.cljs$core$IAssociative$_assoc$arity$3(null,cljs.core._nth.call(null,entry__39887__auto__,(0)),cljs.core._nth.call(null,entry__39887__auto__,(1)));
 } else {
-return cljs.core.reduce.call(null,cljs.core._conj,this__39902__auto____$1,entry__39903__auto__);
+return cljs.core.reduce.call(null,cljs.core._conj,this__39886__auto____$1,entry__39887__auto__);
 }
 });
 
@@ -494,20 +494,20 @@ return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMP
 
 untangled.client.impl.network.Network.cljs$lang$type = true;
 
-untangled.client.impl.network.Network.cljs$lang$ctorPrSeq = (function (this__39933__auto__){
+untangled.client.impl.network.Network.cljs$lang$ctorPrSeq = (function (this__39917__auto__){
 return cljs.core._conj.call(null,cljs.core.List.EMPTY,"untangled.client.impl.network/Network");
 });
 
-untangled.client.impl.network.Network.cljs$lang$ctorPrWriter = (function (this__39933__auto__,writer__39934__auto__){
-return cljs.core._write.call(null,writer__39934__auto__,"untangled.client.impl.network/Network");
+untangled.client.impl.network.Network.cljs$lang$ctorPrWriter = (function (this__39917__auto__,writer__39918__auto__){
+return cljs.core._write.call(null,writer__39918__auto__,"untangled.client.impl.network/Network");
 });
 
 untangled.client.impl.network.__GT_Network = (function untangled$client$impl$network$__GT_Network(url,request_transform,global_error_callback,complete_app,transit_handlers){
 return (new untangled.client.impl.network.Network(url,request_transform,global_error_callback,complete_app,transit_handlers,null,null,null));
 });
 
-untangled.client.impl.network.map__GT_Network = (function untangled$client$impl$network$map__GT_Network(G__51105){
-return (new untangled.client.impl.network.Network(new cljs.core.Keyword(null,"url","url",276297046).cljs$core$IFn$_invoke$arity$1(G__51105),new cljs.core.Keyword(null,"request-transform","request-transform",170337297).cljs$core$IFn$_invoke$arity$1(G__51105),new cljs.core.Keyword(null,"global-error-callback","global-error-callback",901427631).cljs$core$IFn$_invoke$arity$1(G__51105),new cljs.core.Keyword(null,"complete-app","complete-app",1317441339).cljs$core$IFn$_invoke$arity$1(G__51105),new cljs.core.Keyword(null,"transit-handlers","transit-handlers",-1206080791).cljs$core$IFn$_invoke$arity$1(G__51105),null,cljs.core.dissoc.call(null,G__51105,new cljs.core.Keyword(null,"url","url",276297046),new cljs.core.Keyword(null,"request-transform","request-transform",170337297),new cljs.core.Keyword(null,"global-error-callback","global-error-callback",901427631),new cljs.core.Keyword(null,"complete-app","complete-app",1317441339),new cljs.core.Keyword(null,"transit-handlers","transit-handlers",-1206080791)),null));
+untangled.client.impl.network.map__GT_Network = (function untangled$client$impl$network$map__GT_Network(G__220513){
+return (new untangled.client.impl.network.Network(new cljs.core.Keyword(null,"url","url",276297046).cljs$core$IFn$_invoke$arity$1(G__220513),new cljs.core.Keyword(null,"request-transform","request-transform",170337297).cljs$core$IFn$_invoke$arity$1(G__220513),new cljs.core.Keyword(null,"global-error-callback","global-error-callback",901427631).cljs$core$IFn$_invoke$arity$1(G__220513),new cljs.core.Keyword(null,"complete-app","complete-app",1317441339).cljs$core$IFn$_invoke$arity$1(G__220513),new cljs.core.Keyword(null,"transit-handlers","transit-handlers",-1206080791).cljs$core$IFn$_invoke$arity$1(G__220513),null,cljs.core.dissoc.call(null,G__220513,new cljs.core.Keyword(null,"url","url",276297046),new cljs.core.Keyword(null,"request-transform","request-transform",170337297),new cljs.core.Keyword(null,"global-error-callback","global-error-callback",901427631),new cljs.core.Keyword(null,"complete-app","complete-app",1317441339),new cljs.core.Keyword(null,"transit-handlers","transit-handlers",-1206080791)),null));
 });
 
 /**
@@ -537,40 +537,40 @@ return (new untangled.client.impl.network.Network(new cljs.core.Keyword(null,"ur
  *   
  */
 untangled.client.impl.network.make_untangled_network = (function untangled$client$impl$network$make_untangled_network(var_args){
-var args__40450__auto__ = [];
-var len__40443__auto___51119 = arguments.length;
-var i__40444__auto___51120 = (0);
+var args__40434__auto__ = [];
+var len__40427__auto___220527 = arguments.length;
+var i__40428__auto___220528 = (0);
 while(true){
-if((i__40444__auto___51120 < len__40443__auto___51119)){
-args__40450__auto__.push((arguments[i__40444__auto___51120]));
+if((i__40428__auto___220528 < len__40427__auto___220527)){
+args__40434__auto__.push((arguments[i__40428__auto___220528]));
 
-var G__51121 = (i__40444__auto___51120 + (1));
-i__40444__auto___51120 = G__51121;
+var G__220529 = (i__40428__auto___220528 + (1));
+i__40428__auto___220528 = G__220529;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__40451__auto__ = ((((1) < args__40450__auto__.length))?(new cljs.core.IndexedSeq(args__40450__auto__.slice((1)),(0),null)):null);
-return untangled.client.impl.network.make_untangled_network.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__40451__auto__);
+var argseq__40435__auto__ = ((((1) < args__40434__auto__.length))?(new cljs.core.IndexedSeq(args__40434__auto__.slice((1)),(0),null)):null);
+return untangled.client.impl.network.make_untangled_network.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__40435__auto__);
 });
 
-untangled.client.impl.network.make_untangled_network.cljs$core$IFn$_invoke$arity$variadic = (function (url,p__51116){
-var map__51117 = p__51116;
-var map__51117__$1 = ((((!((map__51117 == null)))?((((map__51117.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__51117.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__51117):map__51117);
-var request_transform = cljs.core.get.call(null,map__51117__$1,new cljs.core.Keyword(null,"request-transform","request-transform",170337297));
-var global_error_callback = cljs.core.get.call(null,map__51117__$1,new cljs.core.Keyword(null,"global-error-callback","global-error-callback",901427631));
-var transit_handlers = cljs.core.get.call(null,map__51117__$1,new cljs.core.Keyword(null,"transit-handlers","transit-handlers",-1206080791));
+untangled.client.impl.network.make_untangled_network.cljs$core$IFn$_invoke$arity$variadic = (function (url,p__220524){
+var map__220525 = p__220524;
+var map__220525__$1 = ((((!((map__220525 == null)))?((((map__220525.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__220525.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__220525):map__220525);
+var request_transform = cljs.core.get.call(null,map__220525__$1,new cljs.core.Keyword(null,"request-transform","request-transform",170337297));
+var global_error_callback = cljs.core.get.call(null,map__220525__$1,new cljs.core.Keyword(null,"global-error-callback","global-error-callback",901427631));
+var transit_handlers = cljs.core.get.call(null,map__220525__$1,new cljs.core.Keyword(null,"transit-handlers","transit-handlers",-1206080791));
 return untangled.client.impl.network.map__GT_Network.call(null,new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"url","url",276297046),url,new cljs.core.Keyword(null,"transit-handlers","transit-handlers",-1206080791),transit_handlers,new cljs.core.Keyword(null,"request-transform","request-transform",170337297),request_transform,new cljs.core.Keyword(null,"global-error-callback","global-error-callback",901427631),cljs.core.atom.call(null,global_error_callback)], null));
 });
 
 untangled.client.impl.network.make_untangled_network.cljs$lang$maxFixedArity = (1);
 
-untangled.client.impl.network.make_untangled_network.cljs$lang$applyTo = (function (seq51114){
-var G__51115 = cljs.core.first.call(null,seq51114);
-var seq51114__$1 = cljs.core.next.call(null,seq51114);
-return untangled.client.impl.network.make_untangled_network.cljs$core$IFn$_invoke$arity$variadic(G__51115,seq51114__$1);
+untangled.client.impl.network.make_untangled_network.cljs$lang$applyTo = (function (seq220522){
+var G__220523 = cljs.core.first.call(null,seq220522);
+var seq220522__$1 = cljs.core.next.call(null,seq220522);
+return untangled.client.impl.network.make_untangled_network.cljs$core$IFn$_invoke$arity$variadic(G__220523,seq220522__$1);
 });
 
 
@@ -601,95 +601,95 @@ this.cljs$lang$protocol_mask$partition0$ = 2229667594;
 this.cljs$lang$protocol_mask$partition1$ = 8192;
 })
 
-untangled.client.impl.network.MockNetwork.prototype.cljs$core$ILookup$_lookup$arity$2 = (function (this__39897__auto__,k__39898__auto__){
+untangled.client.impl.network.MockNetwork.prototype.cljs$core$ILookup$_lookup$arity$2 = (function (this__39881__auto__,k__39882__auto__){
 var self__ = this;
-var this__39897__auto____$1 = this;
-return this__39897__auto____$1.cljs$core$ILookup$_lookup$arity$3(null,k__39898__auto__,null);
+var this__39881__auto____$1 = this;
+return this__39881__auto____$1.cljs$core$ILookup$_lookup$arity$3(null,k__39882__auto__,null);
 });
 
 
-untangled.client.impl.network.MockNetwork.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__39899__auto__,k51123,else__39900__auto__){
+untangled.client.impl.network.MockNetwork.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__39883__auto__,k220531,else__39884__auto__){
 var self__ = this;
-var this__39899__auto____$1 = this;
-var G__51125 = (((k51123 instanceof cljs.core.Keyword))?k51123.fqn:null);
-switch (G__51125) {
+var this__39883__auto____$1 = this;
+var G__220533 = (((k220531 instanceof cljs.core.Keyword))?k220531.fqn:null);
+switch (G__220533) {
 case "complete-app":
 return self__.complete_app;
 
 break;
 default:
-return cljs.core.get.call(null,self__.__extmap,k51123,else__39900__auto__);
+return cljs.core.get.call(null,self__.__extmap,k220531,else__39884__auto__);
 
 }
 });
 
 
-untangled.client.impl.network.MockNetwork.prototype.cljs$core$IPrintWithWriter$_pr_writer$arity$3 = (function (this__39911__auto__,writer__39912__auto__,opts__39913__auto__){
+untangled.client.impl.network.MockNetwork.prototype.cljs$core$IPrintWithWriter$_pr_writer$arity$3 = (function (this__39895__auto__,writer__39896__auto__,opts__39897__auto__){
 var self__ = this;
-var this__39911__auto____$1 = this;
-var pr_pair__39914__auto__ = ((function (this__39911__auto____$1){
-return (function (keyval__39915__auto__){
-return cljs.core.pr_sequential_writer.call(null,writer__39912__auto__,cljs.core.pr_writer,""," ","",opts__39913__auto__,keyval__39915__auto__);
-});})(this__39911__auto____$1))
+var this__39895__auto____$1 = this;
+var pr_pair__39898__auto__ = ((function (this__39895__auto____$1){
+return (function (keyval__39899__auto__){
+return cljs.core.pr_sequential_writer.call(null,writer__39896__auto__,cljs.core.pr_writer,""," ","",opts__39897__auto__,keyval__39899__auto__);
+});})(this__39895__auto____$1))
 ;
-return cljs.core.pr_sequential_writer.call(null,writer__39912__auto__,pr_pair__39914__auto__,"#untangled.client.impl.network.MockNetwork{",", ","}",opts__39913__auto__,cljs.core.concat.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"complete-app","complete-app",1317441339),self__.complete_app],null))], null),self__.__extmap));
+return cljs.core.pr_sequential_writer.call(null,writer__39896__auto__,pr_pair__39898__auto__,"#untangled.client.impl.network.MockNetwork{",", ","}",opts__39897__auto__,cljs.core.concat.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"complete-app","complete-app",1317441339),self__.complete_app],null))], null),self__.__extmap));
 });
 
 
 untangled.client.impl.network.MockNetwork.prototype.cljs$core$IIterable$ = cljs.core.PROTOCOL_SENTINEL;
 
 
-untangled.client.impl.network.MockNetwork.prototype.cljs$core$IIterable$_iterator$arity$1 = (function (G__51122){
+untangled.client.impl.network.MockNetwork.prototype.cljs$core$IIterable$_iterator$arity$1 = (function (G__220530){
 var self__ = this;
-var G__51122__$1 = this;
-return (new cljs.core.RecordIter((0),G__51122__$1,1,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"complete-app","complete-app",1317441339)], null),(cljs.core.truth_(self__.__extmap)?cljs.core._iterator.call(null,self__.__extmap):cljs.core.nil_iter.call(null))));
+var G__220530__$1 = this;
+return (new cljs.core.RecordIter((0),G__220530__$1,1,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"complete-app","complete-app",1317441339)], null),(cljs.core.truth_(self__.__extmap)?cljs.core._iterator.call(null,self__.__extmap):cljs.core.nil_iter.call(null))));
 });
 
 
-untangled.client.impl.network.MockNetwork.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__39895__auto__){
+untangled.client.impl.network.MockNetwork.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__39879__auto__){
 var self__ = this;
-var this__39895__auto____$1 = this;
+var this__39879__auto____$1 = this;
 return self__.__meta;
 });
 
 
-untangled.client.impl.network.MockNetwork.prototype.cljs$core$ICloneable$_clone$arity$1 = (function (this__39891__auto__){
+untangled.client.impl.network.MockNetwork.prototype.cljs$core$ICloneable$_clone$arity$1 = (function (this__39875__auto__){
 var self__ = this;
-var this__39891__auto____$1 = this;
+var this__39875__auto____$1 = this;
 return (new untangled.client.impl.network.MockNetwork(self__.complete_app,self__.__meta,self__.__extmap,self__.__hash));
 });
 
 
-untangled.client.impl.network.MockNetwork.prototype.cljs$core$ICounted$_count$arity$1 = (function (this__39901__auto__){
+untangled.client.impl.network.MockNetwork.prototype.cljs$core$ICounted$_count$arity$1 = (function (this__39885__auto__){
 var self__ = this;
-var this__39901__auto____$1 = this;
+var this__39885__auto____$1 = this;
 return (1 + cljs.core.count.call(null,self__.__extmap));
 });
 
 
-untangled.client.impl.network.MockNetwork.prototype.cljs$core$IHash$_hash$arity$1 = (function (this__39892__auto__){
+untangled.client.impl.network.MockNetwork.prototype.cljs$core$IHash$_hash$arity$1 = (function (this__39876__auto__){
 var self__ = this;
-var this__39892__auto____$1 = this;
-var h__39664__auto__ = self__.__hash;
-if(!((h__39664__auto__ == null))){
-return h__39664__auto__;
+var this__39876__auto____$1 = this;
+var h__39648__auto__ = self__.__hash;
+if(!((h__39648__auto__ == null))){
+return h__39648__auto__;
 } else {
-var h__39664__auto____$1 = cljs.core.hash_imap.call(null,this__39892__auto____$1);
-self__.__hash = h__39664__auto____$1;
+var h__39648__auto____$1 = cljs.core.hash_imap.call(null,this__39876__auto____$1);
+self__.__hash = h__39648__auto____$1;
 
-return h__39664__auto____$1;
+return h__39648__auto____$1;
 }
 });
 
 
-untangled.client.impl.network.MockNetwork.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this__39893__auto__,other__39894__auto__){
+untangled.client.impl.network.MockNetwork.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this__39877__auto__,other__39878__auto__){
 var self__ = this;
-var this__39893__auto____$1 = this;
-if(cljs.core.truth_((function (){var and__39210__auto__ = other__39894__auto__;
-if(cljs.core.truth_(and__39210__auto__)){
-return ((this__39893__auto____$1.constructor === other__39894__auto__.constructor)) && (cljs.core.equiv_map.call(null,this__39893__auto____$1,other__39894__auto__));
+var this__39877__auto____$1 = this;
+if(cljs.core.truth_((function (){var and__39194__auto__ = other__39878__auto__;
+if(cljs.core.truth_(and__39194__auto__)){
+return ((this__39877__auto____$1.constructor === other__39878__auto__.constructor)) && (cljs.core.equiv_map.call(null,this__39877__auto____$1,other__39878__auto__));
 } else {
-return and__39210__auto__;
+return and__39194__auto__;
 }
 })())){
 return true;
@@ -716,51 +716,51 @@ return cljs.core.assoc.call(null,this$__$1,new cljs.core.Keyword(null,"complete-
 });
 
 
-untangled.client.impl.network.MockNetwork.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__39906__auto__,k__39907__auto__){
+untangled.client.impl.network.MockNetwork.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__39890__auto__,k__39891__auto__){
 var self__ = this;
-var this__39906__auto____$1 = this;
-if(cljs.core.contains_QMARK_.call(null,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"complete-app","complete-app",1317441339),null], null), null),k__39907__auto__)){
-return cljs.core.dissoc.call(null,cljs.core.with_meta.call(null,cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,this__39906__auto____$1),self__.__meta),k__39907__auto__);
+var this__39890__auto____$1 = this;
+if(cljs.core.contains_QMARK_.call(null,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"complete-app","complete-app",1317441339),null], null), null),k__39891__auto__)){
+return cljs.core.dissoc.call(null,cljs.core.with_meta.call(null,cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,this__39890__auto____$1),self__.__meta),k__39891__auto__);
 } else {
-return (new untangled.client.impl.network.MockNetwork(self__.complete_app,self__.__meta,cljs.core.not_empty.call(null,cljs.core.dissoc.call(null,self__.__extmap,k__39907__auto__)),null));
+return (new untangled.client.impl.network.MockNetwork(self__.complete_app,self__.__meta,cljs.core.not_empty.call(null,cljs.core.dissoc.call(null,self__.__extmap,k__39891__auto__)),null));
 }
 });
 
 
-untangled.client.impl.network.MockNetwork.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__39904__auto__,k__39905__auto__,G__51122){
+untangled.client.impl.network.MockNetwork.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__39888__auto__,k__39889__auto__,G__220530){
 var self__ = this;
-var this__39904__auto____$1 = this;
-var pred__51126 = cljs.core.keyword_identical_QMARK_;
-var expr__51127 = k__39905__auto__;
-if(cljs.core.truth_(pred__51126.call(null,new cljs.core.Keyword(null,"complete-app","complete-app",1317441339),expr__51127))){
-return (new untangled.client.impl.network.MockNetwork(G__51122,self__.__meta,self__.__extmap,null));
+var this__39888__auto____$1 = this;
+var pred__220534 = cljs.core.keyword_identical_QMARK_;
+var expr__220535 = k__39889__auto__;
+if(cljs.core.truth_(pred__220534.call(null,new cljs.core.Keyword(null,"complete-app","complete-app",1317441339),expr__220535))){
+return (new untangled.client.impl.network.MockNetwork(G__220530,self__.__meta,self__.__extmap,null));
 } else {
-return (new untangled.client.impl.network.MockNetwork(self__.complete_app,self__.__meta,cljs.core.assoc.call(null,self__.__extmap,k__39905__auto__,G__51122),null));
+return (new untangled.client.impl.network.MockNetwork(self__.complete_app,self__.__meta,cljs.core.assoc.call(null,self__.__extmap,k__39889__auto__,G__220530),null));
 }
 });
 
 
-untangled.client.impl.network.MockNetwork.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__39909__auto__){
+untangled.client.impl.network.MockNetwork.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__39893__auto__){
 var self__ = this;
-var this__39909__auto____$1 = this;
+var this__39893__auto____$1 = this;
 return cljs.core.seq.call(null,cljs.core.concat.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"complete-app","complete-app",1317441339),self__.complete_app],null))], null),self__.__extmap));
 });
 
 
-untangled.client.impl.network.MockNetwork.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__39896__auto__,G__51122){
+untangled.client.impl.network.MockNetwork.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__39880__auto__,G__220530){
 var self__ = this;
-var this__39896__auto____$1 = this;
-return (new untangled.client.impl.network.MockNetwork(self__.complete_app,G__51122,self__.__extmap,self__.__hash));
+var this__39880__auto____$1 = this;
+return (new untangled.client.impl.network.MockNetwork(self__.complete_app,G__220530,self__.__extmap,self__.__hash));
 });
 
 
-untangled.client.impl.network.MockNetwork.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__39902__auto__,entry__39903__auto__){
+untangled.client.impl.network.MockNetwork.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__39886__auto__,entry__39887__auto__){
 var self__ = this;
-var this__39902__auto____$1 = this;
-if(cljs.core.vector_QMARK_.call(null,entry__39903__auto__)){
-return this__39902__auto____$1.cljs$core$IAssociative$_assoc$arity$3(null,cljs.core._nth.call(null,entry__39903__auto__,(0)),cljs.core._nth.call(null,entry__39903__auto__,(1)));
+var this__39886__auto____$1 = this;
+if(cljs.core.vector_QMARK_.call(null,entry__39887__auto__)){
+return this__39886__auto____$1.cljs$core$IAssociative$_assoc$arity$3(null,cljs.core._nth.call(null,entry__39887__auto__,(0)),cljs.core._nth.call(null,entry__39887__auto__,(1)));
 } else {
-return cljs.core.reduce.call(null,cljs.core._conj,this__39902__auto____$1,entry__39903__auto__);
+return cljs.core.reduce.call(null,cljs.core._conj,this__39886__auto____$1,entry__39887__auto__);
 }
 });
 
@@ -770,24 +770,24 @@ return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMP
 
 untangled.client.impl.network.MockNetwork.cljs$lang$type = true;
 
-untangled.client.impl.network.MockNetwork.cljs$lang$ctorPrSeq = (function (this__39933__auto__){
+untangled.client.impl.network.MockNetwork.cljs$lang$ctorPrSeq = (function (this__39917__auto__){
 return cljs.core._conj.call(null,cljs.core.List.EMPTY,"untangled.client.impl.network/MockNetwork");
 });
 
-untangled.client.impl.network.MockNetwork.cljs$lang$ctorPrWriter = (function (this__39933__auto__,writer__39934__auto__){
-return cljs.core._write.call(null,writer__39934__auto__,"untangled.client.impl.network/MockNetwork");
+untangled.client.impl.network.MockNetwork.cljs$lang$ctorPrWriter = (function (this__39917__auto__,writer__39918__auto__){
+return cljs.core._write.call(null,writer__39918__auto__,"untangled.client.impl.network/MockNetwork");
 });
 
 untangled.client.impl.network.__GT_MockNetwork = (function untangled$client$impl$network$__GT_MockNetwork(complete_app){
 return (new untangled.client.impl.network.MockNetwork(complete_app,null,null,null));
 });
 
-untangled.client.impl.network.map__GT_MockNetwork = (function untangled$client$impl$network$map__GT_MockNetwork(G__51124){
-return (new untangled.client.impl.network.MockNetwork(new cljs.core.Keyword(null,"complete-app","complete-app",1317441339).cljs$core$IFn$_invoke$arity$1(G__51124),null,cljs.core.dissoc.call(null,G__51124,new cljs.core.Keyword(null,"complete-app","complete-app",1317441339)),null));
+untangled.client.impl.network.map__GT_MockNetwork = (function untangled$client$impl$network$map__GT_MockNetwork(G__220532){
+return (new untangled.client.impl.network.MockNetwork(new cljs.core.Keyword(null,"complete-app","complete-app",1317441339).cljs$core$IFn$_invoke$arity$1(G__220532),null,cljs.core.dissoc.call(null,G__220532,new cljs.core.Keyword(null,"complete-app","complete-app",1317441339)),null));
 });
 
 untangled.client.impl.network.mock_network = (function untangled$client$impl$network$mock_network(){
 return untangled.client.impl.network.map__GT_MockNetwork.call(null,cljs.core.PersistentArrayMap.EMPTY);
 });
 
-//# sourceMappingURL=network.js.map?rel=1491695669317
+//# sourceMappingURL=network.js.map?rel=1491715138719

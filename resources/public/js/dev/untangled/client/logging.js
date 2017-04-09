@@ -7,8 +7,8 @@ goog.require('goog.log');
 goog.require('goog.debug.Logger.Level');
 untangled.client.logging.set_level = (function untangled$client$logging$set_level(log_level){
 
-return om.next._STAR_logger_STAR_.setLevel(goog.debug.Logger.Level.getPredefinedLevel((function (){var G__51066 = (((log_level instanceof cljs.core.Keyword))?log_level.fqn:null);
-switch (G__51066) {
+return om.next._STAR_logger_STAR_.setLevel(goog.debug.Logger.Level.getPredefinedLevel((function (){var G__220474 = (((log_level instanceof cljs.core.Keyword))?log_level.fqn:null);
+switch (G__220474) {
 case "all":
 return "ALL";
 
@@ -43,23 +43,23 @@ throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("No matching claus
  * Include a pretty-printed cljs value as a string with the given text message.
  */
 untangled.client.logging.value_message = (function untangled$client$logging$value_message(msg,val){
-return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(msg),cljs.core.str.cljs$core$IFn$_invoke$arity$1(":\n"),cljs.core.str.cljs$core$IFn$_invoke$arity$1((function (){var sb__40314__auto__ = (new goog.string.StringBuffer());
-var _STAR_print_newline_STAR_51070_51072 = cljs.core._STAR_print_newline_STAR_;
-var _STAR_print_fn_STAR_51071_51073 = cljs.core._STAR_print_fn_STAR_;
+return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(msg),cljs.core.str.cljs$core$IFn$_invoke$arity$1(":\n"),cljs.core.str.cljs$core$IFn$_invoke$arity$1((function (){var sb__40298__auto__ = (new goog.string.StringBuffer());
+var _STAR_print_newline_STAR_220478_220480 = cljs.core._STAR_print_newline_STAR_;
+var _STAR_print_fn_STAR_220479_220481 = cljs.core._STAR_print_fn_STAR_;
 cljs.core._STAR_print_newline_STAR_ = true;
 
-cljs.core._STAR_print_fn_STAR_ = ((function (_STAR_print_newline_STAR_51070_51072,_STAR_print_fn_STAR_51071_51073,sb__40314__auto__){
-return (function (x__40315__auto__){
-return sb__40314__auto__.append(x__40315__auto__);
-});})(_STAR_print_newline_STAR_51070_51072,_STAR_print_fn_STAR_51071_51073,sb__40314__auto__))
+cljs.core._STAR_print_fn_STAR_ = ((function (_STAR_print_newline_STAR_220478_220480,_STAR_print_fn_STAR_220479_220481,sb__40298__auto__){
+return (function (x__40299__auto__){
+return sb__40298__auto__.append(x__40299__auto__);
+});})(_STAR_print_newline_STAR_220478_220480,_STAR_print_fn_STAR_220479_220481,sb__40298__auto__))
 ;
 
 try{cljs.pprint.pprint.call(null,val);
-}finally {cljs.core._STAR_print_fn_STAR_ = _STAR_print_fn_STAR_51071_51073;
+}finally {cljs.core._STAR_print_fn_STAR_ = _STAR_print_fn_STAR_220479_220481;
 
-cljs.core._STAR_print_newline_STAR_ = _STAR_print_newline_STAR_51070_51072;
+cljs.core._STAR_print_newline_STAR_ = _STAR_print_newline_STAR_220478_220480;
 }
-return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(sb__40314__auto__)].join('');
+return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(sb__40298__auto__)].join('');
 })())].join('');
 });
 /**
@@ -67,23 +67,23 @@ return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(sb__40314__auto__)].join('')
  *        Returns the value (like identity) so it can be harmlessly nested in expressions.
  */
 untangled.client.logging.debug = (function untangled$client$logging$debug(var_args){
-var args51074 = [];
-var len__40443__auto___51077 = arguments.length;
-var i__40444__auto___51078 = (0);
+var args220482 = [];
+var len__40427__auto___220485 = arguments.length;
+var i__40428__auto___220486 = (0);
 while(true){
-if((i__40444__auto___51078 < len__40443__auto___51077)){
-args51074.push((arguments[i__40444__auto___51078]));
+if((i__40428__auto___220486 < len__40427__auto___220485)){
+args220482.push((arguments[i__40428__auto___220486]));
 
-var G__51079 = (i__40444__auto___51078 + (1));
-i__40444__auto___51078 = G__51079;
+var G__220487 = (i__40428__auto___220486 + (1));
+i__40428__auto___220486 = G__220487;
 continue;
 } else {
 }
 break;
 }
 
-var G__51076 = args51074.length;
-switch (G__51076) {
+var G__220484 = args220482.length;
+switch (G__220484) {
 case 1:
 return untangled.client.logging.debug.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -93,7 +93,7 @@ return untangled.client.logging.debug.cljs$core$IFn$_invoke$arity$2((arguments[(
 
 break;
 default:
-throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Invalid arity: "),cljs.core.str.cljs$core$IFn$_invoke$arity$1(args51074.length)].join('')));
+throw (new Error([cljs.core.str.cljs$core$IFn$_invoke$arity$1("Invalid arity: "),cljs.core.str.cljs$core$IFn$_invoke$arity$1(args220482.length)].join('')));
 
 }
 });
@@ -116,23 +116,23 @@ untangled.client.logging.debug.cljs$lang$maxFixedArity = 2;
  * output an INFO level message to the Om logger
  */
 untangled.client.logging.info = (function untangled$client$logging$info(var_args){
-var args__40450__auto__ = [];
-var len__40443__auto___51082 = arguments.length;
-var i__40444__auto___51083 = (0);
+var args__40434__auto__ = [];
+var len__40427__auto___220490 = arguments.length;
+var i__40428__auto___220491 = (0);
 while(true){
-if((i__40444__auto___51083 < len__40443__auto___51082)){
-args__40450__auto__.push((arguments[i__40444__auto___51083]));
+if((i__40428__auto___220491 < len__40427__auto___220490)){
+args__40434__auto__.push((arguments[i__40428__auto___220491]));
 
-var G__51084 = (i__40444__auto___51083 + (1));
-i__40444__auto___51083 = G__51084;
+var G__220492 = (i__40428__auto___220491 + (1));
+i__40428__auto___220491 = G__220492;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__40451__auto__ = ((((0) < args__40450__auto__.length))?(new cljs.core.IndexedSeq(args__40450__auto__.slice((0)),(0),null)):null);
-return untangled.client.logging.info.cljs$core$IFn$_invoke$arity$variadic(argseq__40451__auto__);
+var argseq__40435__auto__ = ((((0) < args__40434__auto__.length))?(new cljs.core.IndexedSeq(args__40434__auto__.slice((0)),(0),null)):null);
+return untangled.client.logging.info.cljs$core$IFn$_invoke$arity$variadic(argseq__40435__auto__);
 });
 
 untangled.client.logging.info.cljs$core$IFn$_invoke$arity$variadic = (function (data){
@@ -141,31 +141,31 @@ return goog.log.info(om.next._STAR_logger_STAR_,cljs.core.apply.call(null,cljs.c
 
 untangled.client.logging.info.cljs$lang$maxFixedArity = (0);
 
-untangled.client.logging.info.cljs$lang$applyTo = (function (seq51081){
-return untangled.client.logging.info.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq51081));
+untangled.client.logging.info.cljs$lang$applyTo = (function (seq220489){
+return untangled.client.logging.info.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq220489));
 });
 
 /**
  * output a WARNING level message to the Om logger
  */
 untangled.client.logging.warn = (function untangled$client$logging$warn(var_args){
-var args__40450__auto__ = [];
-var len__40443__auto___51086 = arguments.length;
-var i__40444__auto___51087 = (0);
+var args__40434__auto__ = [];
+var len__40427__auto___220494 = arguments.length;
+var i__40428__auto___220495 = (0);
 while(true){
-if((i__40444__auto___51087 < len__40443__auto___51086)){
-args__40450__auto__.push((arguments[i__40444__auto___51087]));
+if((i__40428__auto___220495 < len__40427__auto___220494)){
+args__40434__auto__.push((arguments[i__40428__auto___220495]));
 
-var G__51088 = (i__40444__auto___51087 + (1));
-i__40444__auto___51087 = G__51088;
+var G__220496 = (i__40428__auto___220495 + (1));
+i__40428__auto___220495 = G__220496;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__40451__auto__ = ((((0) < args__40450__auto__.length))?(new cljs.core.IndexedSeq(args__40450__auto__.slice((0)),(0),null)):null);
-return untangled.client.logging.warn.cljs$core$IFn$_invoke$arity$variadic(argseq__40451__auto__);
+var argseq__40435__auto__ = ((((0) < args__40434__auto__.length))?(new cljs.core.IndexedSeq(args__40434__auto__.slice((0)),(0),null)):null);
+return untangled.client.logging.warn.cljs$core$IFn$_invoke$arity$variadic(argseq__40435__auto__);
 });
 
 untangled.client.logging.warn.cljs$core$IFn$_invoke$arity$variadic = (function (data){
@@ -174,31 +174,31 @@ return goog.log.warning(om.next._STAR_logger_STAR_,cljs.core.apply.call(null,clj
 
 untangled.client.logging.warn.cljs$lang$maxFixedArity = (0);
 
-untangled.client.logging.warn.cljs$lang$applyTo = (function (seq51085){
-return untangled.client.logging.warn.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq51085));
+untangled.client.logging.warn.cljs$lang$applyTo = (function (seq220493){
+return untangled.client.logging.warn.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq220493));
 });
 
 /**
  * output an ERROR level message to the Om logger
  */
 untangled.client.logging.error = (function untangled$client$logging$error(var_args){
-var args__40450__auto__ = [];
-var len__40443__auto___51090 = arguments.length;
-var i__40444__auto___51091 = (0);
+var args__40434__auto__ = [];
+var len__40427__auto___220498 = arguments.length;
+var i__40428__auto___220499 = (0);
 while(true){
-if((i__40444__auto___51091 < len__40443__auto___51090)){
-args__40450__auto__.push((arguments[i__40444__auto___51091]));
+if((i__40428__auto___220499 < len__40427__auto___220498)){
+args__40434__auto__.push((arguments[i__40428__auto___220499]));
 
-var G__51092 = (i__40444__auto___51091 + (1));
-i__40444__auto___51091 = G__51092;
+var G__220500 = (i__40428__auto___220499 + (1));
+i__40428__auto___220499 = G__220500;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__40451__auto__ = ((((0) < args__40450__auto__.length))?(new cljs.core.IndexedSeq(args__40450__auto__.slice((0)),(0),null)):null);
-return untangled.client.logging.error.cljs$core$IFn$_invoke$arity$variadic(argseq__40451__auto__);
+var argseq__40435__auto__ = ((((0) < args__40434__auto__.length))?(new cljs.core.IndexedSeq(args__40434__auto__.slice((0)),(0),null)):null);
+return untangled.client.logging.error.cljs$core$IFn$_invoke$arity$variadic(argseq__40435__auto__);
 });
 
 untangled.client.logging.error.cljs$core$IFn$_invoke$arity$variadic = (function (data){
@@ -207,9 +207,9 @@ return goog.log.error(om.next._STAR_logger_STAR_,cljs.core.apply.call(null,cljs.
 
 untangled.client.logging.error.cljs$lang$maxFixedArity = (0);
 
-untangled.client.logging.error.cljs$lang$applyTo = (function (seq51089){
-return untangled.client.logging.error.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq51089));
+untangled.client.logging.error.cljs$lang$applyTo = (function (seq220497){
+return untangled.client.logging.error.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq220497));
 });
 
 
-//# sourceMappingURL=logging.js.map?rel=1491695668814
+//# sourceMappingURL=logging.js.map?rel=1491715138464
