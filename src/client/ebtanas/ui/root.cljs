@@ -37,7 +37,7 @@
     {:name name
      :menus menus})
   static om/Ident
-  (ident [this {:keys [title]}]
+  (ident [this {:keys [name]}]
     [:nav/by-name name])
   static om/IQuery
   (query [this]
@@ -56,14 +56,14 @@
   (initial-state [this params]
     {:title "Ebtanas"
      :name "Main Header"
-     :navigation
-            (uc/initial-state
-              Navigation
-              {:name "Navigation Header"
-               :menus [(uc/initial-state NavigationItem {:name "Home" :icon "icon-home" :url "/" :active true})
-                       (uc/initial-state NavigationItem {:name "Bank Soal" :icon "icon-library_books" :url "#" :active false})
-                       (uc/initial-state NavigationItem {:name "Daftar" :icon "icon-people" :url "#" :active false})
-                       (uc/initial-state NavigationItem {:name "Masuk" :icon "icon-exit_to_app" :url "/login" :active false})]})})
+     :header-nav
+       (uc/initial-state
+          Navigation
+          {:name "Navigation Header"
+           :menus [(uc/initial-state NavigationItem {:name "Home" :icon "icon-home" :url "/" :active true})
+                   (uc/initial-state NavigationItem {:name "Bank Soal" :icon "icon-library_books" :url "#" :active false})
+                   (uc/initial-state NavigationItem {:name "Daftar" :icon "icon-people" :url "#" :active false})
+                   (uc/initial-state NavigationItem {:name "Masuk" :icon "icon-exit_to_app" :url "/login" :active false})]})})
   static om/Ident
   (ident [this {:keys [name]}]
     [:header/by-name name])
@@ -71,10 +71,10 @@
   (query [this]
     [:title
      :name
-     {:navigation (om/get-query Navigation)}])
+     {:header-nav (om/get-query Navigation)}])
   Object
   (render [this]
-    (let [{:keys [title navigation]} (om/props this)]
+    (let [{:keys [title header-nav]} (om/props this)]
       (dom/header #js {:className "navbar"}
         (dom/section #js {:className "navbar-section"}
           (dom/a #js {:className "navbar-brand"
@@ -83,7 +83,7 @@
             (str " " title)))
         (dom/section #js {:className "navbar-section"}
             (dom/ul #js {:className "tab inline-flex"}
-              (navigation-ui navigation)))))))
+              (navigation-ui header-nav)))))))
 
 (def header-ui (om/factory Header))
 
@@ -93,7 +93,7 @@
     {:name "Main Footer"
      :year 2017
      :copyright "Indonesia"
-     :navigation
+     :footer-nav
        (uc/initial-state
          Navigation
          {:name "Navigation Footer"
@@ -108,10 +108,10 @@
     [:name
      :year
      :copyright
-     {:navigation (om/get-query Navigation)}])
+     {:footer-nav (om/get-query Navigation)}])
   Object
   (render [this]
-    (let [{:keys [copyright year navigation]} (om/props this)]
+    (let [{:keys [copyright year footer-nav]} (om/props this)]
       (dom/footer #js {}
         (dom/hr #js {:className "style14"})
         (dom/section #js {:className "navbar"}
@@ -123,7 +123,7 @@
             (dom/span nil (dom/i #js {:className "icon icon-pages"})))
           (dom/section #js {:className "navbar-section"}
             (dom/ul #js {:className "tab inline-flex"}
-              (navigation-ui navigation))))))))
+              (navigation-ui footer-nav))))))))
 
 (def footer-ui (om/factory Footer))
 
