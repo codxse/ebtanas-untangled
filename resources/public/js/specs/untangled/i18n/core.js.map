@@ -1,1 +1,0 @@
-{"version":3,"file":"\/Users\/Nadiar\/Desktop\/Ebtanas\/resources\/public\/js\/specs\/untangled\/i18n\/core.js","sources":["core.cljc?rel=1491715067758"],"lineCount":7,"mappings":";AAAA;;AAEA,AAAeA,iDAAiB,yBAAA,zBAACC;AAEjC,AAAeC,sDAAsB,yBAAA,zBAACD","names":["untangled.i18n.core\/*current-locale*","cljs.core\/atom","untangled.i18n.core\/*loaded-translations*"]}

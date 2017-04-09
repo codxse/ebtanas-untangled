@@ -1,1 +1,0 @@
-{"version":3,"file":"\/Users\/Nadiar\/Desktop\/Ebtanas\/resources\/public\/js\/dev\/ebtanas\/main.js","sources":["main.cljs?rel=1491724578323"],"lineCount":9,"mappings":";AAAA;;;;;AAKA,AAACA,gCAAOC,iBAAI,sCAAA,AAAAC,iEAAA,vGAACC,gEAAYF,kBAAIG","names":["cljs.core\/reset!","ebtanas.core\/app","cljs.core\/deref","untangled.client.core\/mount","ebtanas.ui.root\/Root"]}
