@@ -33,29 +33,15 @@
 
 (defui ^:once Navigation
   static uc/InitialAppState
-  (initial-state [this params]
-    {:title "Navigation Header"
-     :menus [(uc/initial-state NavigationItem {:name "Home"
-                                               :icon "icon-home"
-                                               :url "/"
-                                               :active true})
-             (uc/initial-state NavigationItem {:name "Bank Soal"
-                                               :icon "icon-library_books"
-                                               :url "#" :active false})
-             (uc/initial-state NavigationItem {:name "Daftar"
-                                               :icon "icon-people"
-                                               :url "#"
-                                               :active false})
-             (uc/initial-state NavigationItem {:name "Masuk"
-                                               :icon "icon-exit_to_app"
-                                               :url "/login"
-                                               :active false})]})
+  (initial-state [this {:keys [name menus]}]
+    {:name name
+     :menus menus})
   static om/Ident
   (ident [this {:keys [title]}]
-    [:nav/by-title title])
+    [:nav/by-name name])
   static om/IQuery
   (query [this]
-    [:title
+    [:name
      {:menus (om/get-query NavigationItem)}])
   Object
   (render [this]
@@ -63,19 +49,28 @@
       (dom/ul #js {:className "tab inline-flex"}
         (map navigation-item menus)))))
 
-(def navigation-header-ui (om/factory Navigation))
+(def navigation-ui (om/factory Navigation))
 
 (defui ^:once Header
   static uc/InitialAppState
   (initial-state [this params]
     {:title "Ebtanas"
-     :navigation (uc/initial-state Navigation {})})
+     :name "Main Header"
+     :navigation
+            (uc/initial-state
+              Navigation
+              {:name "Navigation Header"
+               :menus [(uc/initial-state NavigationItem {:name "Home" :icon "icon-home" :url "/" :active true})
+                       (uc/initial-state NavigationItem {:name "Bank Soal" :icon "icon-library_books" :url "#" :active false})
+                       (uc/initial-state NavigationItem {:name "Daftar" :icon "icon-people" :url "#" :active false})
+                       (uc/initial-state NavigationItem {:name "Masuk" :icon "icon-exit_to_app" :url "/login" :active false})]})})
   static om/Ident
-  (ident [this {:keys [title]}]
-    [:header/by-title title])
+  (ident [this {:keys [name]}]
+    [:header/by-name name])
   static om/IQuery
   (query [this]
     [:title
+     :name
      {:navigation (om/get-query Navigation)}])
   Object
   (render [this]
@@ -88,9 +83,49 @@
             (str " " title)))
         (dom/section #js {:className "navbar-section"}
             (dom/ul #js {:className "tab inline-flex"}
-              (navigation-header-ui navigation)))))))
+              (navigation-ui navigation)))))))
 
 (def header-ui (om/factory Header))
+
+(defui ^:once Footer
+  static uc/InitialAppState
+  (initial-state [this params]
+    {:name "Main Footer"
+     :year 2017
+     :copyright "Indonesia"
+     :navigation
+       (uc/initial-state
+         Navigation
+         {:name "Navigation Footer"
+          :menus [(uc/initial-state NavigationItem {:name "Kebijakan Privasi" :url "#"})
+                  (uc/initial-state NavigationItem {:name "Contekan" :url "#"})
+                  (uc/initial-state NavigationItem {:name "Misi Kami" :url "#"})]})})
+  static om/Ident
+  (ident [this {:keys [name]}]
+    [:footer/by-name name])
+  static om/IQuery
+  (query [this]
+    [:name
+     :year
+     :copyright
+     {:navigation (om/get-query Navigation)}])
+  Object
+  (render [this]
+    (let [{:keys [copyright year navigation]} (om/props this)]
+      (dom/footer #js {}
+        (dom/hr #js {:className "style14"})
+        (dom/section #js {:className "navbar"}
+          (dom/section #js {:className "navbar-section"}
+            (dom/span #js {:className "btn btn-link"}
+                      (str (gstring/unescapeEntities "&copy; ")
+                           (str "Hak Cipta " year " - " copyright))))
+          (dom/section #js {:className "navbar-center"}
+            (dom/span nil (dom/i #js {:className "icon icon-pages"})))
+          (dom/section #js {:className "navbar-section"}
+            (dom/ul #js {:className "tab inline-flex"}
+              (navigation-ui navigation))))))))
+
+(def footer-ui (om/factory Footer))
 
 (defui ^:once LoginForm
   static uc/InitialAppState
@@ -191,16 +226,18 @@
   (initial-state [this params]
     {:ui/react-key "start"
      :header (uc/initial-state Header {})
+     :footer (uc/initial-state Footer {})
      :active-body (uc/initial-state BodySwitcher {})})
   static om/IQuery
   (query [this]
     [:ui/react-key
      {:active-body (om/get-query BodySwitcher)}
-     {:header (om/get-query Header)}])
+     {:header (om/get-query Header)}
+     {:footer (om/get-query Footer)}])
   Object
   (render [this]
-    (let [{:keys [ui/react-key active-body header]} (om/props this)]
+    (let [{:keys [ui/react-key active-body header footer]} (om/props this)]
       (dom/div #js {:id "reactive" :key react-key}
-        (js/console.log "Props:" (om/props this))
         (header-ui header)
-        (body-ui active-body)))))
+        (body-ui active-body)
+        (footer-ui footer)))))
