@@ -63,7 +63,7 @@
        (uc/initial-state
          Navigation
          {:name "Navigation Header"
-          :menus [(uc/initial-state NavigationItem {:name "Home" :icon "icon-home" :url "/" :active true :body :main})
+          :menus [(uc/initial-state NavigationItem {:name "Halaman Utama" :icon "icon-home" :url "/" :active true :body :main})
                   (uc/initial-state NavigationItem {:name "Bank Soal" :icon "icon-library_books" :url "#" :active false})
                   (uc/initial-state NavigationItem {:name "Daftar" :icon "icon-people" :url "#" :active false})
                   (uc/initial-state NavigationItem {:name "Masuk" :icon "icon-exit_to_app" :url "/login" :active false :body :login})]})})

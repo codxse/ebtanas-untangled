@@ -24,6 +24,7 @@
   static uc/InitialAppState
   (initial-state [this params]
     {:component :main
+     :title "Halaman Utama"
      :id 1
      :subjects [(uc/initial-state SubjectOption {:name "Matematika"})
                 (uc/initial-state SubjectOption {:name "B. Indonesia"})
