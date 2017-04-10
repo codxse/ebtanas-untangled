@@ -7,14 +7,14 @@
 
 (defui ^:once NavigationItem
   static uc/InitialAppState
-  (initial-state [this {:keys [name icon url active]}]
-    {:name name :icon icon :url url :active active})
+  (initial-state [this {:keys [name icon url active body]}]
+    {:name name :icon icon :url url :active active :body body})
   static om/Ident
   (ident [this {:keys [name]}]
     [:navItem/by-name name])
   static om/IQuery
   (query [this]
-    [:name :icon :url :active])
+    [:name :icon :url :active :body])
   Object
   (render [this]
     (let [{:keys [name icon url active] :as params} (om/props this)
@@ -42,14 +42,17 @@
   Object
   (render [this]
     (let [{:keys [menus]} (om/props this)
-          set-active-body! (fn [{:keys [name active]}]
-                             (om/transact! this `[(app/set-active-page! ~{:name name :active active}) :active-body]))]
+          set-active-body! (fn [{:keys [name body]}]
+                             (om/transact! this `[(app/set-active-page! ~{:name name :body body}) :active-body]))]
       (dom/ul #js {:className "tab inline-flex"}
         (map (fn [menu]
                (navigation-item (om/computed menu {:set-active-body! set-active-body!})))
              menus)))))
 
 (def navigation-ui (om/factory Navigation))
+
+;; :body keyword value must be same with
+;; :component keyword value of [body page] component
 
 (defui ^:once Header
   static uc/InitialAppState
@@ -60,10 +63,10 @@
        (uc/initial-state
          Navigation
          {:name "Navigation Header"
-          :menus [(uc/initial-state NavigationItem {:name "Home" :icon "icon-home" :url "/" :active true})
+          :menus [(uc/initial-state NavigationItem {:name "Home" :icon "icon-home" :url "/" :active true :body :main})
                   (uc/initial-state NavigationItem {:name "Bank Soal" :icon "icon-library_books" :url "#" :active false})
                   (uc/initial-state NavigationItem {:name "Daftar" :icon "icon-people" :url "#" :active false})
-                  (uc/initial-state NavigationItem {:name "Masuk" :icon "icon-exit_to_app" :url "/login" :active false})]})})
+                  (uc/initial-state NavigationItem {:name "Masuk" :icon "icon-exit_to_app" :url "/login" :active false :body :login})]})})
   static om/Ident
   (ident [this {:keys [name]}]
     [:header/by-name name])

@@ -20,7 +20,7 @@
 
 (def subject-option (om/factory SubjectOption {:keyfn :name}))
 
-(defui ^:once SearchForm
+(defui ^:once SearchFormqq
   static uc/InitialAppState
   (initial-state [this params]
     {:component :main
