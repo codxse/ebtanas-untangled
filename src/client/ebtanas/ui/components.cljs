@@ -3,8 +3,7 @@
     [om.next :as om :refer-macros [defui]]
     [om.dom :as dom]
     [untangled.client.core :as uc]
-    [goog.string :as gstring]
-    [ebtanas.ui.root :as root]))
+    [goog.string :as gstring]))
 
 (defui ^:once NavigationItem
   static uc/InitialAppState
