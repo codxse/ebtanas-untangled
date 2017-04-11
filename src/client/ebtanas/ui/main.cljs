@@ -24,7 +24,7 @@
 (defui ^:once SearchForm
   static uc/InitialAppState
   (initial-state [this params]
-    {:component (get-in page-data [:home :handler])
+    {:handler (get-in page-data [:home :handler])
      :title (get-in page-data [:home :title])
      :id 1
      :subjects [(uc/initial-state SubjectOption {:name "Matematika"})
@@ -39,7 +39,7 @@
                 (uc/initial-state SubjectOption {:name "Sejarah"})]})
   static om/IQuery
   (query [this]
-    [:component
+    [:handler
      :id
      {:subjects (om/get-query SubjectOption)}])
   Object

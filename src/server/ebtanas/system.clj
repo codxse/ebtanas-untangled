@@ -82,6 +82,5 @@
                               :login serve-index
                               :main serve-index}}
     :components {:pipeline (component/using
-                             ;(map->AdditionalPipeline {})
                              (map->RingHTML5RoutingComponent {})
                              [:handler])}))

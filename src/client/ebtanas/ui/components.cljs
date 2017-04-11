@@ -8,14 +8,14 @@
 
 (defui ^:once NavigationItem
   static uc/InitialAppState
-  (initial-state [this {:keys [name icon url active body]}]
-    {:name name :icon icon :url url :active active :body body})
+  (initial-state [this {:keys [name icon url active handler]}]
+    {:name name :icon icon :url url :active active :handler handler})
   static om/Ident
   (ident [this {:keys [name]}]
     [:navItem/by-name name])
   static om/IQuery
   (query [this]
-    [:name :icon :url :active :body])
+    [:name :icon :url :active :handler])
   Object
   (render [this]
     (let [{:keys [name icon url active] :as params} (om/props this)
@@ -43,8 +43,9 @@
   Object
   (render [this]
     (let [{:keys [menus]} (om/props this)
-          set-active-body! (fn [{:keys [name body]}]
-                             (om/transact! this `[(app/set-active-page! ~{:name name :body body}) :active-body]))]
+          set-active-body! (fn [{:keys [name handler]}]
+                             (om/transact! this `[(app/set-active-page!
+                                                    ~{:name name :handler handler}) :active-body]))]
       (dom/ul #js {:className "tab inline-flex"}
         (map (fn [menu]
                (navigation-item (om/computed menu {:set-active-body! set-active-body!})))
@@ -68,7 +69,7 @@
                         :icon "icon-home"
                         :active true
                         :url (r/url-for main)
-                        :body main})
+                        :handler main})
                     (uc/initial-state NavigationItem
                        {:name "Bank Soal"
                         :icon "icon-library_books"
@@ -82,9 +83,9 @@
                     (uc/initial-state NavigationItem
                        {:name "Masuk"
                         :icon "icon-exit_to_app"
-                        :url "/login"
+                        :url (r/url-for login)
                         :active false
-                        :body (get-in page-data [:login :handler])})])})})
+                        :handler login})])})})
   static om/Ident
   (ident [this {:keys [name]}]
     [:header/by-name name])

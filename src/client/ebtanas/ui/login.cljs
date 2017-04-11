@@ -38,14 +38,14 @@
 (defui ^:once LoginForm
   static uc/InitialAppState
   (initial-state [this params]
-    {:component (get-in page-data [:login :handler])
+    {:handler (get-in page-data [:login :handler])
      :title (get-in page-data [:login :title])
      :id 1
      :txt-input-form [(uc/initial-state InputTextLogin (:email input-text-data))
                       (uc/initial-state InputTextLogin (:password input-text-data))]})
   static om/IQuery
   (query [this]
-    [:component
+    [:handler
      :id
      :title
      {:txt-input-form (om/get-query InputTextLogin)}])

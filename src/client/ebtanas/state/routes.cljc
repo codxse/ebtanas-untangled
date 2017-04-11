@@ -10,13 +10,12 @@
    :login {:handler :login
            :title "Masuk Halaman Anggota"}})
 
+; "The bidi routing map for the application.
+; The leaf keywords are the route names.
+; Parameters in the route are available for use
+; in the routing algorithm as :param/param-name."
+
 (defonce app-routes
-
-  ;"The bidi routing map for the application.
-  ;The leaf keywords are the route names.
-  ;Parameters in the route are available for use
-  ;in the routing algorithm as :param/param-name."
-
   ["/" {"" (get-in page-data [:home :handler])
         "index-dev.html" (get-in page-data [:home :handler])
         "index.html" (get-in page-data [:home :handler])
