@@ -2,6 +2,8 @@
   (:require [bidi.bidi :as b]
             [pushy.core :as p]))
 
+(def history (atom {}))
+
 (defonce page-data
   {:home {:handler :main
           :title "Halaman Utama"}
@@ -24,14 +26,11 @@
   "Get a handler map from given url"
   (b/match-route app-routes url))
 
-(defn set-body-ident! [state handler]
-  "Add given state a map {:active-body the-body-ident}"
-  (swap! state assoc :active-body [handler 1]))
+(defn- history! [match]
+  (swap! history assoc :active-body [(:handler match) 1]))
 
 (defn url-for [handler]
   "Get a url string from given handler"
   (b/path-for app-routes handler))
 
-;(def history (p/pushy set-body-ident! match-url))
-;
-;(p/start! history)
+(p/start! (p/pushy history! match-url))

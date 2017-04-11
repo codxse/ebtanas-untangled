@@ -21,7 +21,7 @@
     (let [{:keys [name icon url active] :as params} (om/props this)
           {:keys [set-active-body!]} (om/get-computed this)]
       (dom/li #js {:className (str "tab-item " (when active "active"))}
-        (dom/a #js {:href "#" ;(str url)
+        (dom/a #js {:href url
                     :onClick #(set-active-body! params)}
           (when icon (dom/span #js {:className (str "icon " icon)}))
           (str " " name))))))
@@ -61,24 +61,30 @@
        (uc/initial-state
          Navigation
          {:name "Navigation Header"
-          :menus [(uc/initial-state NavigationItem {:name "Halaman Utama"
-                                                    :icon "icon-home"
-                                                    :url "/"
-                                                    :active true
-                                                    :body (get-in page-data [:home :handler])})
-                  (uc/initial-state NavigationItem {:name "Bank Soal"
-                                                    :icon "icon-library_books"
-                                                    :url "#"
-                                                    :active false})
-                  (uc/initial-state NavigationItem {:name "Daftar"
-                                                    :icon "icon-people"
-                                                    :url "#"
-                                                    :active false})
-                  (uc/initial-state NavigationItem {:name "Masuk"
-                                                    :icon "icon-exit_to_app"
-                                                    :url "/login"
-                                                    :active false
-                                                    :body (get-in page-data [:login :handler])})]})})
+          :menus (let [main (get-in page-data [:home :handler])
+                       login (get-in page-data [:login :handler])]
+                   [(uc/initial-state NavigationItem
+                       {:name "Halaman Utama"
+                        :icon "icon-home"
+                        :active true
+                        :url (r/url-for main)
+                        :body main})
+                    (uc/initial-state NavigationItem
+                       {:name "Bank Soal"
+                        :icon "icon-library_books"
+                        :url "#"
+                        :active false})
+                    (uc/initial-state NavigationItem
+                       {:name "Daftar"
+                        :icon "icon-people"
+                        :url "#"
+                        :active false})
+                    (uc/initial-state NavigationItem
+                       {:name "Masuk"
+                        :icon "icon-exit_to_app"
+                        :url "/login"
+                        :active false
+                        :body (get-in page-data [:login :handler])})])})})
   static om/Ident
   (ident [this {:keys [name]}]
     [:header/by-name name])

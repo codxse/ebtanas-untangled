@@ -4,9 +4,6 @@
             [untangled.client.impl.data-fetch :as df]
             [ebtanas.state.routes :as r]))
 
-(def routes ["/index-dev.html" {"" :main
-                                "login" :login}])
-
 (defn- active-menu-ident [m]
   (let [maps (vals m)]
     [:navItem/by-name (-> (filter #(= true (:active %)) maps)
@@ -21,4 +18,4 @@
                (do
                  (swap! state update-in prev-active conj {:active false})
                  (swap! state update-in clicked-menu conj {:active true})
-                 (r/set-body-ident! state body))))})
+                 (swap! state assoc :active-body [body 1]))))})
