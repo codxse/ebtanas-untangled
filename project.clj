@@ -15,8 +15,10 @@
                  [lein-doo "0.1.7" :scope "test"]
                  [org.clojure/core.async "0.3.442"]
                  [http-kit "2.2.0"]
-                 [com.taoensso/timbre "4.8.0"]]
+                 [com.taoensso/timbre "4.8.0"]
 
+                 [kibu/pushy "0.3.7"]
+                 [bidi "2.0.16"]]
 
   :plugins [[lein-cljsbuild "1.1.5"]
             [lein-doo "0.1.7"]

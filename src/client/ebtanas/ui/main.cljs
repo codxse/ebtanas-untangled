@@ -1,7 +1,8 @@
 (ns ebtanas.ui.main
   (:require [om.next :as om :refer-macros [defui]]
             [om.dom :as dom]
-            [untangled.client.core :as uc]))
+            [untangled.client.core :as uc]
+            [ebtanas.state.routes :refer [page-data]]))
 
 (defui ^:once SubjectOption
   static uc/InitialAppState
@@ -23,8 +24,8 @@
 (defui ^:once SearchForm
   static uc/InitialAppState
   (initial-state [this params]
-    {:component :main
-     :title "Halaman Utama"
+    {:component (get-in page-data [:home :handler])
+     :title (get-in page-data [:home :title])
      :id 1
      :subjects [(uc/initial-state SubjectOption {:name "Matematika"})
                 (uc/initial-state SubjectOption {:name "B. Indonesia"})

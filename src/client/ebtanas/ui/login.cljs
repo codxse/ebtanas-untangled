@@ -1,7 +1,8 @@
 (ns ebtanas.ui.login
   (:require [om.next :as om :refer-macros [defui]]
             [om.dom :as dom]
-            [untangled.client.core :as uc]))
+            [untangled.client.core :as uc]
+            [ebtanas.state.routes :refer [page-data]]))
 
 (defonce input-text-data
   {:email {:label "Email" :type "email" :col-width "col-6" :placeholder "pevita@gmail.com"}
@@ -37,8 +38,8 @@
 (defui ^:once LoginForm
   static uc/InitialAppState
   (initial-state [this params]
-    {:component :login
-     :title "Masuk Halaman Anggota"
+    {:component (get-in page-data [:login :handler])
+     :title (get-in page-data [:login :title])
      :id 1
      :txt-input-form [(uc/initial-state InputTextLogin (:email input-text-data))
                       (uc/initial-state InputTextLogin (:password input-text-data))]})

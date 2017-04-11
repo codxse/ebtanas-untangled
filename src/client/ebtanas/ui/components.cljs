@@ -3,7 +3,8 @@
     [om.next :as om :refer-macros [defui]]
     [om.dom :as dom]
     [untangled.client.core :as uc]
-    [goog.string :as gstring]))
+    [goog.string :as gstring]
+    [ebtanas.state.routes :as r :refer [page-data]]))
 
 (defui ^:once NavigationItem
   static uc/InitialAppState
@@ -20,7 +21,7 @@
     (let [{:keys [name icon url active] :as params} (om/props this)
           {:keys [set-active-body!]} (om/get-computed this)]
       (dom/li #js {:className (str "tab-item " (when active "active"))}
-        (dom/a #js {:href "#";(str url)
+        (dom/a #js {:href "#" ;(str url)
                     :onClick #(set-active-body! params)}
           (when icon (dom/span #js {:className (str "icon " icon)}))
           (str " " name))))))
@@ -51,9 +52,6 @@
 
 (def navigation-ui (om/factory Navigation))
 
-;; :body keyword value must be same with
-;; :component keyword value of [body page] component
-
 (defui ^:once Header
   static uc/InitialAppState
   (initial-state [this params]
@@ -63,10 +61,24 @@
        (uc/initial-state
          Navigation
          {:name "Navigation Header"
-          :menus [(uc/initial-state NavigationItem {:name "Halaman Utama" :icon "icon-home" :url "/" :active true :body :main})
-                  (uc/initial-state NavigationItem {:name "Bank Soal" :icon "icon-library_books" :url "#" :active false})
-                  (uc/initial-state NavigationItem {:name "Daftar" :icon "icon-people" :url "#" :active false})
-                  (uc/initial-state NavigationItem {:name "Masuk" :icon "icon-exit_to_app" :url "/login" :active false :body :login})]})})
+          :menus [(uc/initial-state NavigationItem {:name "Halaman Utama"
+                                                    :icon "icon-home"
+                                                    :url "/"
+                                                    :active true
+                                                    :body (get-in page-data [:home :handler])})
+                  (uc/initial-state NavigationItem {:name "Bank Soal"
+                                                    :icon "icon-library_books"
+                                                    :url "#"
+                                                    :active false})
+                  (uc/initial-state NavigationItem {:name "Daftar"
+                                                    :icon "icon-people"
+                                                    :url "#"
+                                                    :active false})
+                  (uc/initial-state NavigationItem {:name "Masuk"
+                                                    :icon "icon-exit_to_app"
+                                                    :url "/login"
+                                                    :active false
+                                                    :body (get-in page-data [:login :handler])})]})})
   static om/Ident
   (ident [this {:keys [name]}]
     [:header/by-name name])
