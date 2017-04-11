@@ -11,11 +11,14 @@
                           :name)]))
 
 (defmethod mutate 'app/set-active-page!
-  [{:keys [state]} _ {:keys [name body]}]
+  [{:keys [state res-ident] :or {res-ident [:main 1]}} _ {:keys [name body]}]
   {:action (fn []
              (let [clicked-menu [:navItem/by-name name]
-                   prev-active (active-menu-ident (:navItem/by-name @state))]
+                   prev-active (active-menu-ident (:navItem/by-name @state))
+                   active-body (atom res-ident)]
                (do
                  (swap! state update-in prev-active conj {:active false})
                  (swap! state update-in clicked-menu conj {:active true})
-                 (swap! state assoc :active-body [body 1]))))})
+                 (when (not= [body 1] res-ident)
+                   (swap! active-body (fn [_] [body 1])))
+                 (swap! state assoc :active-body @active-body))))})

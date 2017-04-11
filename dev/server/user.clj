@@ -33,7 +33,7 @@
 
 ;; ==================== SERVER ====================
 
-(set-refresh-dirs "dev/server" "src/server" "specs/server")
+(set-refresh-dirs "dev/server" "src/server" "specs/server" "src/client")
 
 (defn started? [sys]
   (-> sys :config :value))

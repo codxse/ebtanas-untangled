@@ -4,11 +4,11 @@
 
 #?(:cljs (def history (atom {})))
 
-#?(:cljs (defonce page-data
-           {:home {:handler :main
-                   :title "Halaman Utama"}
-            :login {:handler :login
-                    :title "Masuk Halaman Anggota"}}))
+(defonce page-data
+  {:home {:handler :main
+          :title "Halaman Utama"}
+   :login {:handler :login
+           :title "Masuk Halaman Anggota"}})
 
 (defonce app-routes
 
@@ -20,7 +20,8 @@
   ["/" {"" (get-in page-data [:home :handler])
         "index-dev.html" (get-in page-data [:home :handler])
         "index.html" (get-in page-data [:home :handler])
-        "login" (get-in page-data [:login :handler])}])
+        "login" (get-in page-data [:login :handler])
+        ["hello/" [#"\d+" :id]] :sampel1}])
 
 (defn match-url [url]
   "Get a handler map from given url"

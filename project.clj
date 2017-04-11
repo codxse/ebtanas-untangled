@@ -18,7 +18,8 @@
                  [com.taoensso/timbre "4.8.0"]
 
                  [kibu/pushy "0.3.7"]
-                 [bidi "2.0.16"]]
+                 [bidi "2.0.16"]
+                 [ring/ring-mock "0.3.0"]]
 
   :plugins [[lein-cljsbuild "1.1.5"]
             [lein-doo "0.1.7"]
