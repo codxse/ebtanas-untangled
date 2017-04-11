@@ -33,7 +33,7 @@
                  :with-repl    true
                  :changes-only true}
 
-  :source-paths ["src/server"]
+  :source-paths ["src/server" "src/client"]
   :test-paths ["specs" "specs/server" "specs/config"]
   :clean-targets ^{:protect false} ["target" "resources/public/js" "resources/private"]
 

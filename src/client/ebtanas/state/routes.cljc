@@ -1,14 +1,14 @@
 (ns ebtanas.state.routes
   (:require [bidi.bidi :as b]
-            [pushy.core :as p]))
+            #? (:cljs [pushy.core :as p])))
 
-(def history (atom {}))
+#?(:cljs (def history (atom {})))
 
-(defonce page-data
-  {:home {:handler :main
-          :title "Halaman Utama"}
-   :login {:handler :login
-           :title "Masuk Halaman Anggota"}})
+#?(:cljs (defonce page-data
+           {:home {:handler :main
+                   :title "Halaman Utama"}
+            :login {:handler :login
+                    :title "Masuk Halaman Anggota"}}))
 
 (defonce app-routes
 
@@ -26,11 +26,11 @@
   "Get a handler map from given url"
   (b/match-route app-routes url))
 
-(defn- history! [match]
-  (swap! history assoc :active-body [(:handler match) 1]))
+#?(:cljs (defn- history! [match]
+           (swap! history assoc :active-body [(:handler match) 1])))
 
-(defn url-for [handler]
-  "Get a url string from given handler"
-  (b/path-for app-routes handler))
+#?(:cljs (defn url-for [handler]
+           "Get a url string from given handler"
+           (b/path-for app-routes handler)))
 
-(p/start! (p/pushy history! match-url))
+#?(:cljs (p/start! (p/pushy history! match-url)))
