@@ -11,8 +11,8 @@
   (initial-state [this {:keys [name icon url active handler]}]
     {:name name :icon icon :url url :active active :handler handler})
   static om/Ident
-  (ident [this {:keys [name]}]
-    [:navItem/by-name name])
+  (ident [this {:keys [handler]}]
+    [:navItem/by-handler handler])
   static om/IQuery
   (query [this]
     [:name :icon :url :active :handler])
@@ -44,7 +44,7 @@
   (render [this]
     (let [{:keys [menus]} (om/props this)
           set-active-body! (fn [{:keys [name handler]}]
-                             (om/transact! this `[(app/set-active-page!
+                             (om/transact! this `[(app/update-route!
                                                     ~{:name name :handler handler}) :active-body]))]
       (dom/ul #js {:className "tab inline-flex"}
         (map (fn [menu]
@@ -74,12 +74,14 @@
                        {:name "Bank Soal"
                         :icon "icon-library_books"
                         :url "#"
-                        :active false})
+                        :active false
+                        :handler :bank-soal})
                     (uc/initial-state NavigationItem
                        {:name "Daftar"
                         :icon "icon-people"
                         :url "#"
-                        :active false})
+                        :active false
+                        :handler :daftar})
                     (uc/initial-state NavigationItem
                        {:name "Masuk"
                         :icon "icon-exit_to_app"
@@ -119,9 +121,9 @@
        (uc/initial-state
          Navigation
          {:name "Navigation Footer"
-          :menus [(uc/initial-state NavigationItem {:name "Kebijakan Privasi" :url "#"})
-                  (uc/initial-state NavigationItem {:name "Contekan" :url "#"})
-                  (uc/initial-state NavigationItem {:name "Misi Kami" :url "#"})]})})
+          :menus [(uc/initial-state NavigationItem {:name "Kebijakan Privasi" :url "#" :handler :kebijakan-privasi})
+                  (uc/initial-state NavigationItem {:name "Contekan" :url "#" :handler :contekan})
+                  (uc/initial-state NavigationItem {:name "Misi Kami" :url "#" :handler :misi-kami})]})})
   static om/Ident
   (ident [this {:keys [name]}]
     [:footer/by-name name])

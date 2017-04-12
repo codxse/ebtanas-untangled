@@ -1,8 +1,9 @@
 (ns ebtanas.state.routes
   (:require [bidi.bidi :as b]
-            #? (:cljs [pushy.core :as p])))
+    #?(:cljs [pushy.core :as p])
+      [om.next :as om]))
 
-#?(:cljs (def history (atom {})))
+#?(:cljs (def history (atom nil)))
 
 (defonce page-data
   {:home {:handler :main
@@ -26,11 +27,12 @@
   "Get a handler map from given url"
   (b/match-route app-routes url))
 
-#?(:cljs (defn- history! [match]
-           (swap! history assoc :active-body [(:handler match) 1])))
+#?(:cljs (defn set-route!
+           [component-or-reconciler bidi-match]
+           (om/transact!
+             component-or-reconciler
+             `[(app/update-route! ~bidi-match)])))
 
 #?(:cljs (defn url-for [handler]
            "Get a url string from given handler"
            (b/path-for app-routes handler)))
-
-#?(:cljs (p/start! (p/pushy history! match-url)))
