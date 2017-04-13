@@ -21,6 +21,9 @@
                  [bidi "2.0.16"]
                  [ring/ring-mock "0.3.0"]]
 
+                 ;[ring-webjars "0.1.1"]]
+                 ;[org.webjars/bootstrap "3.3.5"]]
+
   :plugins [[lein-cljsbuild "1.1.5"]
             [lein-doo "0.1.7"]
             [com.jakemccrary/lein-test-refresh "0.17.0"]]

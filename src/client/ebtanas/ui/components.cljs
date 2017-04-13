@@ -51,7 +51,7 @@
                (navigation-item (om/computed menu {:set-active-body! set-active-body!})))
              menus)))))
 
-(def navigation-ui (om/factory Navigation))
+(def navigation (om/factory Navigation))
 
 (defui ^:once Header
   static uc/InitialAppState
@@ -63,7 +63,9 @@
          Navigation
          {:name "Navigation Header"
           :menus (let [main (get-in page-data [:home :handler])
-                       login (get-in page-data [:login :handler])]
+                       login (get-in page-data [:login :handler])
+                       signup (get-in page-data [:signup :handler])
+                       psets (get-in page-data [:psets :handler])]
                    [(uc/initial-state NavigationItem
                        {:name "Halaman Utama"
                         :icon "icon-home"
@@ -73,15 +75,15 @@
                     (uc/initial-state NavigationItem
                        {:name "Bank Soal"
                         :icon "icon-library_books"
-                        :url "#"
+                        :url (r/url-for psets)
                         :active false
-                        :handler :bank-soal})
+                        :handler psets})
                     (uc/initial-state NavigationItem
                        {:name "Daftar"
                         :icon "icon-people"
-                        :url "#"
+                        :url (r/url-for signup)
                         :active false
-                        :handler :daftar})
+                        :handler signup})
                     (uc/initial-state NavigationItem
                        {:name "Masuk"
                         :icon "icon-exit_to_app"
@@ -107,9 +109,9 @@
             (str " " title)))
         (dom/section #js {:className "navbar-section"}
           (dom/ul #js {:className "tab inline-flex"}
-            (navigation-ui header-nav)))))))
+            (navigation header-nav)))))))
 
-(def header-ui (om/factory Header))
+(def header (om/factory Header))
 
 (defui ^:once Footer
   static uc/InitialAppState
@@ -121,9 +123,12 @@
        (uc/initial-state
          Navigation
          {:name "Navigation Footer"
-          :menus [(uc/initial-state NavigationItem {:name "Kebijakan Privasi" :url "#" :handler :kebijakan-privasi})
-                  (uc/initial-state NavigationItem {:name "Contekan" :url "#" :handler :contekan})
-                  (uc/initial-state NavigationItem {:name "Misi Kami" :url "#" :handler :misi-kami})]})})
+          :menus (let [privacy (get-in page-data [:privacy :handler])
+                       faq (get-in page-data [:faq :handler])
+                       mission (get-in page-data [:mission :handler])]
+                   [(uc/initial-state NavigationItem {:name "Kebijakan Privasi" :url (r/url-for privacy) :handler privacy})
+                    (uc/initial-state NavigationItem {:name "Tanya Jawab" :url (r/url-for faq) :handler faq})
+                    (uc/initial-state NavigationItem {:name "Misi Kami" :url (r/url-for mission) :handler mission})])})})
   static om/Ident
   (ident [this {:keys [name]}]
     [:footer/by-name name])
@@ -147,6 +152,33 @@
             (dom/span nil (dom/i #js {:className "icon icon-pages"})))
           (dom/section #js {:className "navbar-section"}
             (dom/ul #js {:className "tab inline-flex"}
-              (navigation-ui footer-nav))))))))
+              (navigation footer-nav))))))))
 
-(def footer-ui (om/factory Footer))
+(def footer (om/factory Footer))
+
+(defui ^:once FormText
+  static uc/InitialAppState
+  (initial-state [this {:keys [label type col-width placeholder]}]
+    {:label label
+     :type type
+     :col-width col-width
+     :placeholder placeholder})
+  static om/Ident
+  (ident [this {:keys [label]}]
+    [:login-form/by-label label])
+  static om/IQuery
+  (query [this]
+    [:label :type :col-width :placeholder])
+  Object
+  (render [this]
+    (let [{:keys [label type col-width placeholder]} (om/props this)]
+      (dom/div #js {:className "form-group"}
+        (dom/div #js {:className "col-4"}
+          (dom/label #js {:className "form-label"} label))
+        (dom/div #js {:className col-width}
+          (dom/input #js {:className "form-input"
+                          :type type
+                          :placeholder placeholder}))))))
+
+(def form-text (om/factory FormText))
+

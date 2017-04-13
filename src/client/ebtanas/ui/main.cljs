@@ -21,7 +21,7 @@
 
 (def subject-option (om/factory SubjectOption {:keyfn :name}))
 
-(defui ^:once SearchForm
+(defui ^:once MainSearch
   static uc/InitialAppState
   (initial-state [this params]
     {:handler (get-in page-data [:home :handler])
@@ -56,4 +56,4 @@
             (dom/button #js {:className "btn btn-primary btn-action btn-lg"}
               (dom/span #js {:className "icon icon-search"}))))))))
 
-(def search-ui (om/factory SearchForm))
+(def main-search (om/factory MainSearch))

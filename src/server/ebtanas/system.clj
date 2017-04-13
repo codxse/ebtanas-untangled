@@ -18,6 +18,8 @@
     [ebtanas.state.routes :refer [app-routes]]
     [clojure.java.io :as io]))
 
+    ;[ring.middleware.webjars :refer [wrap-webjars]]))
+
 (defn logging-mutate [env k params]
   (timbre/info "Entering mutation:" k)
   (mut/apimutate env k params))
@@ -52,7 +54,9 @@
     ; HTML5 routing to happen from bookmarked URIs.
     (let [vanilla-pipeline (h/get-fallback-hook handler)]
       (h/set-fallback-hook! handler (comp vanilla-pipeline
-                                          (partial wrap-html5-routes-as-index))))
+                                          (partial wrap-html5-routes-as-index)
+                                          (partial wrap-cookies))))
+                                          ;(partial wrap-webjars))))
     this)
   (stop [this] this))
 
@@ -69,10 +73,7 @@
     :config-path config-path
     :parser (om/parser {:read r/api-read :mutate logging-mutate})
     :parser-injections #{:config}
-    ; TEMPLATE: :examples
-    ; An example for providing extra route handlers (e.g. REST-based endpoints for non-Om clients)
-    :extra-routes {:routes app-routes ;   ["/" {["hello/" [#"\d+" :id]] :sampel1}]
-                   ; Use the route target keyword to define the function that handles that route
+    :extra-routes {:routes app-routes
                    :handlers {:sampel1 (fn [env {:keys [route-params] :as params}]
                                          (timbre/info "Got a request on sample1 route with " :ENV env :ROUTE-PARAMS route-params)
                                          (-> (str "Hello: " (:id route-params)
@@ -80,7 +81,8 @@
                                              response/response
                                              (response/content-type "text/plain")))
                               :login serve-index
-                              :main serve-index}}
+                              :main serve-index
+                              :signup serve-index}}
     :components {:pipeline (component/using
                              (map->RingHTML5RoutingComponent {})
                              [:handler])}))

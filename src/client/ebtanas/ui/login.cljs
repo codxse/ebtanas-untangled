@@ -10,8 +10,7 @@
 
 (defui ^:once InputTextLogin
   static uc/InitialAppState
-  (initial-state
-    [this {:keys [label type col-width placeholder]}]
+  (initial-state [this {:keys [label type col-width placeholder]}]
     {:label label
      :type type
      :col-width col-width
@@ -35,12 +34,15 @@
 
 (def input-text (om/factory InputTextLogin))
 
-(defui ^:once LoginForm
+(defui ^:once Login
   static uc/InitialAppState
   (initial-state [this params]
     {:handler (get-in page-data [:login :handler])
      :title (get-in page-data [:login :title])
      :id 1
+     :label {:checkbox "Ingat saya"
+             :submit "Masuk"
+             :forgot-pwd "Lupa password?"}
      :txt-input-form [(uc/initial-state InputTextLogin (:email input-text-data))
                       (uc/initial-state InputTextLogin (:password input-text-data))]})
   static om/IQuery
@@ -48,10 +50,11 @@
     [:handler
      :id
      :title
+     :label
      {:txt-input-form (om/get-query InputTextLogin)}])
   Object
   (render [this]
-    (let [{:keys [title txt-input-form]} (om/props this)]
+    (let [{:keys [title txt-input-form] :as props} (om/props this)]
       (dom/section #js {:className "body section columns"}
         (dom/h2 nil title)
         (dom/div #js {:className "container"}
@@ -65,14 +68,14 @@
                   (dom/label #js {:className "form-checkbox"}
                     (dom/input #js {:type "checkbox"})
                     (dom/i #js {:className "form-icon"})
-                    "Ingat Saya")))
+                    (get-in props [:label :checkbox]))))
               (dom/div #js {:className "form-group"}
                 (dom/div #js {:className "col-4"})
                 (dom/div #js {:className "col-8"}
                   (dom/button #js {:className "btn btn-primary"
                                    :type "submit"}
-                              "Masuk")
+                              (get-in props [:label :submit]))
                   (dom/button #js {:className "btn btn-link disabled"}
-                              "Lupa password?"))))))))))
+                              (get-in props [:label :forgot-pwd])))))))))))
 
-(def login-ui (om/factory LoginForm))
+(def login (om/factory Login))
