@@ -3,14 +3,14 @@
   :license {:name "MIT" :url "https://opensource.org/licenses/MIT"}
 
   :dependencies [[org.clojure/clojure "1.9.0-alpha14"]
-                 [org.clojure/clojurescript "1.9.494"]
+                 [org.clojure/clojurescript "1.9.518"]
                  [commons-io "2.5"]
 
-                 [navis/untangled-client "0.6.1-SNAPSHOT"]
-                 [untangled/om-css "1.0.0"]
+                 [navis/untangled-client "0.8.1"]
+                 [untangled/om-css "1.0.1"]
                  [org.omcljs/om "1.0.0-alpha48"]
 
-                 [navis/untangled-server "0.6.2"]
+                 [navis/untangled-server "0.7.0"]
                  [navis/untangled-spec "1.0.0-alpha3" :scope "test"]
                  [lein-doo "0.1.7" :scope "test"]
                  [org.clojure/core.async "0.3.442"]
@@ -97,10 +97,10 @@
                        :prep-tasks ["compile"
                                     ["cljsbuild" "once" "production"]]}
              :dev     {:source-paths ["dev/client" "dev/server" "src/client" "src/server"]
-                       :dependencies [[binaryage/devtools "0.9.1"]
+                       :dependencies [[binaryage/devtools "0.9.3"]
                                       [org.clojure/tools.namespace "0.3.0-alpha3"]
                                       [com.cemerick/piggieback "0.2.1"]
-                                      [figwheel-sidecar "0.5.9" :exclusions [org.clojure/tools.reader]]
-                                      [devcards "0.2.2"]]
+                                      [figwheel-sidecar "0.5.10" :exclusions [org.clojure/tools.reader]]
+                                      [devcards "0.2.3"]]
                        :repl-options {:init-ns          user
                                       :nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}}})
