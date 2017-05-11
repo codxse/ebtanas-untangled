@@ -4,7 +4,8 @@
     [om.dom :as dom]
     [untangled.client.core :as uc]
     [goog.string :as gstring]
-    [ebtanas.state.routes :as r :refer [page-data]]))
+    [ebtanas.state.routes :as r :refer [page-data]]
+    [untangled.client.mutations :as m]))
 
 (defui ^:once NavigationItem
   static uc/InitialAppState
@@ -162,23 +163,28 @@
     {:label label
      :type type
      :col-width col-width
-     :placeholder placeholder})
+     :placeholder placeholder
+     :ui/new-value ""})
   static om/Ident
   (ident [this {:keys [label]}]
     [:login-form/by-label label])
   static om/IQuery
   (query [this]
-    [:label :type :col-width :placeholder])
+    [:label :type :col-width :placeholder :ui/new-value])
   Object
   (render [this]
-    (let [{:keys [label type col-width placeholder]} (om/props this)]
+    (let [{:keys [label type col-width placeholder ui/new-value]} (om/props this)]
       (dom/div #js {:className "form-group"}
         (dom/div #js {:className "col-4"}
           (dom/label #js {:className "form-label"} label))
         (dom/div #js {:className col-width}
-          (dom/input #js {:className "form-input"
-                          :type type
-                          :placeholder placeholder}))))))
+          (dom/input #js {:className   "form-input"
+                          :id          label
+                          :name        label
+                          :type        type
+                          :value       new-value
+                          :placeholder placeholder
+                          :onChange    #(m/set-string! this :ui/new-value :event %)}))))))
 
 (def form-text (om/factory FormText))
 

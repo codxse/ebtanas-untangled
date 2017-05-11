@@ -34,7 +34,9 @@
         (dom/h2 nil title)
         (dom/div #js {:className "container"}
           (dom/div #js {:className "column col-6 centered"}
-            (dom/form #js {:className "form-horizontal"}
+            (dom/form #js {:className "form-horizontal"
+                           :method "POST"
+                           :action "/auth"}
               (c/form-text (txt-input-form 0))
               (c/form-text (txt-input-form 1))
               (dom/div #js {:className "form-group"}

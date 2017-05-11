@@ -11,6 +11,7 @@
     [taoensso.timbre :as timbre]
     [ring.middleware.cookies :refer [wrap-cookies]]
     [ring.middleware.resource :as resource]
+    [ring.middleware.params :refer [wrap-params]]
     [ring.mock.request :as req]
     [ring.util.response :as response]
     [ring.util.request :as rreq]
@@ -55,8 +56,8 @@
     (let [vanilla-pipeline (h/get-fallback-hook handler)]
       (h/set-fallback-hook! handler (comp vanilla-pipeline
                                           (partial wrap-html5-routes-as-index)
-                                          (partial wrap-cookies))))
-                                          ;(partial wrap-webjars))))
+                                          (partial wrap-cookies)
+                                          (partial wrap-params))))
     this)
   (stop [this] this))
 
@@ -67,6 +68,12 @@
   (-> (read-file! (str "public/" index-markup))
       response/response
       (response/content-type "text/html")))
+
+(defn authentication [req params]
+  (timbre/info :REQ req :PAR params)
+  (-> (str (:body req) params)
+      response/response
+      (response/content-type "text/plain")))
 
 (defn make-system [config-path]
   (core/make-untangled-server
@@ -82,7 +89,8 @@
                                              (response/content-type "text/plain")))
                               :login serve-index
                               :main serve-index
-                              :signup serve-index}}
+                              :signup serve-index
+                              :auth-backend authentication}}
     :components {:pipeline (component/using
                              (map->RingHTML5RoutingComponent {})
                              [:handler])}))

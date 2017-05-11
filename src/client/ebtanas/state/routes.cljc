@@ -27,6 +27,7 @@
 
 (defonce app-routes
   ["/" {"" (get-in page-data [:home :handler])
+        "auth" :auth-backend
         "index-dev.html" (get-in page-data [:home :handler])
         "index.html" (get-in page-data [:home :handler])
         "login" (get-in page-data [:login :handler])
