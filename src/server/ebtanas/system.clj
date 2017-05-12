@@ -61,7 +61,16 @@
     this)
   (stop [this] this))
 
-(defn serve-index
+(defrecord RingMiddleware [handler]
+  component/Lifecycle
+  (start [this]
+    (let [vanilla-pipeline (h/get-pre-hook handler)]
+      (h/set-pre-hook! handler (comp vanilla-pipeline
+                                     (partial wrap-cookies)
+                                     (partial wrap-params)))))
+  (stop [this] this))
+
+(defn default-handler
   [{:keys [request] :as env}
    {:keys [route-param request-method] :as params}]
   (timbre/info :URI (:uri request) :PARAMS params)
@@ -71,7 +80,7 @@
 
 (defn authentication [req params]
   (timbre/info :REQ req :PAR params)
-  (-> (str (:body req) params)
+  (-> (str req params)
       response/response
       (response/content-type "text/plain")))
 
@@ -87,10 +96,10 @@
                                                   " PARAMS: " params)
                                              response/response
                                              (response/content-type "text/plain")))
-                              :login serve-index
-                              :main serve-index
-                              :signup serve-index
+                              :login default-handler
+                              :main default-handler
+                              :signup default-handler
                               :auth-backend authentication}}
     :components {:pipeline (component/using
-                             (map->RingHTML5RoutingComponent {})
+                             (map->RingMiddleware {})
                              [:handler])}))
