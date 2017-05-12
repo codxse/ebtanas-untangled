@@ -19,8 +19,10 @@
 
                  [kibu/pushy "0.3.7"]
                  [bidi "2.0.16"]
-                 [ring/ring-mock "0.3.0"]]
+                 [ring/ring-mock "0.3.0"]
 
+                 [buddy/buddy-auth "1.4.1"]
+                 [buddy/buddy-hashers "1.2.0"]]
                  ;[ring-webjars "0.1.1"]]
                  ;[org.webjars/bootstrap "3.3.5"]]
 

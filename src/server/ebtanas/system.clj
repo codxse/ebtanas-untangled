@@ -12,9 +12,14 @@
     [ring.middleware.cookies :refer [wrap-cookies]]
     [ring.middleware.resource :as resource]
     [ring.middleware.params :refer [wrap-params]]
+    [ring.middleware.session :refer [wrap-session]]
     [ring.mock.request :as req]
     [ring.util.response :as response]
     [ring.util.request :as rreq]
+
+    [buddy.auth :refer [authenticated? throw-unauthorized]]
+    [buddy.auth.backends.session :refer [session-backend]]
+    [buddy.auth.middleware :refer [wrap-authentication wrap-authorization]]
 
     [ebtanas.state.routes :refer [app-routes]]
     [clojure.java.io :as io]))
@@ -61,15 +66,6 @@
     this)
   (stop [this] this))
 
-(defrecord RingMiddleware [handler]
-  component/Lifecycle
-  (start [this]
-    (let [vanilla-pipeline (h/get-pre-hook handler)]
-      (h/set-pre-hook! handler (comp vanilla-pipeline
-                                     (partial wrap-cookies)
-                                     (partial wrap-params)))))
-  (stop [this] this))
-
 (defn default-handler
   [{:keys [request] :as env}
    {:keys [route-param request-method] :as params}]
@@ -78,11 +74,73 @@
       response/response
       (response/content-type "text/html")))
 
+(def authdata (atom {:email "admin@admin.com" :password "admin" :login false}))
+
+(defn logout
+  [request]
+  (do
+    (swap! authdata assoc :login false)
+    (-> (response/redirect "/login")
+        (assoc :session {}))))
+
 (defn authentication [req params]
   (timbre/info :REQ req :PAR params)
-  (-> (str req params)
-      response/response
-      (response/content-type "text/plain")))
+  (let [email (get-in req [:request :form-params "Email"])
+        password (get-in req [:request :form-params "Password"])
+        session (get-in req [:request :session])
+        found-email (= email (swap! authdata get :email))
+        found-password (= password (swap! authdata get :password))]
+    (if (and found-email found-password)
+      (let [next-url (get-in req [:request :query-params :next] "/")
+            updated-session (assoc session :identity email)]
+        (do (swap! authdata assoc :login true)
+            (-> (response/redirect next-url)
+                (assoc :session updated-session))))
+      (response/redirect "/login"))))
+
+
+    ;(-> (with-out-str
+    ;      (clojure.pprint/pprint {:req req
+    ;                              :params params
+    ;                              :email email
+    ;                              :password password
+    ;                              :session session}))
+    ;    response/response
+    ;    (response/content-type "text/plain"))))
+
+(defn unauthorized-handler
+  [request metadata]
+  (cond
+    ;; If request is authenticated, raise 403 instead
+    ;; of 401 (because user is authenticated but permission
+    ;; denied is raised).
+    (authenticated? request)
+    (-> (response/response request)
+        (assoc :status 403))
+    ;; In other cases, redirect the user to login page.
+    :else
+    (let [current-url (:uri request)]
+      (response/redirect "/login"))))
+
+(def auth-backend
+  (session-backend {:unauthorized-handler unauthorized-handler}))
+
+(defn wrap-auth [handler]
+  (fn [req]
+    (as-> req $
+        (wrap-authorization $ auth-backend)
+        (wrap-authentication $ auth-backend))))
+
+(defrecord RingMiddleware [handler]
+  component/Lifecycle
+  (start [this]
+    (let [vanilla-pipeline (h/get-pre-hook handler)]
+      (h/set-pre-hook! handler (comp vanilla-pipeline
+                                     (partial wrap-auth)
+                                     (partial wrap-cookies)
+                                     (partial wrap-params)
+                                     (partial wrap-session)))))
+  (stop [this] this))
 
 (defn make-system [config-path]
   (core/make-untangled-server
